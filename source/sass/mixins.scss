@@ -49,3 +49,32 @@
     @content;
   }
 }
+
+@mixin interaction {
+  color: $color-default-white;
+  background-color: $color-navy-blue;
+
+  @include hover {
+    background-color: $color-default-white;
+    color: $color-resolution-blue;
+    border: 1px solid $color-resolution-blue;
+  }
+
+  @include focus {
+    background-color: $color-default-white;
+    color: $color-resolution-blue;
+    border: 1px solid $color-resolution-blue;
+  }
+
+  &:active {
+    background-color: $color-resolution-blue;
+    color: $color-default-white;
+  }
+
+  &[aria-disabled="true"],
+  &:disabled {
+    color: $color-default-white;
+    background-color: rgba(2, 102, 193, 0.1);
+    pointer-events: none;
+  }
+}
