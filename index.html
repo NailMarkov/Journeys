@@ -8,11 +8,12 @@
   <meta name="description" content="Описание проекта">
   <title>Journeys</title>
   <link rel="stylesheet" href="css/style.min.css">
-  <link rel="preload" href="fonts/montserrat-300.woff2" type="font/woff2" as="font" crossorigin="anonymous" />
-  <link rel="preload" href="fonts/montserrat-400.woff2" type="font/woff2" as="font" crossorigin="anonymous" />
-  <link rel="preload" href="fonts/montserrat-500.woff2" type="font/woff2" as="font" crossorigin="anonymous" />
-  <link rel="preload" href="fonts/montserrat-700.woff2" type="font/woff2" as="font" crossorigin="anonymous" />
-  <link rel="preload" href="fonts/montserrat-800.woff2" type="font/woff2" as="font" crossorigin="anonymous" />
+  <link rel="preload" href="fonts/Montserrat-Light.woff2" type="font/woff2" as="font" crossorigin="anonymous" />
+  <link rel="preload" href="fonts/Montserrat-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous" />
+  <link rel="preload" href="fonts/Montserrat-Medium.woff2" type="font/woff2" as="font" crossorigin="anonymous" />
+  <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" type="font/woff2" as="font" crossorigin="anonymous" />
+  <link rel="preload" href="fonts/Montserrat-Bold.woff2" type="font/woff2" as="font" crossorigin="anonymous" />
+  <link rel="preload" href="fonts/Montserrat-ExtraBold.woff2" type="font/woff2" as="font" crossorigin="anonymous" />
 </head>
 
 <body>
@@ -20,36 +21,42 @@
 
     <!-- Header -->
     <header class="page-header">
-      <a class="page-header__logo-link" href="index.html">
-        <span class="visually-hidden">Логотип сайта Путешествия.</span>
-        <svg class="page-header__icon" aria-hidden="true" focusable="false" width="205" height="62" xmlns="http://www.w3.org/2000/svg">
-          <use xlink:href="img/sprite.svg#logo" />
-        </svg>
-      </a>
-      <ul class="page-header__list">
-        <li class="page-header__item">
-          <a class="page-header__link" href="#!">Туры</a>
-        </li>
-        <li class="page-header__item">
-          <a class="page-header__link" href="#!">Обучение</a>
-        </li>
-        <li class="page-header__item">
-          <a class="page-header__link" href="#!">О нас</a>
-        </li>
-        <li class="page-header__item">
-          <a class="page-header__link" href="#!">Отзывы</a>
-        </li>
-        <li class="page-header__item">
-          <a class="page-header__link" href="#!">Фотографии</a>
-        </li>
-        <li class="page-header__item">
-          <a class="page-header__link" href="#!">Контакты</a>
-        </li>
-      </ul>
-      <div class="page-header__wrapper">
-        <a href="tel:88007253232" class="page-header__phone-link">8 800 725 32 32</a>
-      </div>
+      <nav class="page-header__nav">
+        <button class="page-header__toggle page-header__toggle--closed" type="button">
+          <span class="visually-hidden">Переключатель отображения меню.</span>
+        </button>
+        <a class="page-header__logo-link" href="index.html">
+          <span class="visually-hidden">Логотип сайта Путешествия.</span>
+          <svg class="page-header__icon" aria-hidden="true" focusable="false" width="205" height="62" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="img/sprite.svg#logo" />
+          </svg>
+        </a>
+        <ul class="page-header__list">
+          <li class="page-header__item">
+            <a class="page-header__link" href="404.html">Туры</a>
+          </li>
+          <li class="page-header__item">
+            <a class="page-header__link" href="#!">Обучение</a>
+          </li>
+          <li class="page-header__item">
+            <a class="page-header__link" href="#!">О нас</a>
+          </li>
+          <li class="page-header__item">
+            <a class="page-header__link" href="#!">Отзывы</a>
+          </li>
+          <li class="page-header__item">
+            <a class="page-header__link" href="#!">Фотографии</a>
+          </li>
+          <li class="page-header__item">
+            <a class="page-header__link" href="#!">Контакты</a>
+          </li>
+        </ul>
+        <div class="page-header__wrapper">
+          <a class="page-header__phone-link" href="tel:88007253232">8 800 725 32 32</a>
+        </div>
+      </nav>
     </header>
+
     <main class="main-page">
       <h1 class="visually-hidden">Сайт Путешествия для любителей походов в горы.</h1>
       <section class="hero">
