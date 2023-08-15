@@ -1,0 +1,20 @@
+.hero {
+  padding: 0 calc(50% - 720px);
+
+  @include vp-1199 {
+    padding: 0;
+  }
+}
+
+.hero__wrapper {
+  position: relative;
+}
+
+.hero__pagination {
+  position: absolute;
+  bottom: 100px;
+  right: 120px;
+  z-index: 5;
+}
+
+

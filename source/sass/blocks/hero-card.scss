@@ -1,0 +1,173 @@
+.hero-card {
+  position: relative;
+  color: $color-default-white;
+
+  @include vp-1199 {
+    width: 100%;
+  }
+}
+
+.hero-card__info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 181px 120px 80px;
+  width: 100%;
+  min-height: 800px;
+
+  @include vp-1199 {
+    padding: 174px 45px 90px;
+  }
+}
+
+.hero-card__title {
+  margin: 0 0 24px;
+  font-weight: 800;
+  font-size: $head-desktop;
+  line-height: $head-desktop;
+  z-index: 5;
+
+  @include vp-1199 {
+    margin-bottom: 13px;
+    font-size: $head-tablet;
+    line-height: $head-tablet;
+    text-align: center;
+
+    br {
+      display: none;
+    }
+  }
+}
+
+.hero-card__description {
+  margin: 0 0 37px;
+  font-size: 17px;
+  line-height: 24px;
+
+  @include vp-1199 {
+    margin-bottom: 27px;
+    text-align: center;
+  }
+}
+
+.hero-card__link {
+  padding: 17px;
+  width: 220px;
+  font-weight: 500;
+  text-align: center;
+
+  @include interaction;
+
+  @include vp-1199 {
+    margin: 0 auto 50px;
+    width: 206px;
+  }
+}
+
+.hero-card__media {
+  position: absolute;
+  bottom: 182px;
+  right: 120px;
+  width: 482px;
+  height: 317px;
+  background-image: url("../img/poster-desktop.jpg");
+
+  @include vp-1199 {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    margin: 0 auto;
+    width: 442px;
+    height: 300px;
+    background-image: url("../img/poster-tablet.jpg");
+  }
+}
+
+.hero-card__photo {
+  position: absolute;
+  bottom: 139px;
+  right: 120px;
+  width: 410px;
+  height: 459px;
+}
+
+.hero-card__btn {
+  position: absolute;
+  top: 131px;
+  left: 213px;
+  padding: 0;
+  width: 56px;
+  height: 56px;
+  background-color: inherit;
+  background-image: url("../img/svg/play-default.svg");
+  border: 0;
+  cursor: pointer;
+
+  @include vp-1199 {
+    top: 122px;
+    left: 193px;
+  }
+
+  @include hover {
+    background-image: url("../img/svg/play-hover.svg");
+  }
+
+  @include focus {
+    background-image: url("../img/svg/play-hover.svg");
+    outline: none;
+  }
+
+  &:active {
+    background-image: url("../img/svg/play-active.svg");
+  }
+
+  &:disabled {
+    background-image: url("../img/svg/play-disabled.svg");
+    pointer-events: none;
+  }
+}
+
+.hero-card__details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
+
+  @include vp-1199 {
+    display: none;
+  }
+}
+
+.hero-card__link-select {
+  position: relative;
+  padding: 12px 20px 14px 39px;
+  font-size: 12px;
+  line-height: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+
+  &--days,
+  &--level {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 14px;
+      left: 20px;
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  &--days {
+    &::before {
+      background-image: url("../img/svg/moon.svg");
+    }
+  }
+
+  &--level {
+    &::before {
+      background-image: url("../img/svg/level.svg");
+    }
+  }
+}

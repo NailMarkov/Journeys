@@ -8,8 +8,8 @@
   align-items: center;
   padding: 40px calc(50% - 600px);
   width: 100%;
-  background-color: tomato;
   color: white;
+  z-index: 10;
 
   @include vp-1199 {
     justify-content: space-between;
@@ -102,7 +102,7 @@
   }
 
   @include vp-767 {
-    padding-bottom: 39px;
+    padding-bottom: 41px;
   }
 
   &--opened {
@@ -115,12 +115,13 @@
     background-color: $color-default-white;
 
     @include vp-767 {
-      top: 88px;
+      top: 86px;
     }
   }
 }
 
 .page-header__link {
+  position: relative;
   margin-left: 22px;
   padding: 3px 5px;
   line-height: 16px;
@@ -138,6 +139,31 @@
     font-size: 14px;
     line-height: 14px;
     letter-spacing: 0.56px;
+  }
+
+  @include hover {
+    left: 5px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background-color: $color-default-white;
+    }
+  }
+
+  @include focus {
+    padding: 2px 4px;
+    border: 1px solid $color-default-white;
+    outline: none;
+  }
+
+  &[aria-disabled="true"] {
+    color: rgba(255, 255, 255, 0.5);
+    pointer-events: none;
   }
 }
 

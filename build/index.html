@@ -60,51 +60,94 @@
     <main class="main-page">
       <h1 class="visually-hidden">Сайт Путешествия для любителей походов в горы.</h1>
       <section class="hero">
-        <div class="swiper" data-slider="hero">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide hero-card" tabindex="0">
-              <h2 class="hero-card__title">Захватывающие вершины Кавказа</h2>
-              <p class="hero-card__description">
-                В&nbsp;сопровождении опытных гидов вы&nbsp;пройдете
-                через потрясающие ландшафты и&nbsp;совершите восход
-                на&nbsp;вершину горы Чегет.
-              </p>
-              <a class="hero-card__link" href="#!">Смотреть тур</a>
-              <div class="hero-card__media"></div>
-              <div class="hero-card__details">
-                <a class="hero-card__link-select" href="#!">6 дней/5 ночей</a>
-                <a class="hero-card__link-select" href="#!">Высокая сложность</a>
+        <div class="hero__wrapper">
+          <div class="swiper" data-slider="hero">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide hero-card" tabindex="0">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/hero/photo-mobile-1.webp, img/hero/photo-mobile-1@2x.webp 2x" />
+                  <source type="image/webp" media="(max-width: 1199px)" srcset="img/hero/photo-tablet-1.webp, img/hero/photo-tablet-1@2x.webp 2x" />
+                  <source type="image/webp" srcset="img/hero/photo-1.webp, img/hero/photo-1@2x.webp 2x" />
+                  <source media="(max-width: 767px)" srcset="img/hero/photo-mobile-1.jpg 1x, img/hero/photo-mobile-1@2x.jpg 2x" />
+                  <source media="(max-width: 1199px)" srcset="img/hero/photo-tablet-1.jpg 1x, img/hero/photo-tablet-1@2x.jpg 2x" />
+                  <img src="img/hero/photo-1.jpg" alt="Захватывающие вершины Кавказа" srcset="img/hero/photo-1@2x.jpg 2x" width="1440" height="880">
+                </picture>
+                <div class="hero-card__info">
+                  <h2 class="hero-card__title">Захватывающие<br> вершины Кавказа</h2>
+                  <p class="hero-card__description">
+                    В&nbsp;сопровождении опытных гидов вы&nbsp;пройдете<br>
+                    через потрясающие ландшафты и&nbsp;совершите<br> восход
+                    на&nbsp;вершину горы Чегет.
+                  </p>
+                  <a class="hero-card__link" href="#!">Смотреть тур</a>
+                  <div class="hero-card__media">
+                    <button class="hero-card__btn" type="button">
+                      <span class="visually-hidden">Запустить видео.</span>
+                    </button>
+                  </div>
+                  <div class="hero-card__details">
+                    <a class="hero-card__link-select hero-card__link-select--days" href="#!">6 дней/5 ночей</a>
+                    <a class="hero-card__link-select hero-card__link-select--level" href="#!">Высокая сложность</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide hero-card" tabindex="0">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/hero/photo-mobile-2.webp, img/hero/photo-mobile-2@2x.webp 2x" />
+                  <source type="image/webp" media="(max-width: 1199px)" srcset="img/hero/photo-tablet-2.webp, img/hero/photo-tablet-2@2x.webp 2x" />
+                  <source type="image/webp" srcset="img/hero/photo-2.webp, img/hero/photo-2@2x.webp 2x" />
+                  <source media="(max-width: 767px)" srcset="img/hero/photo-mobile-2.jpg 1x, img/hero/photo-mobile-2@2x.jpg 2x" />
+                  <source media="(max-width: 1199px)" srcset="img/hero/photo-tablet-2.jpg 1x, img/hero/photo-tablet-2@2x.jpg 2x" />
+                  <img src="img/hero/photo-2.jpg" alt="Невероятная природа Камчатки" srcset="img/hero/photo-2@2x.jpg 2x">
+                </picture>
+                <div class="hero-card__info">
+                  <h2 class="hero-card__title">Невероятная<br> природа Камчатки</h2>
+                  <p class="hero-card__description">
+                    Незабываемое приключение, во&nbsp;время которого
+                    вы&nbsp;отправитесь в&nbsp;путешествие по&nbsp;одному
+                    из&nbsp;самых нетронутых уголков дикой природы в&nbsp;мире.
+                  </p>
+                  <a class="hero-card__link" href="#!">Смотреть тур</a>
+                  <div class="hero-card__photo">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 1199px)" srcset="img/hero/photo-cards-tablet.webp, img/hero/photo-cards-tablet@2x.webp 2x" />
+                      <source type="image/webp" srcset="img/hero/photo-cards.webp, img/hero/photo-cards@2x.webp 2x" />
+                      <source media="(max-width: 1199px)" srcset="img/hero/photo-cards-tablet.jpg 1x, img/hero/photo-cards-tablet@2x.jpg 2x" />
+                      <img src="img/hero/photo-cards.png" alt="" srcset="img/hero/photo-cards@2x.png 2x">
+                    </picture>
+                  </div>
+                  <div class="hero-card__details">
+                    <a class="hero-card__link-select hero-card__link-select--days" href="#!">9 дней/10 ночей</a>
+                    <a class="hero-card__link-select hero-card__link-select--level" href="#!">Средняя сложность</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide hero-card" tabindex="0">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/hero/photo-mobile-3.webp, img/hero/photo-mobile-3@2x.webp 2x" />
+                  <source type="image/webp" media="(max-width: 1199px)" srcset="img/hero/photo-tablet-3.webp, img/hero/photo-tablet-3@2x.webp 2x" />
+                  <source type="image/webp" srcset="img/hero/photo-3.webp, img/hero/photo-3@2x.webp 2x" />
+                  <source media="(max-width: 767px)" srcset="img/hero/photo-mobile-3.jpg 1x, img/hero/photo-mobile-3@2x.jpg 2x" />
+                  <source media="(max-width: 1199px)" srcset="img/hero/photo-tablet-3.jpg 1x, img/hero/photo-tablet-3@2x.jpg 2x" />
+                  <img src="img/hero/photo-3.jpg" alt="Магические пейзажи Алтайского Края" srcset="img/hero/photo-3@2x.jpg 2x">
+                </picture>
+                <div class="hero-card__info">
+                  <h2 class="hero-card__title">Магические пейзажи<br> Алтайского Края</h2>
+                  <p class="hero-card__description">
+                    Алтайский трекинг-тур&nbsp;&mdash; это захватывающее
+                    приключение с&nbsp;посещением магических и&nbsp;захватывающих
+                    дух ландшафтов Алтайских гор.
+                  </p>
+                  <a class="hero-card__link" href="#!">Смотреть тур</a>
+                  <div class="hero-card__radio"></div>
+                  <div class="hero-card__details">
+                    <a class="hero-card__link-select hero-card__link-select--days" href="#!">8 дней/7 ночей</a>
+                    <a class="hero-card__link-select hero-card__link-select--level" href="#!">Легкая сложность</a>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="swiper-slide hero-card" tabindex="0">
-              <h2 class="hero-card__title">Невероятная природа Камчатки</h2>
-              <p class="hero-card__description">
-                Незабываемое приключение, во&nbsp;время которого
-                вы&nbsp;отправитесь в&nbsp;путешествие по&nbsp;одному
-                из&nbsp;самых нетронутых уголков дикой природы в&nbsp;мире.
-              </p>
-              <a class="hero-card__link" href="#!">Смотреть тур</a>
-              <div class="hero-card__media"></div>
-              <div class="hero-card__details">
-                <a class="hero-card__link-select" href="#!">9 дней/10 ночей</a>
-                <a class="hero-card__link-select" href="#!">Средняя сложность</a>
-              </div>
-            </div>
-            <div class="swiper-slide hero-card" tabindex="0">
-              <h2 class="hero-card__title">Магические пейзажи Алтайского Края</h2>
-              <p class="hero-card__description">
-                Алтайский трекинг-тур&nbsp;&mdash; это захватывающее
-                приключение с&nbsp;посещением магических и&nbsp;захватывающих
-                дух ландшафтов Алтайских гор.
-              </p>
-              <a class="hero-card__link" href="#!">Смотреть тур</a>
-              <div class="hero-card__media"></div>
-              <div class="hero-card__details">
-                <a class="hero-card__link-select" href="#!">8 дней/7 ночей</a>
-                <a class="hero-card__link-select" href="#!">Легкая сложность</a>
-              </div>
-            </div>
-          </div>
+          <div class="swiper-pagination" data-pagination="hero"></div>
         </div>
       </section>
 

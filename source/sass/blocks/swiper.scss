@@ -1,0 +1,11 @@
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: inherit;
+  border: 1px solid $color-default-white;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $color-default-white;
+}
