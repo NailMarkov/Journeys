@@ -1,0 +1,49 @@
+.video__player {
+  display: none;
+}
+
+.video.is-active {
+  .video__player {
+    display: block;
+  }
+
+  .video__control {
+    display: none;
+  }
+}
+
+.video__control {
+  position: absolute;
+  top: 131px;
+  left: 213px;
+  padding: 0;
+  width: 56px;
+  height: 56px;
+  background-color: inherit;
+  background-image: url("../img/svg/play-default.svg");
+  border: 0;
+  cursor: pointer;
+
+  @include vp-1199 {
+    top: 122px;
+    left: 193px;
+  }
+
+  @include hover {
+    background-image: url("../img/svg/play-hover.svg");
+  }
+
+  @include focus {
+    background-image: url("../img/svg/play-hover.svg");
+    outline: none;
+  }
+
+  &:active {
+    background-image: url("../img/svg/play-active.svg");
+  }
+
+  &:disabled {
+    background-image: url("../img/svg/play-disabled.svg");
+    pointer-events: none;
+  }
+}
