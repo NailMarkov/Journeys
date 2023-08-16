@@ -1,3 +1,80 @@
 .radio {
+  display: grid;
+  grid-template-columns: 1fr;
   padding: 40px;
+  color: $color-resolution-blue;
+}
+
+.radio__title {
+  margin: 0;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 22px;
+}
+
+.radio__block-interaction {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+}
+
+.radio__subtitle {
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: rgba(28, 51, 116, 0.48);
+}
+
+.radio__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -4px 0 0 auto;
+  padding: 0;
+  list-style-type: none;
+}
+
+.radio__link-action {
+  margin-left: 14px;
+}
+
+.radio__block-range {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.radio__range {
+  position: relative;
+  grid-column: 1 / -1;
+  height: 2px;
+  background-color: rgba(28, 51, 116, 0.4);
+}
+
+.radio__range-bar {
+  position: absolute;
+  left: 0;
+  width: 148px;
+  height: 2px;
+  background-color: $color-resolution-blue;
+  z-index: 5;
+}
+
+.radio__range-button {
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  width: 8px;
+  height: 8px;
+  background-color: $color-resolution-blue;
+  border: 0;
+  border-radius: 50%;
+}
+
+.radio__time {
+  display: block;
+  font-size: 10px;
+  line-height: 10px;
+
+  &--full {
+    margin-left: auto;
+  }
 }
