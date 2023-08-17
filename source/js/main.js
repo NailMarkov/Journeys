@@ -4,6 +4,7 @@ import {Form} from './modules/form-validate/form';
 import {initVideos} from './modules/video';
 import {showMenu} from './modules/menu';
 import {initSliderHero} from './modules/swiper';
+import {initAudio} from './modules/audio';
 
 // ---------------------------------
 
@@ -20,6 +21,7 @@ window.addEventListener('DOMContentLoaded', () => {
   showMenu();
   initSliderHero();
   initVideos();
+  initAudio();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана

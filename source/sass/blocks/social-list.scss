@@ -1,0 +1,38 @@
+.social-list {
+  grid-column: 1 / -1;
+  align-self: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto 20px;
+  padding: 0;
+  list-style-type: none;
+
+  @include vp-767 {
+    margin-left: -16px;
+  }
+}
+
+.social-list__link {
+  margin-left: 16px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid $color-elephant;
+
+  &--vk {
+    padding: 6px 6px 6px 5px;
+  }
+
+  &--ok {
+    padding: 6px 6px 6px 5px;
+
+  }
+
+  &--reddit {
+    padding: 6px 6px 6px 5px;
+  }
+}
+
+.social-list__icon {
+  display: block;
+  margin: auto;
+}

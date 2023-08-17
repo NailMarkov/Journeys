@@ -4,8 +4,36 @@
   background: inherit;
   border: 1px solid $color-default-white;
   opacity: 1;
+
+  @include vp-767 {
+    margin: 0 6px;
+    width: 8px;
+    height: 8px;
+  }
 }
 
 .swiper-pagination-bullet-active {
   background-color: $color-default-white;
+}
+
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  @include vp-1199 {
+    bottom: 84px;
+    right: 349px;
+  }
+
+  @include vp-767 {
+    bottom: 34px;
+    right: 130px;
+  }
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  @include vp-767 {
+    margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 6px);
+  }
 }

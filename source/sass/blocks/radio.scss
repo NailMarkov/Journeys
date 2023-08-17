@@ -3,6 +3,10 @@
   grid-template-columns: 1fr;
   padding: 40px;
   color: $color-resolution-blue;
+
+  @include vp-767 {
+    display: none;
+  }
 }
 
 .radio__title {
@@ -10,6 +14,10 @@
   font-weight: 400;
   font-size: 22px;
   line-height: 22px;
+
+  @include vp-1199 {
+    text-align: left;
+  }
 }
 
 .radio__block-interaction {
@@ -39,7 +47,7 @@
 
 .radio__block-range {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
 }
 
 .radio__range {
@@ -69,6 +77,10 @@
   border-radius: 50%;
 }
 
+.radio__block-time {
+  display: flex;
+}
+
 .radio__time {
   display: block;
   font-size: 10px;
@@ -76,5 +88,36 @@
 
   &--full {
     margin-left: auto;
+  }
+}
+
+.radio__buttons {
+  display: flex;
+  align-items: center;
+  align-self: flex-end;
+}
+
+.radio__button {
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  background-color: inherit;
+  border: 0;
+  cursor: pointer;
+
+  &--shuffle {
+    margin-right: 45px;
+  }
+
+  &--prev {
+    margin-right: 15px;
+  }
+
+  &--next {
+    margin-left: 15px;
+  }
+
+  &--repeat {
+    margin-left: 45px;
   }
 }

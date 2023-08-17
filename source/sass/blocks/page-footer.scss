@@ -1,0 +1,147 @@
+.page-footer {
+  display: grid;
+  grid-template-columns: min-content 1fr 142px;
+  align-items: center;
+  padding: 31px calc(50% - 600px);
+
+  @include vp-1199 {
+    grid-template-columns: min-content 1fr;
+    padding: 44px 45px 40px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    padding: 30px 20px;
+  }
+}
+
+.page-footer__logo-link {
+  margin-right: 100px;
+
+  @include vp-1199 {
+    margin-right: 80px;
+    margin-bottom: 37px;
+  }
+
+  @include vp-767 {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.page-footer__icon {
+  @include vp-1199 {
+    width: 118px;
+    height: 34px;
+  }
+
+  @include vp-767 {
+    width: 112px;
+    height: 34px;
+  }
+}
+
+.page-footer__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 3px -22px;
+  padding: 0;
+  list-style-type: none;
+
+  @include vp-1199 {
+    justify-self: end;
+    margin-bottom: 37px;
+  }
+
+  @include vp-767 {
+    justify-self: start;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 9px 71px;
+    margin-left: 0;
+    margin-bottom: 25px;
+  }
+}
+
+.page-footer__item {
+  @include vp-767 {
+    &--training {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+    }
+
+    &--photo {
+      grid-column: 1 / 2;
+      grid-row: 3 / 4;
+    }
+  }
+}
+
+.page-footer__link {
+  position: relative;
+  margin-left: 22px;
+  padding: 3px 5px;
+  line-height: 16px;
+
+  @include vp-1199 {
+    margin-left: 10px;
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  @include vp-767 {
+    margin-left: 0;
+  }
+
+  @include hover {
+    left: 5px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background-color: $color-elephant;
+    }
+  }
+
+  @include focus {
+    padding: 2px 4px;
+    border: 1px solid $color-elephant;
+    outline: none;
+  }
+
+  &[aria-disabled="true"] {
+    color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+  }
+}
+
+.page-footer__wrapper {
+  margin-left: auto;
+  margin-bottom: 3px;
+
+  @include vp-1199 {
+    display: none;
+  }
+}
+
+.page-footer__phone-link {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.page-footer__copyright {
+  grid-column: 1 /-1;
+  margin: 0 auto;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 12px;
+
+  @include vp-767 {
+    margin: 0;
+  }
+}
