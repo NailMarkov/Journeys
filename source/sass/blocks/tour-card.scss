@@ -1,0 +1,36 @@
+.tour-card {
+  position: relative;
+  width: 380px;
+
+  img {
+    width: 100%;
+  }
+}
+
+.tour-card__block {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 23px;
+  padding: 206px 20px 28px;
+  color: $color-default-white;
+
+  @include vp-767 {
+    gap: 15px;
+    padding-top: 192px;
+  }
+}
+
+.tour-card__title {
+  margin: 0 0 15px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+
+  @include vp-767 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}

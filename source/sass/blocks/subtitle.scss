@@ -1,0 +1,39 @@
+.subtitle {
+  position: relative;
+  margin: 0;
+  font-weight: 800;
+  font-size: $subhead-desktop;
+  line-height: $subhead-desktop;
+
+  @include vp-1199 {
+    font-size: $subhead-tablet;
+    line-height: $subhead-tablet;
+  }
+
+  @include vp-767 {
+    font-size: $subhead-mobile;
+    line-height: $subhead-mobile;
+  }
+}
+
+.subtitle__bg {
+  position: absolute;
+  top: -17px;
+  left: 0;
+  font-size: 55px;
+  line-height: 55px;
+  color: rgba(45, 56, 63, 0.03);
+
+  @include vp-1199 {
+    top: -13px;
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  @include vp-767 {
+    top: -3px;
+    width: 256px;
+    font-size: 26px;
+    line-height: 26px;
+  }
+}

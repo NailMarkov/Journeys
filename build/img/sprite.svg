@@ -2,7 +2,13 @@
 <clipPath id="clip0_131_3790">
 <rect width="205" height="62" fill="white"/>
 </clipPath>
-</defs><symbol id="cross" viewBox="0 0 22 22"><g fill="currentColor">
+</defs><symbol id="arrow-next" viewBox="0 0 14 8"><g fill="currentColor">
+<path d="M13.3536 4.35355C13.5488 4.15829 13.5488 3.84171 13.3536 3.64645L10.1716 0.464466C9.97631 0.269204 9.65973 0.269204 9.46447 0.464466C9.2692 0.659728 9.2692 0.976311 9.46447 1.17157L12.2929 4L9.46447 6.82843C9.2692 7.02369 9.2692 7.34027 9.46447 7.53553C9.65973 7.7308 9.97631 7.7308 10.1716 7.53553L13.3536 4.35355ZM0 4.5H13V3.5H0V4.5Z"/>
+</g></symbol><symbol id="arrow-prev" viewBox="0 0 14 8"><g fill="currentColor">
+<path d="M0.646446 4.35355C0.451184 4.15829 0.451184 3.84171 0.646446 3.64645L3.82843 0.464466C4.02369 0.269204 4.34027 0.269204 4.53553 0.464466C4.7308 0.659728 4.7308 0.976311 4.53553 1.17157L1.70711 4L4.53553 6.82843C4.7308 7.02369 4.7308 7.34027 4.53553 7.53553C4.34027 7.7308 4.02369 7.7308 3.82843 7.53553L0.646446 4.35355ZM14 4.5H1V3.5H14V4.5Z"/>
+</g></symbol><symbol id="arrow-right" viewBox="0 0 9 14"><g fill="none">
+<path d="M1 13L7 7L0.999999 1" stroke="currentColor" stroke-width="2"/>
+</g></symbol><symbol id="cross" viewBox="0 0 22 22"><g fill="currentColor">
 <path d="M2 2L11 11M20 20L11 11M11 11L20 2L2 20" stroke="#2D383F" stroke-width="2"/>
 </g></symbol><symbol id="heart" viewBox="0 0 17 17"><g fill="currentColor">
 <g id="icon/heart">

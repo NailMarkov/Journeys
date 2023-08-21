@@ -1,0 +1,132 @@
+.tours {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  gap: 54px;
+  padding: 123px calc(50% - 600px) 100px;
+  z-index: 1;
+
+  @include vp-1199 {
+    gap: 38px;
+    padding: 83px 45px 43px;
+  }
+
+  @include vp-767 {
+    gap: 28px;
+    padding: 69px 15px 33px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -18px;
+    right: 0;
+    width: 602px;
+    height: 1364px;
+    background-image: url("../img/background/tour-clouds.png");
+    background-repeat: no-repeat;
+    z-index: 0;
+
+    @include vp-1199 {
+      top: -95px;
+      right: -308px;
+    }
+
+    @include vp-767 {
+      top: 137px;
+      right: -170px;
+      width: 346px;
+      height: 595px;
+      background-image: url("../img/background/tour-clouds-mobile.png");
+    }
+  }
+}
+
+.tours__title {
+  @include vp-1199 {
+    margin-top: 5px;
+  }
+
+  @include vp-767 {
+    margin-top: -3px;
+  }
+}
+
+.tours__block-button {
+  display: flex;
+  gap: 4px;
+  z-index: 1;
+}
+
+.tours__btn {
+  width: 37px;
+  height: 35px;
+
+  @include hover {
+    .btn__icon {
+      color: $color-resolution-blue;
+    }
+  }
+}
+
+.tours__slider-wrapper {
+  grid-column: 1 / -1;
+
+  @include vp-1199 {
+    margin-left: 7px;
+    margin-right: 5px;
+  }
+
+  @include vp-767 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.tours__link {
+  grid-column: 1 / -1;
+  margin-top: -5px;
+  margin-left: 3px;
+  font-weight: 700;
+  letter-spacing: 0.64px;
+  text-align: center;
+  text-transform: uppercase;
+  z-index: 3;
+
+  @include vp-1199 {
+    margin-top: 10px;
+    margin-left: 5px;
+  }
+
+  @include vp-767 {
+    margin-top: 0;
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  @include hover {
+    color: $color-resolution-blue;
+  }
+
+  @include focus {
+    color: $color-resolution-blue;
+    outline: none;
+  }
+
+  &:active {
+    color: $color-navy-blue;
+  }
+
+  &[aria-disabled="true"] {
+    background-color: rgba(2, 102, 193, 0.1);
+    pointer-events: none;
+  }
+}
+
+.tours__icon {
+  margin-left: 6px;
+
+  @include vp-767 {
+    margin-left: 4px;
+  }
+}

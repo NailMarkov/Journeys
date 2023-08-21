@@ -1,0 +1,114 @@
+.details-list {
+  display: grid;
+  grid-template-columns: 108px 86px 95px;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  @include vp-1199 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    width: 284px;
+  }
+
+  @include vp-767 {
+    gap: 11px 23px;
+    width: 250px;
+  }
+}
+
+.details-list__item:first-child {
+  @include vp-767 {
+    order: 1;
+  }
+}
+
+.details-list__link {
+  position: relative;
+  padding: 9px 0 8px 22px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 12px;
+
+  &--map {
+    padding: 9px 23px 8px 39px;
+    background-color: $color-navy-blue;
+
+    @include vp-1199 {
+      padding-left: 30px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 9px;
+      left: 24px;
+      width: 9px;
+      height: 12px;
+      background-image: url("../img/svg/location.svg");
+
+      @include vp-1199 {
+        left: 15px;
+      }
+    }
+  }
+
+  &--day {
+    text-align: right;
+
+    @include vp-1199 {
+      margin-left: 18px;
+      padding-left: 28px;
+    }
+
+    @include vp-767 {
+      margin-left: 0;
+      padding-left: 34px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 12px;
+      width: 20px;
+      height: 20px;
+      background-image: url("../img/svg/day.svg");
+
+      @include vp-1199 {
+        left: 0;
+      }
+    }
+  }
+
+  &--night {
+    padding-left: 41px;
+    text-align: right;
+
+    @include vp-1199 {
+      margin-left: 18px;
+      padding-left: 27px;
+    }
+
+    @include vp-1199 {
+      margin-left: 0;
+      padding-left: 34px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 4px;
+      left: 15px;
+      width: 20px;
+      height: 20px;
+      background-image: url("../img/svg/night.svg");
+
+      @include vp-1199 {
+        left: 0;
+      }
+    }
+  }
+}
