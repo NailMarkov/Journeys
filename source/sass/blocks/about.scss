@@ -1,0 +1,31 @@
+.about {
+  padding: 69px calc(50% - 600px) 50px;
+  background-image: url("../img/background/about.png");
+  background-repeat: no-repeat;
+  background-position: 0 34px;
+
+  @include vp-1199 {
+    padding: 45px;
+    min-height: 560px;
+    background-image: url("../img/background/about-tablet.png");
+    background-position: 0 53px;
+  }
+
+  @include vp-767 {
+    padding: 15px;
+    background-position: -42px -9px;
+  }
+}
+
+.about__wrapper {
+  padding-left: 615px;
+
+  @include vp-1199 {
+    padding-left: 354px;
+  }
+
+  @include vp-767 {
+    padding-top: 425px;
+    padding-left: 0;
+  }
+}
