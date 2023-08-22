@@ -1,0 +1,126 @@
+.training {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  align-items: center;
+  gap: 30px;
+  padding: 69px calc(50% - 600px) 95px;
+
+  @include vp-1199 {
+    gap: 20px;
+    padding: 39px 45px 45px;
+  }
+
+  @include vp-767 {
+    gap: 10px;
+    padding: 34px 15px 16px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 62px;
+    width: 100%;
+    height: 1px;
+    background-color: rgb(2, 102, 193, 0.2);
+
+    @include vp-1199 {
+      display: none;
+    }
+  }
+}
+
+.training__title {
+  grid-column: 1 / -1;
+  margin-bottom: 3px;
+
+  @include vp-1199 {
+    margin-bottom: 0;
+  }
+
+  @include vp-767 {
+    margin-bottom: 6px;
+  }
+}
+
+.training__description {
+  position: relative;
+  grid-column: 1 / -1;
+  margin: 0 0 19px;
+  padding-right: 400px;
+  z-index: 5;
+
+  @include vp-1199 {
+    margin-bottom: 38px;
+    padding-right: 150px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 28px;
+    padding-right: 0;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.training__subtitle {
+  margin: 0;
+  font-size: 21px;
+  line-height: 21px;
+
+  @include vp-1199 {
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  &--btn {
+    grid-column: 1 / 2;
+  }
+
+  &--inner {
+    grid-column: 1 / -1;
+    margin-bottom: 12px;
+
+    @include vp-1199 {
+      margin-bottom: 21px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 19px;
+      margin-left: 4px;
+    }
+  }
+}
+
+.training__block-button {
+  display: flex;
+  gap: 4px;
+  margin-right: 2px;
+
+  @include vp-1199{
+    margin-right: 0;
+  }
+}
+
+.training__btn {
+  position: relative;
+  z-index: 5;
+}
+
+.training__slider-wrapper {
+  grid-column: 1 / -1;
+  margin: -15px 0 0;
+
+  @include vp-1199 {
+    margin-bottom: 3px;
+  }
+
+  @include vp-767 {
+    margin-bottom: -2px;
+  }
+}

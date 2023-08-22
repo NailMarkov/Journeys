@@ -1,0 +1,214 @@
+.process-list {
+  position: relative;
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  @include vp-1199 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 90px 30px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+}
+
+.process-list__item {
+  position: relative;
+  padding-left: 40px;
+  background-repeat: no-repeat;
+  background-position: left 10px;
+
+  @include vp-1199 {
+    padding-right: 60px;
+    min-height: 44px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  @include vp-767 {
+    padding-left: 68px;
+    padding-right: 30px;
+    font-size: 12px;
+    line-height: 18px;
+    background-position: 37px 7px;
+  }
+
+  &--map {
+    background-image: url("../img/svg/map.svg");
+
+    @include vp-767 {
+      background-size: 19px 19px;
+    }
+
+    &::before {
+      bottom: -40px;
+      left: 0;
+
+      @include vp-1199 {
+        bottom: -24px;
+      }
+
+      @include vp-767 {
+        bottom: 18px;
+        left: 3px;
+      }
+    }
+
+    &::after {
+      @include vp-1199 {
+        bottom: -17px;
+        left: 0;
+        right: -30px;
+        height: 1px;
+      }
+
+      @include vp-767 {
+        top: 12px;
+        left: 9px;
+        width: 1px;
+        height: 62px;
+      }
+    }
+  }
+
+  &--equipment {
+    background-image: url("../img/svg/boots.svg");
+
+    @include vp-767 {
+      background-size: 19px 19px;
+    }
+
+    &::before {
+      bottom: -40px;
+      left: 0;
+
+      @include vp-1199 {
+        bottom: -24px;
+      }
+
+      @include vp-767 {
+        bottom: 18px;
+        left: 3px;
+      }
+    }
+
+    &::after {
+      @include vp-1199 {
+        bottom: -70px;
+        left: 7px;
+        width: 1px;
+        height: 56px;
+      }
+
+      @include vp-767 {
+        top: 12px;
+        left: 9px;
+        width: 1px;
+        height: 62px;
+      }
+    }
+  }
+
+  &--eco {
+    background-image: url("../img/svg/pine-tree.svg");
+
+    @include vp-1199 {
+      grid-column: 2 / 3;
+    }
+
+    @include vp-767 {
+      grid-column: 1 / -1;
+      background-size: 19px 19px;
+    }
+
+    &::before {
+      bottom: -40px;
+      left: 0;
+
+      @include vp-1199 {
+        bottom: 0;
+        top: -26px;
+      }
+
+      @include vp-767 {
+        top: 11px;
+        left: 3px;
+      }
+    }
+
+    &::after {
+      @include vp-767 {
+        top: 12px;
+        left: 9px;
+        width: 1px;
+        height: 62px;
+      }
+    }
+  }
+
+  &--obstacle {
+    background-image: url("../img/svg/mountain.svg");
+
+    @include vp-1199 {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+    }
+
+    @include vp-767 {
+      grid-column: 1 / -1;
+      grid-row: 4 / 5;
+      background-size: 19px 19px;
+    }
+
+    &::before {
+      bottom: -40px;
+      left: 0;
+
+      @include vp-1199 {
+        bottom: 0;
+        top: -26px;
+      }
+
+      @include vp-767 {
+        top: 11px;
+        left: 3px;
+      }
+    }
+
+    &::after {
+      @include vp-1199 {
+        bottom: 0;
+        top: -19px;
+        left: 0;
+        right: -30px;
+        height: 1px;
+      }
+
+      @include vp-767 {
+        display: none;
+      }
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background-color: $color-navy-blue;
+    border-radius: 50%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: rgb(2, 102, 193, 0.2);
+  }
+}

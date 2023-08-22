@@ -37,7 +37,7 @@
             <a class="page-header__link" href="#tours">Туры</a>
           </li>
           <li class="page-header__item">
-            <a class="page-header__link" href="#!">Обучение</a>
+            <a class="page-header__link" href="#training">Обучение</a>
           </li>
           <li class="page-header__item">
             <a class="page-header__link" href="#!">О нас</a>
@@ -581,90 +581,238 @@
       </section>
 
       <!-- Training -->
-      <section class="training">
-        <h2 class="training__title subtitle">Обучение</h2>
+      <section class="training" id="training">
+        <h2 class="training__title subtitle">
+          Обучение
+          <span class="subtitle__bg">Обучение</span>
+        </h2>
         <p class="training__description">
           Обучение проводится квалифицированными специалистами,
           за&nbsp;плечами которых десятки пройденных маршрутов
           Кавказа, Крыма, Гималаев, Эльбруса, Алтая, Карелии,
           Адыгеи и&nbsp;других.
         </p>
-        <h3 class="training__subtitle">Наши инструкторы</h3>
-        <button class="training__btn btn" type="button">
-          <span class="visually-hidden">Переключить слайд назад.</span>
-          <svg class="btn__icon" aria-hidden="true" focusable="false" width="13" height="13"
-            xmlns="http://www.w3.org/2000/svg">
-            <use xlink:href="img/sprite.svg#arrow-prev" />
-          </svg>
-        </button>
-        <button class="training__btn btn" type="button">
-          <span class="visually-hidden">Переключить слайд вперед.</span>
-          <svg class="btn__icon" aria-hidden="true" focusable="false" width="13" height="13"
-            xmlns="http://www.w3.org/2000/svg">
-            <use xlink:href="img/sprite.svg#arrow-prev" />
-          </svg>
-        </button>
-        <div class="swiper" data-slider="training">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide instructor-card" tabindex="0">
-              <picture>
-                <source type="image/webp" srcset="img/instructors/photo-1.webp, img/instructors/photo-1@2x.webp 2x" />
-                <img src="img/instructors/photo-1.jpg" alt="Фото инструктора." srcset="img/instructors/photo-1@2x.jpg"
-                  width="238" height="213">
-              </picture>
-              <h4 class="instructor-card__name">Александр Прокофьев</h4>
-              <p class="instructor-card__text">
-                Строгий и&nbsp;внимательный инструктор,
-                веселый и&nbsp;общительный человек. Любит природу.
-              </p>
-            </div>
-            <div class="swiper-slide instructor-card" tabindex="0">
-              <picture>
-                <source type="image/webp" srcset="img/instructors/photo-2.webp, img/instructors/photo-2@2x.webp 2x" />
-                <img src="img/instructors/photo-2.jpg" alt="Фото инструктора." srcset="img/instructors/photo-2@2x.jpg"
-                  width="238" height="213">
-              </picture>
-              <h4 class="instructor-card__name">Светлана Афиногенова</h4>
-              <p class="instructor-card__text">
-                Видеть мир вокруг, познавать его опасности, находить
-                друг друга, становиться ближе, чувствовать&nbsp;&mdash;
-                в&nbsp;этом назначение жизни.
-              </p>
-            </div>
-            <div class="swiper-slide instructor-card" tabindex="0">
-              <picture>
-                <source type="image/webp" srcset="img/instructors/photo-3.webp, img/instructors/photo-3@2x.webp 2x" />
-                <img src="img/instructors/photo-3.jpg" alt="Фото инструктора." srcset="img/instructors/photo-3@2x.jpg"
-                  width="238" height="213">
-              </picture>
-              <h4 class="instructor-card__name">Надежда Колесниченко</h4>
-              <p class="instructor-card__text">
-                Участники говорят, что Надежда ответственная, приятная
-                в&nbsp;общении, и&nbsp;в&nbsp;поездках с&nbsp;ней
-                чувствуешь себя спокойно и&nbsp;уверенно.
-              </p>
-            </div>
-            <div class="swiper-slide instructor-card" tabindex="0">
-              <picture>
-                <source type="image/webp" srcset="img/instructors/photo-4.webp, img/instructors/photo-4@2x.webp 2x" />
-                <img src="img/instructors/photo-4.jpg" alt="Фото инструктора." srcset="img/instructors/photo-4@2x.jpg"
-                  width="238" height="213">
-              </picture>
-              <h4 class="instructor-card__name">Федор Кайгородов</h4>
-              <p class="instructor-card__text">
-                Опыт походов: Ходит в&nbsp;походы с&nbsp;2001&nbsp;года.
-                В&nbsp;России побывал в&nbsp;горных районах Хибины,
-                Архыз, много путешествует по&nbsp;Европе.
-              </p>
+        <h3 class="training__subtitle training__subtitle--btn">Наши инструкторы</h3>
+        <div class="training__block-button">
+          <button class="training__btn btn" type="button" data-prev="training">
+            <span class="visually-hidden">Переключить слайд назад.</span>
+            <svg class="btn__icon" aria-hidden="true" focusable="false" width="13" height="13"
+              xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="img/sprite.svg#arrow-prev" />
+            </svg>
+          </button>
+          <button class="training__btn btn" type="button" data-next="training">
+            <span class="visually-hidden">Переключить слайд вперед.</span>
+            <svg class="btn__icon" aria-hidden="true" focusable="false" width="13" height="13"
+              xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="img/sprite.svg#arrow-next" />
+            </svg>
+          </button>
+        </div>
+        <div class="training__slider-wrapper">
+          <div class="swiper" data-slider="training">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide instructor-card" tabindex="0">
+                <div class="instructor-card__photo">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)"
+                      srcset="img/instructors/photo-mobile-1.webp, img/instructors/photo-mobile-1@2x.webp 2x" />
+                    <source type="image/webp" media="(max-width: 1199px)"
+                      srcset="img/instructors/photo-tablet-1.webp, img/instructors/photo-tablet-1@2x.webp 2x" />
+                    <source type="image/webp"
+                      srcset="img/instructors/photo-1.webp, img/instructors/photo-1@2x.webp 2x" />
+                    <source media="(max-width: 767px)"
+                      srcset="img/instructors/photo-mobile-1.jpg 1x, img/instructors/photo-mobile-1@2x.jpg 2x" />
+                    <source media="(max-width: 1199px)"
+                      srcset="img/instructors/photo-tablet-1.jpg 1x, img/instructors/photo-tablet-1@2x.jpg 2x" />
+                    <img src="img/instructors/photo-1.jpg" alt="Фото инструктора."
+                      srcset="img/instructors/photo-1@2x.jpg" width="238" height="212">
+                  </picture>
+                </div>
+                <div class="instructor-card__block">
+                  <h4 class="instructor-card__name">Александр Прокофьев</h4>
+                  <a class="instructor-card__link" href="#!">
+                    <svg class="instructor-card__icon" aria-hidden="true" focusable="false" width="16" height="9"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="img/sprite.svg#vk" />
+                    </svg>
+                  </a>
+                </div>
+                <p class="instructor-card__text">
+                  Строгий и&nbsp;внимательный инструктор,
+                  веселый и&nbsp;общительный человек. Любит природу.
+                </p>
+              </div>
+              <div class="swiper-slide instructor-card" tabindex="0">
+                <div class="instructor-card__photo">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)"
+                      srcset="img/instructors/photo-mobile-2.webp, img/instructors/photo-mobile-2@2x.webp 2x" />
+                    <source type="image/webp" media="(max-width: 1199px)"
+                      srcset="img/instructors/photo-tablet-2.webp, img/instructors/photo-tablet-2@2x.webp 2x" />
+                    <source type="image/webp"
+                      srcset="img/instructors/photo-2.webp, img/instructors/photo-2@2x.webp 2x" />
+                    <source media="(max-width: 767px)"
+                      srcset="img/instructors/photo-mobile-2.jpg 1x, img/instructors/photo-mobile-2@2x.jpg 2x" />
+                    <source media="(max-width: 1199px)"
+                      srcset="img/instructors/photo-tablet-2.jpg 1x, img/instructors/photo-tablet-2@2x.jpg 2x" />
+                    <img src="img/instructors/photo-2.jpg" alt="Фото инструктора."
+                      srcset="img/instructors/photo-2@2x.jpg" width="238" height="213">
+                  </picture>
+                </div>
+                <div class="instructor-card__block">
+                  <h4 class="instructor-card__name">Светлана Афиногенова</h4>
+                  <a class="instructor-card__link" href="#!">
+                    <svg class="instructor-card__icon" aria-hidden="true" focusable="false" width="16" height="9"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="img/sprite.svg#vk" />
+                    </svg>
+                  </a>
+                </div>
+                <p class="instructor-card__text">
+                  Видеть мир вокруг, познавать его опасности, находить
+                  друг друга, становиться ближе, чувствовать -
+                  в&nbsp;этом назначение жизни.
+                </p>
+              </div>
+              <div class="swiper-slide instructor-card" tabindex="0">
+                <div class="instructor-card__photo">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)"
+                      srcset="img/instructors/photo-mobile-3.webp, img/instructors/photo-mobile-3@2x.webp 2x" />
+                    <source type="image/webp" media="(max-width: 1199px)"
+                      srcset="img/instructors/photo-tablet-3.webp, img/instructors/photo-tablet-3@2x.webp 2x" />
+                    <source type="image/webp"
+                      srcset="img/instructors/photo-3.webp, img/instructors/photo-3@2x.webp 2x" />
+                    <source media="(max-width: 767px)"
+                      srcset="img/instructors/photo-mobile-3.jpg 1x, img/instructors/photo-mobile-3@2x.jpg 2x" />
+                    <source media="(max-width: 1199px)"
+                      srcset="img/instructors/photo-tablet-3.jpg 1x, img/instructors/photo-tablet-3@2x.jpg 2x" />
+                    <img src="img/instructors/photo-3.jpg" alt="Фото инструктора."
+                      srcset="img/instructors/photo-3@2x.jpg" width="238" height="213">
+                  </picture>
+                </div>
+                <div class="instructor-card__block">
+                  <h4 class="instructor-card__name">Надежда Колесниченко</h4>
+                  <a class="instructor-card__link" href="#!">
+                    <svg class="instructor-card__icon" aria-hidden="true" focusable="false" width="16" height="9"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="img/sprite.svg#vk" />
+                    </svg>
+                  </a>
+                </div>
+                <p class="instructor-card__text">
+                  Участники говорят, что Надежда ответственная, приятная
+                  в&nbsp;общении, и в поездках с&nbsp;ней
+                  чувствуешь себя спокойно и&nbsp;уверенно.
+                </p>
+              </div>
+              <div class="swiper-slide instructor-card" tabindex="0">
+                <div class="instructor-card__photo">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)"
+                      srcset="img/instructors/photo-mobile-4.webp, img/instructors/photo-mobile-4@2x.webp 2x" />
+                    <source type="image/webp" media="(max-width: 1199px)"
+                      srcset="img/instructors/photo-tablet-4.webp, img/instructors/photo-tablet-4@2x.webp 2x" />
+                    <source type="image/webp"
+                      srcset="img/instructors/photo-4.webp, img/instructors/photo-4@2x.webp 2x" />
+                    <source media="(max-width: 767px)"
+                      srcset="img/instructors/photo-mobile-4.jpg 1x, img/instructors/photo-mobile-4@2x.jpg 2x" />
+                    <source media="(max-width: 1199px)"
+                      srcset="img/instructors/photo-tablet-4.jpg 1x, img/instructors/photo-tablet-4@2x.jpg 2x" />
+                    <img src="img/instructors/photo-4jpg" alt="Фото инструктора."
+                      srcset="img/instructors/photo-4@2x.jpg" width="238" height="213">
+                  </picture>
+                </div>
+                <div class="instructor-card__block">
+                  <h4 class="instructor-card__name">Федор Кайгородов</h4>
+                  <a class="instructor-card__link" href="#!">
+                    <svg class="instructor-card__icon" aria-hidden="true" focusable="false" width="16" height="9"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="img/sprite.svg#vk" />
+                    </svg>
+                  </a>
+                </div>
+                <p class="instructor-card__text">
+                  Опыт походов: Ходит в походы с 2001 года.
+                  В&nbsp;России побывал в&nbsp;горных районах Хибины,
+                  Архыз, много путешествует по&nbsp;Европе.
+                </p>
+              </div>
+              <div class="swiper-slide instructor-card" tabindex="0">
+                <div class="instructor-card__photo">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)"
+                      srcset="img/instructors/photo-mobile-1.webp, img/instructors/photo-mobile-1@2x.webp 2x" />
+                    <source type="image/webp" media="(max-width: 1199px)"
+                      srcset="img/instructors/photo-tablet-1.webp, img/instructors/photo-tablet-1@2x.webp 2x" />
+                    <source type="image/webp"
+                      srcset="img/instructors/photo-1.webp, img/instructors/photo-1@2x.webp 2x" />
+                    <source media="(max-width: 767px)"
+                      srcset="img/instructors/photo-mobile-1.jpg 1x, img/instructors/photo-mobile-1@2x.jpg 2x" />
+                    <source media="(max-width: 1199px)"
+                      srcset="img/instructors/photo-tablet-1.jpg 1x, img/instructors/photo-tablet-1@2x.jpg 2x" />
+                    <img src="img/instructors/photo-1.jpg" alt="Фото инструктора."
+                      srcset="img/instructors/photo-1@2x.jpg" width="238" height="212">
+                  </picture>
+                </div>
+                <div class="instructor-card__block">
+                  <h4 class="instructor-card__name">Александр Прокофьев</h4>
+                  <a class="instructor-card__link" href="#!">
+                    <svg class="instructor-card__icon" aria-hidden="true" focusable="false" width="16" height="9"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="img/sprite.svg#vk" />
+                    </svg>
+                  </a>
+                </div>
+                <p class="instructor-card__text">
+                  Строгий и&nbsp;внимательный инструктор,
+                  веселый и&nbsp;общительный человек. Любит природу.
+                </p>
+              </div>
+              <div class="swiper-slide instructor-card" tabindex="0">
+                <div class="instructor-card__photo">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)"
+                      srcset="img/instructors/photo-mobile-2.webp, img/instructors/photo-mobile-2@2x.webp 2x" />
+                    <source type="image/webp" media="(max-width: 1199px)"
+                      srcset="img/instructors/photo-tablet-2.webp, img/instructors/photo-tablet-2@2x.webp 2x" />
+                    <source type="image/webp"
+                      srcset="img/instructors/photo-2.webp, img/instructors/photo-2@2x.webp 2x" />
+                    <source media="(max-width: 767px)"
+                      srcset="img/instructors/photo-mobile-2.jpg 1x, img/instructors/photo-mobile-2@2x.jpg 2x" />
+                    <source media="(max-width: 1199px)"
+                      srcset="img/instructors/photo-tablet-2.jpg 1x, img/instructors/photo-tablet-2@2x.jpg 2x" />
+                    <img src="img/instructors/photo-2.jpg" alt="Фото инструктора."
+                      srcset="img/instructors/photo-2@2x.jpg" width="238" height="213">
+                  </picture>
+                </div>
+                <div class="instructor-card__block">
+                  <h4 class="instructor-card__name">Светлана Афиногенова</h4>
+                  <a class="instructor-card__link" href="#!">
+                    <svg class="instructor-card__icon" aria-hidden="true" focusable="false" width="16" height="9"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="img/sprite.svg#vk" />
+                    </svg>
+                  </a>
+                </div>
+                <p class="instructor-card__text">
+                  Видеть мир вокруг, познавать его опасности, находить
+                  друг друга, становиться ближе, чувствовать -
+                  в&nbsp;этом назначение жизни.
+                </p>
+              </div>
             </div>
           </div>
         </div>
-        <h3 class="training__subtitle">Процесс обучения</h3>
+        <h3 class="training__subtitle training__subtitle--inner">Процесс обучения</h3>
         <ul class="process-list">
-          <li class="process-list__item">Изучение спортивного туристского движения</li>
-          <li class="process-list__item">Подготовка и&nbsp;техническое снаряжение в&nbsp;походах</li>
-          <li class="process-list__item">Лекции по&nbsp;окружающей среде, экологии и&nbsp;гигиене</li>
-          <li class="process-list__item">Разъяснение сложности горных препятствий</li>
+          <li class="process-list__item process-list__item--map">Изучение спортивного туристского движения</li>
+          <li class="process-list__item process-list__item--equipment">Подготовка и&nbsp;техническое снаряжение
+            в&nbsp;походах</li>
+          <li class="process-list__item process-list__item--eco">Лекции по&nbsp;окружающей среде, экологии
+            и&nbsp;гигиене</li>
+          <li class="process-list__item process-list__item--obstacle">Разъяснение сложности горных препятствий</li>
         </ul>
       </section>
 

@@ -1,0 +1,113 @@
+.instructor-card {
+  margin: 20px 0;
+  padding: 20px;
+  height: auto;
+  box-shadow: 0 0 30px 0 rgba(28, 51, 116, 0.1);
+
+  @include vp-1199 {
+    padding: 14px 15px;
+  }
+
+  @include vp-767 {
+    margin: 30px 0;
+    padding: 20px;
+  }
+}
+
+.instructor-card__photo {
+  margin-bottom: 17px;
+
+  img {
+    width: 100%;
+  }
+
+  @include vp-1199 {
+    margin-bottom: 16px;
+  }
+
+  // @include vp-767 {
+  //   margin-bottom: 16px;
+  // }
+}
+
+.instructor-card__block {
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  align-items: center;
+  margin-bottom: 13px;
+
+  @include vp-1199 {
+    margin-bottom: 11px;
+  }
+
+  @include vp-1199 {
+    margin-bottom: 13px;
+  }
+}
+
+.instructor-card__name {
+  margin: 0;
+  padding-right: 80px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+
+  @include vp-1199 {
+    padding-right: 40px;
+  }
+
+  @include vp-767 {
+    padding-right: 50px;
+  }
+}
+
+.instructor-card__link {
+  width: 24px;
+  height: 24px;
+  padding: 1px 4px;
+  border: 1px solid rgba(2, 102, 193, 0.1);
+
+  @include vp-767 {
+    margin-right: 12px;
+  }
+
+  @include hover {
+    border: 1px solid $color-elephant;
+  }
+
+  @include focus {
+    border: 1px solid $color-elephant;
+    outline: none;
+  }
+
+  &:active {
+    background-color: $color-navy-blue;
+    border: 0;
+    padding: 2px 5px;
+
+    .instructor-card__icon {
+      color: $color-default-white;
+    }
+  }
+
+  &[aria-disabled="true"] {
+    color: rgb(45, 56, 63, 0.3);
+    border-color: rgb(45, 56, 63, 0.3);
+    pointer-events: none;
+  }
+}
+
+.instructor-card__icon {
+  width: 14px;
+  height: 14px;
+}
+
+.instructor-card__text {
+  margin: 0;
+  font-size: 12px;
+  line-height: 16px;
+
+  @include vp-1199 {
+    line-height: 18px;
+  }
+}

@@ -8,7 +8,7 @@
   align-items: center;
   padding: 40px calc(50% - 600px);
   width: 100%;
-  color: white;
+  color: $color-default-white;
   z-index: 10;
 
   @include vp-1199 {

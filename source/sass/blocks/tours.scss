@@ -3,7 +3,7 @@
   display: grid;
   grid-template-columns: 1fr min-content;
   gap: 54px;
-  padding: 123px calc(50% - 600px) 100px;
+  padding: 123px calc(50% - 600px) 50px;
   z-index: 1;
 
   @include vp-1199 {
@@ -29,13 +29,15 @@
 
     @include vp-1199 {
       top: -95px;
-      right: -308px;
+      right: 0;
+      width: 294px;
+      background-image: url("../img/background/tour-clouds-tablet.png");
     }
 
     @include vp-767 {
       top: 137px;
-      right: -170px;
-      width: 346px;
+      right: 0;
+      width: 176px;
       height: 595px;
       background-image: url("../img/background/tour-clouds-mobile.png");
     }
