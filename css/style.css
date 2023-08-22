@@ -1513,6 +1513,8 @@ button,
   color: #ffffff;
   background-color: #0266c1;
   padding: 10px;
+  width: 37px;
+  height: 35px;
   border: none;
   cursor: pointer;
   opacity: 1;
@@ -2298,6 +2300,82 @@ button,
   line-height: 13px;
 }
 
+.instructor-card {
+  margin: 20px 0;
+  padding: 20px;
+  height: auto;
+  -webkit-box-shadow: 0 0 30px 0 rgba(28, 51, 116, 0.1);
+  box-shadow: 0 0 30px 0 rgba(28, 51, 116, 0.1);
+}
+
+.instructor-card__photo {
+  margin-bottom: 17px;
+}
+
+.instructor-card__photo img {
+  width: 100%;
+}
+
+.instructor-card__block {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr -webkit-min-content;
+  -ms-grid-columns: 1fr min-content;
+  grid-template-columns: 1fr -webkit-min-content;
+  grid-template-columns: 1fr min-content;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 13px;
+}
+
+.instructor-card__name {
+  margin: 0;
+  padding-right: 80px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.instructor-card__link {
+  width: 24px;
+  height: 24px;
+  padding: 1px 4px;
+  border: 1px solid rgba(2, 102, 193, 0.1);
+}
+
+.instructor-card__link.focus-visible:focus {
+  border: 1px solid #2d383f;
+  outline: none;
+}
+
+.instructor-card__link:active {
+  background-color: #0266c1;
+  border: 0;
+  padding: 2px 5px;
+}
+
+.instructor-card__link:active .instructor-card__icon {
+  color: #ffffff;
+}
+
+.instructor-card__link[aria-disabled=true] {
+  color: rgba(45, 56, 63, 0.3);
+  border-color: rgba(45, 56, 63, 0.3);
+  pointer-events: none;
+}
+
+.instructor-card__icon {
+  width: 14px;
+  height: 14px;
+}
+
+.instructor-card__text {
+  margin: 0;
+  font-size: 12px;
+  line-height: 16px;
+}
+
 .page-footer {
   display: -ms-grid;
   display: grid;
@@ -2377,7 +2455,7 @@ button,
   align-items: center;
   padding: 40px calc(50% - 600px);
   width: 100%;
-  color: white;
+  color: #ffffff;
   z-index: 10;
 }
 
@@ -2465,6 +2543,77 @@ button,
   font-weight: 600;
   font-size: 18px;
   line-height: 18px;
+}
+
+.process-list {
+  position: relative;
+  grid-column: 1/-1;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.process-list__item {
+  position: relative;
+  padding-left: 40px;
+  background-repeat: no-repeat;
+  background-position: left 10px;
+}
+
+.process-list__item--map {
+  background-image: url("../img/svg/map.svg");
+}
+
+.process-list__item--map::before {
+  bottom: -40px;
+  left: 0;
+}
+
+.process-list__item--equipment {
+  background-image: url("../img/svg/boots.svg");
+}
+
+.process-list__item--equipment::before {
+  bottom: -40px;
+  left: 0;
+}
+
+.process-list__item--eco {
+  background-image: url("../img/svg/pine-tree.svg");
+}
+
+.process-list__item--eco::before {
+  bottom: -40px;
+  left: 0;
+}
+
+.process-list__item--obstacle {
+  background-image: url("../img/svg/mountain.svg");
+}
+
+.process-list__item--obstacle::before {
+  bottom: -40px;
+  left: 0;
+}
+
+.process-list__item::before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background-color: #0266c1;
+  border-radius: 50%;
+}
+
+.process-list__item::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(2, 102, 193, 0.2);
 }
 
 .radio {
@@ -2706,7 +2855,7 @@ button,
   grid-template-columns: 1fr -webkit-min-content;
   grid-template-columns: 1fr min-content;
   gap: 54px;
-  padding: 123px calc(50% - 600px) 100px;
+  padding: 123px calc(50% - 600px) 50px;
   z-index: 1;
 }
 
@@ -2766,6 +2915,78 @@ button,
 
 .tours__icon {
   margin-left: 6px;
+}
+
+.training {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr -webkit-min-content;
+  -ms-grid-columns: 1fr min-content;
+  grid-template-columns: 1fr -webkit-min-content;
+  grid-template-columns: 1fr min-content;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 30px;
+  padding: 69px calc(50% - 600px) 95px;
+}
+
+.training::before {
+  content: "";
+  position: absolute;
+  bottom: 62px;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(2, 102, 193, 0.2);
+}
+
+.training__title {
+  grid-column: 1/-1;
+  margin-bottom: 3px;
+}
+
+.training__description {
+  position: relative;
+  grid-column: 1/-1;
+  margin: 0 0 19px;
+  padding-right: 400px;
+  z-index: 5;
+}
+
+.training__subtitle {
+  margin: 0;
+  font-size: 21px;
+  line-height: 21px;
+}
+
+.training__subtitle--btn {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+}
+
+.training__subtitle--inner {
+  grid-column: 1/-1;
+  margin-bottom: 12px;
+}
+
+.training__block-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  margin-right: 2px;
+}
+
+.training__btn {
+  position: relative;
+  z-index: 5;
+}
+
+.training__slider-wrapper {
+  grid-column: 1/-1;
+  margin: -15px 0 0;
 }
 
 .video__player {
@@ -2885,11 +3106,6 @@ button,
     padding-left: 27px;
   }
 
-  .details-list__link--night {
-    margin-left: 0;
-    padding-left: 34px;
-  }
-
   .details-list__link--night::before {
     left: 0;
   }
@@ -2970,6 +3186,30 @@ button,
 
   .info-list {
     gap: 25px;
+  }
+
+  .instructor-card {
+    padding: 14px 15px;
+  }
+
+  .instructor-card__photo {
+    margin-bottom: 16px;
+  }
+
+  .instructor-card__block {
+    margin-bottom: 11px;
+  }
+
+  .instructor-card__block {
+    margin-bottom: 13px;
+  }
+
+  .instructor-card__name {
+    padding-right: 40px;
+  }
+
+  .instructor-card__text {
+    line-height: 18px;
   }
 
   .page-footer {
@@ -3054,6 +3294,74 @@ button,
     line-height: 16px;
   }
 
+  .process-list {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+    gap: 90px 30px;
+  }
+
+  .process-list__item {
+    padding-right: 60px;
+    min-height: 44px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .process-list__item--map::before {
+    bottom: -24px;
+  }
+
+  .process-list__item--map::after {
+    bottom: -17px;
+    left: 0;
+    right: -30px;
+    height: 1px;
+  }
+
+  .process-list__item--equipment::before {
+    bottom: -24px;
+  }
+
+  .process-list__item--equipment::after {
+    bottom: -70px;
+    left: 7px;
+    width: 1px;
+    height: 56px;
+  }
+
+  .process-list__item--eco {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+  }
+
+  .process-list__item--eco::before {
+    bottom: 0;
+    top: -26px;
+  }
+
+  .process-list__item--obstacle {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+  }
+
+  .process-list__item--obstacle::before {
+    bottom: 0;
+    top: -26px;
+  }
+
+  .process-list__item--obstacle::after {
+    bottom: 0;
+    top: -19px;
+    left: 0;
+    right: -30px;
+    height: 1px;
+  }
+
   .radio__title {
     text-align: left;
   }
@@ -3084,7 +3392,9 @@ button,
 
   .tours::after {
     top: -95px;
-    right: -308px;
+    right: 0;
+    width: 294px;
+    background-image: url("../img/background/tour-clouds-tablet.png");
   }
 
   .tours__title {
@@ -3099,6 +3409,41 @@ button,
   .tours__link {
     margin-top: 10px;
     margin-left: 5px;
+  }
+
+  .training {
+    gap: 20px;
+    padding: 39px 45px 45px;
+  }
+
+  .training::before {
+    display: none;
+  }
+
+  .training__title {
+    margin-bottom: 0;
+  }
+
+  .training__description {
+    margin-bottom: 38px;
+    padding-right: 150px;
+  }
+
+  .training__subtitle {
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  .training__subtitle--inner {
+    margin-bottom: 21px;
+  }
+
+  .training__block-button {
+    margin-right: 0;
+  }
+
+  .training__slider-wrapper {
+    margin-bottom: 3px;
   }
 
   .video__control {
@@ -3124,6 +3469,11 @@ button,
   }
 
   .details-list__link--day {
+    margin-left: 0;
+    padding-left: 34px;
+  }
+
+  .details-list__link--night {
     margin-left: 0;
     padding-left: 34px;
   }
@@ -3162,6 +3512,10 @@ button,
     display: none;
   }
 
+  .hero {
+    min-height: 568px;
+  }
+
   .info-list {
     gap: 9px;
   }
@@ -3179,6 +3533,19 @@ button,
   .info-list__text {
     font-size: 12px;
     line-height: 12px;
+  }
+
+  .instructor-card {
+    margin: 30px 0;
+    padding: 20px;
+  }
+
+  .instructor-card__name {
+    padding-right: 50px;
+  }
+
+  .instructor-card__link {
+    margin-right: 12px;
   }
 
   .page-footer {
@@ -3285,6 +3652,86 @@ button,
     line-height: 14px;
   }
 
+  .process-list {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+
+  .process-list__item {
+    padding-left: 68px;
+    padding-right: 30px;
+    font-size: 12px;
+    line-height: 18px;
+    background-position: 37px 7px;
+  }
+
+  .process-list__item--map {
+    background-size: 19px 19px;
+  }
+
+  .process-list__item--map::before {
+    bottom: 18px;
+    left: 3px;
+  }
+
+  .process-list__item--map::after {
+    top: 12px;
+    left: 9px;
+    width: 1px;
+    height: 62px;
+  }
+
+  .process-list__item--equipment {
+    background-size: 19px 19px;
+  }
+
+  .process-list__item--equipment::before {
+    bottom: 18px;
+    left: 3px;
+  }
+
+  .process-list__item--equipment::after {
+    top: 12px;
+    left: 9px;
+    width: 1px;
+    height: 62px;
+  }
+
+  .process-list__item--eco {
+    grid-column: 1/-1;
+    background-size: 19px 19px;
+  }
+
+  .process-list__item--eco::before {
+    top: 11px;
+    left: 3px;
+  }
+
+  .process-list__item--eco::after {
+    top: 12px;
+    left: 9px;
+    width: 1px;
+    height: 62px;
+  }
+
+  .process-list__item--obstacle {
+    grid-column: 1/-1;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4/5;
+    background-size: 19px 19px;
+  }
+
+  .process-list__item--obstacle::before {
+    top: 11px;
+    left: 3px;
+  }
+
+  .process-list__item--obstacle::after {
+    display: none;
+  }
+
   .radio {
     display: none;
   }
@@ -3341,8 +3788,8 @@ button,
 
   .tours::after {
     top: 137px;
-    right: -170px;
-    width: 346px;
+    right: 0;
+    width: 176px;
     height: 595px;
     background-image: url("../img/background/tour-clouds-mobile.png");
   }
@@ -3364,6 +3811,36 @@ button,
 
   .tours__icon {
     margin-left: 4px;
+  }
+
+  .training {
+    gap: 10px;
+    padding: 34px 15px 16px;
+  }
+
+  .training__title {
+    margin-bottom: 6px;
+  }
+
+  .training__description {
+    margin-bottom: 28px;
+    padding-right: 0;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .training__subtitle {
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .training__subtitle--inner {
+    margin-bottom: 19px;
+    margin-left: 4px;
+  }
+
+  .training__slider-wrapper {
+    margin-bottom: -2px;
   }
 }
 
@@ -3449,6 +3926,10 @@ button,
     background-color: #ffffff;
     color: #1c3374;
     border: 1px solid #1c3374;
+  }
+
+  .instructor-card__link:hover:not(.focus-visible) {
+    border: 1px solid #2d383f;
   }
 
   .page-footer__link:hover:not(.focus-visible) {
