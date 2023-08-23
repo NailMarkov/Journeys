@@ -1315,6 +1315,7 @@ html {
 body {
   width: 100%;
   height: 100%;
+  overflow-x: hidden;
 }
 
 a {
@@ -2783,6 +2784,87 @@ button,
   margin-left: 45px;
 }
 
+.review-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+  padding: 20px 40px 20px 20px;
+  width: 790px;
+  height: auto;
+  -webkit-box-shadow: 0px 0px 30px 0px rgba(28, 51, 116, 0.1);
+  box-shadow: 0px 0px 30px 0px rgba(28, 51, 116, 0.1);
+}
+
+.reviews__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 15px 0;
+  width: 442px;
+}
+
+.review-card__text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.review-card__text:first-child {
+  margin-bottom: 9px;
+}
+
+.review-card__name {
+  margin: auto 0 7px;
+  font-size: 13px;
+  line-height: 13px;
+}
+
+.review-card__info {
+  margin: 0;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.reviews {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr -webkit-min-content;
+  -ms-grid-columns: 1fr min-content;
+  grid-template-columns: 1fr -webkit-min-content;
+  grid-template-columns: 1fr min-content;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 27px;
+  padding: 40px calc(50% - 600px) 113px;
+}
+
+.reviews__title {
+  margin-top: 5px;
+}
+
+.reviews__block-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  margin-top: -25px;
+}
+
+.reviews__slider-wrapper {
+  grid-column: 1/-1;
+}
+
+.reviews__slider-wrapper .swiper {
+  overflow: visible;
+}
+
 .social-list {
   grid-column: 1/-1;
   -ms-grid-row-align: center;
@@ -3427,6 +3509,36 @@ button,
     text-align: left;
   }
 
+  .review-card {
+    padding-right: 30px;
+    width: 560px;
+  }
+
+  .reviews__block {
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    padding: 4px 0;
+    width: 294px;
+  }
+
+  .review-card__text {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .review-card__name {
+    margin-bottom: 5px;
+    font-size: 12px;
+  }
+
+  .reviews {
+    padding: 16px 45px 85px;
+  }
+
+  .reviews__block-button {
+    margin-top: -20px;
+  }
+
   .subtitle {
     font-size: 25px;
     line-height: 25px;
@@ -3823,6 +3935,29 @@ button,
 
   .radio {
     display: none;
+  }
+
+  .review-card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 15px;
+    padding-top: 23px;
+    padding-right: 20px;
+  }
+
+  .reviews__block {
+    width: 100%;
+    min-height: 244px;
+  }
+
+  .reviews {
+    padding: 13px 15px 60px;
+  }
+
+  .reviews__block-button {
+    margin-top: -9px;
   }
 
   .social-list {
