@@ -3,7 +3,7 @@ import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {initVideos} from './modules/video';
 import {showMenu} from './modules/menu';
-import {initSliderHero, initSliderTours, initSliderTraining} from './modules/swiper';
+import {initSliderHero, initSliderTours, initSliderTraining, initSliderReviews} from './modules/swiper';
 import {initAudio} from './modules/audio';
 
 // ---------------------------------
@@ -22,6 +22,7 @@ window.addEventListener('DOMContentLoaded', () => {
   initSliderHero();
   initSliderTours();
   initSliderTraining();
+  initSliderReviews();
   initVideos();
   initAudio();
 

@@ -68,3 +68,29 @@ export const initSliderTraining = () => {
 
   return swiperTraining;
 };
+
+export const initSliderReviews = () => {
+  const sliderReviewsElement = document.querySelector('[data-slider="reviews"]');
+  const swiperReviews = new window.Swiper(sliderReviewsElement, {
+    navigation: {
+      prevEl: document.querySelector('[data-prev="reviews"]'),
+      nextEl: document.querySelector('[data-next="reviews"]'),
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 30,
+      },
+      768: {
+        slidesPerView: 'auto',
+        spaceBetween: 30,
+      },
+      1200: {
+        slidesPerView: 'auto',
+        spaceBetween: 30,
+      },
+    },
+  });
+
+  return swiperReviews;
+};

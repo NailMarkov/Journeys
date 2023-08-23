@@ -1,0 +1,41 @@
+.reviews {
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  align-items: center;
+  gap: 27px;
+  padding: 40px calc(50% - 600px) 113px;
+
+  @include vp-1199 {
+    padding: 16px 45px 85px;
+  }
+
+  @include vp-767 {
+    padding: 13px 15px 60px;
+  }
+}
+
+.reviews__title {
+  margin-top: 5px;
+}
+
+.reviews__block-button {
+  display: flex;
+  gap: 4px;
+  margin-top: -25px;
+
+  @include vp-1199 {
+    margin-top: -20px;
+  }
+
+  @include vp-767 {
+    margin-top: -9px;
+  }
+}
+
+.reviews__slider-wrapper {
+  grid-column: 1 / -1;
+
+  .swiper {
+    overflow: visible;
+  }
+}
