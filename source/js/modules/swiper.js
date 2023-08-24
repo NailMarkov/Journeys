@@ -94,3 +94,29 @@ export const initSliderReviews = () => {
 
   return swiperReviews;
 };
+
+export const initSliderAdvantages = () => {
+  const getDesktopChange = (event) => {
+    const result = event.matches ? swiperAdvantages : swiperAdvantages.destroy();
+
+    return result;
+  };
+
+  const mediaQuery = window.matchMedia('(min-width: 1199px)');
+  mediaQuery.addEventListener('change', getDesktopChange);
+
+  const sliderAdvantagesElement = document.querySelector('[data-slider="advantages"]');
+  const swiperAdvantages = new window.Swiper(sliderAdvantagesElement, {
+    loop: true,
+    navigation: {
+      prevEl: document.querySelector('[data-prev="advantages"]'),
+      nextEl: document.querySelector('[data-next="advantages"]'),
+    },
+    initialSlide: 2,
+    slidesPerView: 'auto',
+    spaceBetween: 30,
+    centeredSlides: true,
+  });
+
+  return getDesktopChange(mediaQuery);
+};

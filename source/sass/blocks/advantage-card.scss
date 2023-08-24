@@ -1,0 +1,74 @@
+.advantage-card {
+  display: flex;
+  flex-direction: column;
+  padding: 124px 20px 40px;
+  width: 380px;
+  height: auto;
+  background-color: $color-default-white;
+  background-position: top 40px center;
+  background-repeat: no-repeat;
+  text-align: center;
+  border: 1px solid rgba(2, 102, 193, 0.1);
+
+  @include vp-1199 {
+    padding: 102px 20px 30px;
+    width: 324px;
+    background-position: top 29px center;
+    background-size: 48px 48px;
+  }
+
+  @include vp-767 {
+    padding: 86px 10px 20px;
+    width: 290px;
+    background-position: top 19px center;
+    background-size: 42px;
+  }
+
+  &--shield {
+    background-image: url("../img/svg/shield.svg");
+  }
+
+  &--crown {
+    background-image: url("../img/svg/crown.svg");
+  }
+
+  &--equipment {
+    background-image: url("../img/svg/equipment.svg");
+  }
+
+  &--path {
+    background-image: url("../img/svg/path.svg");
+  }
+
+  &--leaf {
+    background-image: url("../img/svg/leaf.svg");
+  }
+}
+
+.advantage-card__title {
+  margin: 0 0 15px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 18px;
+
+  @include vp-1199 {
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+
+.advantage-card__description {
+  margin: 0;
+  font-size: 14px;
+  line-height: 22px;
+
+  @include vp-1199 {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}

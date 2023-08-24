@@ -1,0 +1,85 @@
+.advantages {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 47px;
+  padding: 53px calc(50% - 720px) 57px;
+  background-image: url("../img/background/advantages-right.png");
+  background-repeat: no-repeat;
+  background-position: top -5px right 0px;
+
+  @include vp-1199 {
+    padding: 44px 45px 40px;
+    background-image: none;
+  }
+
+  @include vp-767 {
+    gap: 15px;
+    padding: 30px 15px 36px;
+
+    .advantages__title {
+      margin-bottom: 15px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: -185px;
+    left: 0;
+    width: 1170px;
+    height: 391px;
+    background-image: url("../img/background/advantages-left.png");
+    background-repeat: no-repeat;
+
+    @include vp-1199 {
+      display: none;
+    }
+  }
+}
+
+.advantages__title {
+  .subtitle__bg {
+    left: -83px;
+
+    @include vp-1199 {
+      left: -63px;
+    }
+
+    @include vp-767{
+      left: -17px;
+    }
+  }
+
+  @include vp-767 {
+    margin-bottom: 14px;
+  }
+}
+
+.advantages__slider-wrapper {
+  margin-bottom: 3px;
+}
+
+.advantages__wrapper {
+  @include vp-1199 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+.advantages__block-button {
+  display: flex;
+  gap: 4px;
+
+  @include vp-1199 {
+    display: none;
+  }
+}
