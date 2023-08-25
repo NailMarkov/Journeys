@@ -120,3 +120,29 @@ export const initSliderAdvantages = () => {
 
   return getDesktopChange(mediaQuery);
 };
+
+export const initSliderGallery = () => {
+  const sliderGalleryElement = document.querySelector('[data-slider="photogallery"]');
+  const swiperGallery = new window.Swiper(sliderGalleryElement, {
+    navigation: {
+      prevEl: document.querySelector('[data-prev="photogallery"]'),
+      nextEl: document.querySelector('[data-next="photogallery"]'),
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 'auto',
+        spaceBetween: 3,
+      },
+      768: {
+        slidesPerView: 'auto',
+        spaceBetween: 6,
+      },
+      1200: {
+        slidesPerView: 'auto',
+        spaceBetween: 6,
+      },
+    },
+  });
+
+  return swiperGallery;
+};

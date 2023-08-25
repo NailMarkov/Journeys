@@ -1073,41 +1073,149 @@
 
       <!-- Photogallery -->
       <section class="photogallery">
-        <h2 class="photogallery__title subtitle">Фотогалерея</h2>
+        <h2 class="photogallery__title subtitle">Фотогалерея
+          <span class="subtitle__bg">Фотогалерея</span>
+        </h2>
         <p class="photogallery__description">
           Добавляйте фото в&nbsp;Instagram с&nbsp;хэштегом #лайфтур,
           а&nbsp;также отмечайте нас на&nbsp;фото.
           Лучшие фотографии украсят этот раздел нашего сайта.
         </p>
-        <button class="photogallery__btn btn" type="button">
-          <span class="visually-hidden">Переключить слайд назад.</span>
-          <svg class="btn__icon" aria-hidden="true" focusable="false" width="13" height="13"
-            xmlns="http://www.w3.org/2000/svg">
-            <use xlink:href="img/sprite.svg#arrow-prev" />
-          </svg>
-        </button>
-        <button class="photogallery__btn btn" type="button">
-          <span class="visually-hidden">Переключить слайд вперед.</span>
-          <svg class="btn__icon" aria-hidden="true" focusable="false" width="13" height="13"
-            xmlns="http://www.w3.org/2000/svg">
-            <use xlink:href="img/sprite.svg#arrow-prev" />
-          </svg>
-        </button>
-        <div class="swiper" data-slider="photogallery">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide photo-card" tabindex="0">
-            </div>
-            <div class="swiper-slide photo-card" tabindex="0">
-            </div>
-            <div class="swiper-slide photo-card" tabindex="0">
-            </div>
-            <div class="swiper-slide photo-card" tabindex="0">
-            </div>
-            <div class="swiper-slide photo-card" tabindex="0">
-            </div>
-            <div class="swiper-slide photo-card" tabindex="0">
-            </div>
-            <div class="swiper-slide photo-card" tabindex="0">
+        <div class="photogallery__block-button">
+          <button class="photogallery__btn btn" type="button" data-prev="photogallery">
+            <span class="visually-hidden">Переключить слайд назад.</span>
+            <svg class="btn__icon" aria-hidden="true" focusable="false" width="13" height="13"
+              xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="img/sprite.svg#arrow-prev" />
+            </svg>
+          </button>
+          <button class="photogallery__btn btn" type="button" data-next="photogallery">
+            <span class="visually-hidden">Переключить слайд вперед.</span>
+            <svg class="btn__icon" aria-hidden="true" focusable="false" width="13" height="13"
+              xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="img/sprite.svg#arrow-next" />
+            </svg>
+          </button>
+        </div>
+        <div class="photogallery__slider-wrapper">
+          <div class="swiper" data-slider="photogallery">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide photo-card" tabindex="0">
+                <div class="photo-card__image photo-card__image--image1">
+                  <picture>
+                    <source type="image/webp"
+                      srcset="img/photogallery/image-1.webp, img/photogallery/image-1@2x.webp 2x" />
+                    <img src="img/photogallery/image-1.jpg" alt="Фото туриста." srcset="img/photogallery/image-1@2x.jpg"
+                      width="275" height="449">
+                  </picture>
+                </div>
+                <div class="photo-card__image photo-card__image--image2">
+                  <picture>
+                    <source type="image/webp"
+                      srcset="img/photogallery/image-2.webp, img/photogallery/image-2@2x.webp 2x" />
+                    <img src="img/photogallery/image-2.jpg" alt="Фото туриста." srcset="img/photogallery/image-2@2x.jpg"
+                      width="298" height="179">
+                  </picture>
+                </div>
+                <div class="photo-card__image photo-card__image--image3">
+                  <picture>
+                    <source type="image/webp"
+                      srcset="img/photogallery/image-4.webp, img/photogallery/image-4@2x.webp 2x" />
+                    <img src="img/photogallery/image-4.jpg" alt="Фото туриста." srcset="img/photogallery/image-4@2x.jpg"
+                      width="272" height="449">
+                  </picture>
+                </div>
+                <div class="photo-card__image photo-card__image--image4">
+                  <picture>
+                    <source type="image/webp"
+                      srcset="img/photogallery/image-5.webp, img/photogallery/image-5@2x.webp 2x" />
+                    <img src="img/photogallery/image-5.jpg" alt="Фото туриста." srcset="img/photogallery/image-5@2x.jpg"
+                      width="298" height="179">
+                  </picture>
+                </div>
+                <div class="photo-card__image photo-card__image--image5">
+                  <picture>
+                    <source type="image/webp"
+                      srcset="img/photogallery/image-7.webp, img/photogallery/image-7@2x.webp 2x" />
+                    <img src="img/photogallery/image-7.jpg" alt="Фото туриста." srcset="img/photogallery/image-7@2x.jpg"
+                      width="276" height="449">
+                  </picture>
+                </div>
+                <div class="photo-card__image photo-card__image--image6">
+                  <picture>
+                    <source type="image/webp"
+                      srcset="img/photogallery/image-3.webp, img/photogallery/image-3@2x.webp 2x" />
+                    <img src="img/photogallery/image-3.jpg" alt="Фото туриста." srcset="img/photogallery/image-3@2x.jpg"
+                      width="298" height="265">
+                  </picture>
+                </div>
+                <div class="photo-card__image photo-card__image--image7">
+                  <picture>
+                    <source type="image/webp"
+                      srcset="img/photogallery/image-6.webp, img/photogallery/image-6@2x.webp 2x" />
+                    <img src="img/photogallery/image-6.jpg" alt="Фото туриста." srcset="img/photogallery/image-6@2x.jpg"
+                      width="298" height="265">
+                  </picture>
+                </div>
+              </div>
+              <div class="swiper-slide photo-card" tabindex="0">
+                <div class="photo-card__image photo-card__image--image1">
+                  <picture>
+                    <source type="image/webp"
+                      srcset="img/photogallery/image-1.webp, img/photogallery/image-1@2x.webp 2x" />
+                    <img src="img/photogallery/image-1.jpg" alt="Фото туриста." srcset="img/photogallery/image-1@2x.jpg"
+                      width="275" height="449">
+                  </picture>
+                </div>
+                <div class="photo-card__image photo-card__image--image2">
+                  <picture>
+                    <source type="image/webp"
+                      srcset="img/photogallery/image-2.webp, img/photogallery/image-2@2x.webp 2x" />
+                    <img src="img/photogallery/image-2.jpg" alt="Фото туриста." srcset="img/photogallery/image-2@2x.jpg"
+                      width="298" height="179">
+                  </picture>
+                </div>
+                <div class="photo-card__image photo-card__image--image3">
+                  <picture>
+                    <source type="image/webp"
+                      srcset="img/photogallery/image-4.webp, img/photogallery/image-4@2x.webp 2x" />
+                    <img src="img/photogallery/image-4.jpg" alt="Фото туриста." srcset="img/photogallery/image-4@2x.jpg"
+                      width="272" height="449">
+                  </picture>
+                </div>
+                <div class="photo-card__image photo-card__image--image4">
+                  <picture>
+                    <source type="image/webp"
+                      srcset="img/photogallery/image-5.webp, img/photogallery/image-5@2x.webp 2x" />
+                    <img src="img/photogallery/image-5.jpg" alt="Фото туриста." srcset="img/photogallery/image-5@2x.jpg"
+                      width="298" height="179">
+                  </picture>
+                </div>
+                <div class="photo-card__image photo-card__image--image5">
+                  <picture>
+                    <source type="image/webp"
+                      srcset="img/photogallery/image-7.webp, img/photogallery/image-7@2x.webp 2x" />
+                    <img src="img/photogallery/image-7.jpg" alt="Фото туриста." srcset="img/photogallery/image-7@2x.jpg"
+                      width="276" height="449">
+                  </picture>
+                </div>
+                <div class="photo-card__image photo-card__image--image6">
+                  <picture>
+                    <source type="image/webp"
+                      srcset="img/photogallery/image-3.webp, img/photogallery/image-3@2x.webp 2x" />
+                    <img src="img/photogallery/image-3.jpg" alt="Фото туриста." srcset="img/photogallery/image-3@2x.jpg"
+                      width="298" height="265">
+                  </picture>
+                </div>
+                <div class="photo-card__image photo-card__image--image7">
+                  <picture>
+                    <source type="image/webp"
+                      srcset="img/photogallery/image-6.webp, img/photogallery/image-6@2x.webp 2x" />
+                    <img src="img/photogallery/image-6.jpg" alt="Фото туриста." srcset="img/photogallery/image-6@2x.jpg"
+                      width="298" height="265">
+                  </picture>
+                </div>
+              </div>
             </div>
           </div>
         </div>
