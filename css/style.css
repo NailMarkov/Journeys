@@ -2231,6 +2231,37 @@ button,
   background-image: url("../img/svg/night.svg");
 }
 
+.feedback {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  margin: 0 auto;
+  padding: 311px 231px 308px;
+  width: 1440px;
+  color: #ffffff;
+  background-image: url("../img/background/subscribe.webp");
+  background-repeat: no-repeat;
+}
+
+.feedback__title {
+  padding: 0 288px;
+}
+
+.feedback__text {
+  margin: 0;
+  padding: 0 188px;
+}
+
+.form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 238px;
+  grid-template-columns: 1fr 238px;
+  gap: 30px;
+}
+
 .hero-card {
   position: relative;
   color: #ffffff;
