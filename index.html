@@ -1225,15 +1225,13 @@
       <section class="feedback">
         <h2 class="feedback__title subtitle">Остались вопросы?</h2>
         <p class="feedback__text">Заполните форму и&nbsp;наш оператор свяжется с&nbsp;вами для консультации.</p>
-        <div class="feedback__wrapper-form">
+        <div class="feedback__wrapper-form" data-form-validate data-callback="base">
           <form class="form" action="https://echo.htmlacademy.ru" method="post">
             <fieldset class="form__block">
-              <div class="form__control-block" data-validate-type="text" data-on-input-validate
-                data-message-base="Введите имя" data-message-extra="Запись не корректна" data-required>
+              <div class="form__control-block" data-validate-type="text" data-on-input-validate data-required>
                 <input type="text" aria-label="Имя" name="name" placeholder="Как к вам обращаться?" required>
               </div>
-              <div class="form__control-block" data-validate-type="phone" data-on-input-validate
-                data-message-base="Введите телефон" data-message-extra="Запись не корректна" data-required>
+              <div class="form__control-block" data-validate-type="phone" data-on-input-validate data-required>
                 <input type="tel" aria-label="Телефон" name="phone" placeholder="Телефон" required>
               </div>
             </fieldset>

@@ -1607,7 +1607,7 @@ button,
   -ms-flex-align: center;
   align-items: center;
   gap: 47px;
-  padding: 53px calc(50% - 720px) 57px;
+  padding: 53px calc(50% - 720px) 59px;
   background-image: url("../img/background/advantages-right.png");
   background-repeat: no-repeat;
   background-position: top -5px right 0px;
@@ -1637,6 +1637,7 @@ button,
   display: -ms-flexbox;
   display: flex;
   gap: 4px;
+  margin-top: -2px;
 }
 
 .btn {
@@ -2237,12 +2238,11 @@ button,
   -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
   gap: 18px;
-  margin: 0 auto;
-  padding: 311px 231px 308px;
-  width: 1440px;
+  padding: 311px calc(50% - 489px) 308px;
   color: #ffffff;
   background-image: url("../img/background/subscribe.webp");
   background-repeat: no-repeat;
+  background-position: center top;
 }
 
 .feedback__title {
@@ -2250,7 +2250,7 @@ button,
 }
 
 .feedback__text {
-  margin: 0;
+  margin: 0 0 22px;
   padding: 0 188px;
 }
 
@@ -2260,6 +2260,117 @@ button,
   -ms-grid-columns: 1fr 238px;
   grid-template-columns: 1fr 238px;
   gap: 30px;
+}
+
+.form__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.form__control-block {
+  width: 340px;
+}
+
+.form__control-block.is-invalid input {
+  padding: 23px 30px 22px;
+  border: 1px solid #ff121f;
+}
+
+.form__control-block input {
+  padding: 23px 30px 22px;
+  width: 100%;
+  background-color: #ffffff;
+  border: 0;
+  cursor: pointer;
+}
+
+.form__control-block input::-webkit-input-placeholder {
+  opacity: 0.5;
+}
+
+.form__control-block input::-moz-placeholder {
+  opacity: 0.5;
+}
+
+.form__control-block input:-ms-input-placeholder {
+  opacity: 0.5;
+}
+
+.form__control-block input::-ms-input-placeholder {
+  opacity: 0.5;
+}
+
+.form__control-block input::placeholder {
+  opacity: 0.5;
+}
+
+.form__control-block input.focus-visible:active {
+  padding: 22px 30px 21px;
+  outline: none;
+  border: 1px solid #1c3374;
+}
+
+.form__control-block input.focus-visible:active::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.form__control-block input.focus-visible:active::-moz-placeholder {
+  color: transparent;
+}
+
+.form__control-block input.focus-visible:active:-ms-input-placeholder {
+  color: transparent;
+}
+
+.form__control-block input.focus-visible:active::-ms-input-placeholder {
+  color: transparent;
+}
+
+.form__control-block input.focus-visible:active::placeholder {
+  color: transparent;
+}
+
+.form__control-block input.focus-visible:focus {
+  padding: 22px 30px 21px;
+  outline: none;
+  border: 1px solid #1c3374;
+}
+
+.form__control-block input.focus-visible:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.form__control-block input.focus-visible:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.form__control-block input.focus-visible:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.form__control-block input.focus-visible:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+.form__control-block input.focus-visible:focus::placeholder {
+  color: transparent;
+}
+
+.form__control-block input:disabled {
+  color: rgba(2, 102, 193, 0.1);
+  pointer-events: none;
+}
+
+.form__btn {
+  padding: 24px 24px 22px;
+  width: 100%;
+  height: 64px;
+  font-weight: 500;
 }
 
 .hero-card {
@@ -3447,13 +3558,14 @@ button,
   }
 
   .advantage-card {
-    padding: 102px 20px 30px;
+    padding: 103px 20px 29px;
     width: 324px;
     background-position: top 29px center;
     background-size: 48px 48px;
   }
 
   .advantage-card__title {
+    margin: 0 0 14px;
     font-size: 16px;
     line-height: 16px;
   }
@@ -3526,6 +3638,86 @@ button,
 
   .details-list__link--night::before {
     left: 0;
+  }
+
+  .feedback {
+    -ms-grid-columns: 295px;
+    grid-template-columns: 295px;
+    padding: 196px calc(50% - 147px) 183px;
+    background-image: url("../img/background/subscribe-tablet.jpg");
+    background-position: top;
+    background-size: 100%;
+  }
+
+  .feedback__title {
+    padding: 0 9px;
+  }
+
+  .feedback__text {
+    margin-bottom: 12px;
+    padding: 0;
+  }
+
+  .form {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin: 0 14px;
+  }
+
+  .form__block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  .form__control-block {
+    width: 266px;
+  }
+
+  .form__control-block input {
+    padding: 15px 15px 16px;
+  }
+
+  .form__control-block input::-webkit-input-placeholder {
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .form__control-block input::-moz-placeholder {
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .form__control-block input:-ms-input-placeholder {
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .form__control-block input::-ms-input-placeholder {
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .form__control-block input::placeholder {
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .form__control-block input.focus-visible:active {
+    padding: 14px 15px 15px;
+  }
+
+  .form__control-block input.focus-visible:focus {
+    padding: 14px 15px 15px;
+  }
+
+  .form__btn {
+    padding: 17px 24px;
+    width: 266px;
+    height: 58px;
   }
 
   .hero-card {
@@ -3717,7 +3909,8 @@ button,
   }
 
   .photogallery {
-    padding: 43px 0 0;
+    gap: 22px;
+    padding: 45px 0 0;
   }
 
   .photogallery__title {
@@ -3736,7 +3929,7 @@ button,
   }
 
   .photogallery__block-button {
-    margin-bottom: 15px;
+    margin-bottom: 16px;
     margin-right: 45px;
   }
 
@@ -3928,6 +4121,12 @@ button,
   }
 }
 
+@media (hover: hover) and (max-width: 1199px) {
+  .form__control-block input:hover:not(.focus-visible) {
+    padding: 14px 15px 15px;
+  }
+}
+
 @media (max-width: 767px) {
   .container {
     padding: 0 16px;
@@ -4017,6 +4216,44 @@ button,
   .details-list__link--night {
     margin-left: 0;
     padding-left: 34px;
+  }
+
+  .feedback {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    padding: 180px 15px 175px;
+    gap: 14px;
+    background-image: url("../img/background/subscribe-mobile.jpg");
+    background-size: 100%;
+  }
+
+  .feedback__title {
+    padding: 0 24px;
+    text-align: center;
+  }
+
+  .feedback__text {
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+  }
+
+  .form {
+    gap: 8px;
+    margin: 0;
+  }
+
+  .form__block {
+    gap: 8px;
+  }
+
+  .form__control-block {
+    width: 100%;
+  }
+
+  .form__btn {
+    width: 100%;
+    height: 52px;
   }
 
   .hero-card__info {
@@ -4203,7 +4440,7 @@ button,
 
   .photogallery {
     gap: 15px;
-    padding: 26px 0 0;
+    padding: 27px 0 0;
   }
 
   .photogallery__title {
@@ -4526,6 +4763,36 @@ button,
 
   .custom-select__item:hover:not(.focus-visible) {
     background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .form__control-block input:hover:not(.focus-visible) {
+    padding: 22px 30px 21px;
+    border: 1px solid #0266c1;
+  }
+
+  .form__control-block input:hover:not(.focus-visible)::-webkit-input-placeholder {
+    color: #0266c1;
+    opacity: 1;
+  }
+
+  .form__control-block input:hover:not(.focus-visible)::-moz-placeholder {
+    color: #0266c1;
+    opacity: 1;
+  }
+
+  .form__control-block input:hover:not(.focus-visible):-ms-input-placeholder {
+    color: #0266c1;
+    opacity: 1;
+  }
+
+  .form__control-block input:hover:not(.focus-visible)::-ms-input-placeholder {
+    color: #0266c1;
+    opacity: 1;
+  }
+
+  .form__control-block input:hover:not(.focus-visible)::placeholder {
+    color: #0266c1;
+    opacity: 1;
   }
 
   .hero-card__link:hover:not(.focus-visible) {
