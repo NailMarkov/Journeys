@@ -2,4 +2,137 @@
   display: grid;
   grid-template-columns: 1fr 238px;
   gap: 30px;
+
+  @include vp-1199 {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin: 0 14px;
+  }
+
+  @include vp-767 {
+    gap: 8px;
+    margin: 0;
+  }
+}
+
+.form__block {
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+  @include vp-1199 {
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  @include vp-767 {
+    gap: 8px;
+  }
+}
+
+.form__control-block {
+  width: 340px;
+
+  @include vp-1199 {
+    width: 266px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
+
+  &.is-invalid {
+    input {
+      padding: 23px 30px 22px;
+      border: 1px solid $color-torch-red;
+    }
+  }
+
+  input {
+    padding: 23px 30px 22px;
+    width: 100%;
+    background-color: $color-default-white;
+    border: 0;
+    cursor: pointer;
+
+    @include vp-1199 {
+      padding: 15px 15px 16px;
+    }
+
+    &::placeholder {
+      opacity: 0.5;
+
+      @include vp-1199 {
+        font-size: 14px;
+        line-height: 14px;
+      }
+    }
+
+    @include hover {
+      padding: 22px 30px 21px;
+      border: 1px solid $color-navy-blue;
+
+      @include vp-1199 {
+        padding: 14px 15px 15px;
+      }
+
+      &::placeholder {
+        color: $color-navy-blue;
+        opacity: 1;
+      }
+    }
+
+    @include active {
+      padding: 22px 30px 21px;
+      outline: none;
+      border: 1px solid $color-resolution-blue;
+
+      @include vp-1199 {
+        padding: 14px 15px 15px;
+      }
+
+      &::placeholder {
+        color: transparent;
+      }
+    }
+
+    @include focus {
+      padding: 22px 30px 21px;
+      outline: none;
+      border: 1px solid $color-resolution-blue;
+
+      @include vp-1199 {
+        padding: 14px 15px 15px;
+      }
+
+      &::placeholder {
+        color: transparent;
+      }
+    }
+
+    &:disabled {
+      color: rgba(2, 102, 193, 0.1);
+      pointer-events: none;
+    }
+  }
+}
+
+.form__btn {
+  padding: 24px 24px 22px;
+  width: 100%;
+  height: 64px;
+  font-weight: 500;
+
+  @include vp-1199 {
+    padding: 17px 24px;
+    width: 266px;
+    height: 58px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    height: 52px;
+  }
 }

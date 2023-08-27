@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   gap: 47px;
-  padding: 53px calc(50% - 720px) 57px;
+  padding: 53px calc(50% - 720px) 59px;
   background-image: url("../img/background/advantages-right.png");
   background-repeat: no-repeat;
   background-position: top -5px right 0px;
@@ -78,6 +78,7 @@
 .advantages__block-button {
   display: flex;
   gap: 4px;
+  margin-top: -2px;
 
   @include vp-1199 {
     display: none;

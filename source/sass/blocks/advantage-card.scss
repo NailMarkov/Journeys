@@ -11,7 +11,7 @@
   border: 1px solid rgba(2, 102, 193, 0.1);
 
   @include vp-1199 {
-    padding: 102px 20px 30px;
+    padding: 103px 20px 29px;
     width: 324px;
     background-position: top 29px center;
     background-size: 48px 48px;
@@ -52,6 +52,7 @@
   line-height: 18px;
 
   @include vp-1199 {
+    margin: 0 0 14px;
     font-size: 16px;
     line-height: 16px;
   }
