@@ -1,0 +1,21 @@
+.feedback {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  margin: 0 auto;
+  padding: 311px 231px 308px;
+  width: 1440px;
+  color: $color-default-white;
+  background-image: url("../img/background/subscribe.webp");
+  background-repeat: no-repeat;
+}
+
+.feedback__title {
+  padding: 0 288px;
+
+}
+
+.feedback__text {
+  margin: 0;
+  padding: 0 188px;
+}
