@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Описание проекта">
   <title>Journeys</title>
+  <link rel="stylesheet" href="css/leaflet.css">
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="fonts/Montserrat-Light.woff2" type="font/woff2" as="font" crossorigin="anonymous" />
   <link rel="preload" href="fonts/Montserrat-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous" />
@@ -1242,29 +1243,33 @@
 
       <!-- Contacts -->
       <section class="contacts">
-        <h2 class="contacts__title subtitle">Контакты</h2>
+        <h2 class="contacts__title subtitle">Контакты
+          <span class="subtitle__bg">Контакты</span>
+        </h2>
         <p class="contacts__description">
           Свяжитесь с&nbsp;нами любым удобным для вас способом или приходите к&nbsp;нам
           в&nbsp;гости. Мы&nbsp;будем рады поделиться увлекательными историями
           и&nbsp;подобрать для вас тур.
         </p>
         <ul class="contact-list">
-          <li class="contact-list__item">
-            <span class="contact-list__title">Телефон</span>
+          <li class="contact-list__item contact-list__item--phone">
+            <h3 class="contact-list__title">Телефон</h3>
             <a class="contact-list__link" href="tel:89837454545">8 983 745 45 45</a>
           </li>
-          <li class="contact-list__item">
-            <span class="contact-list__title">E-mail</span>
+          <li class="contact-list__item contact-list__item--mail">
+            <h3 class="contact-list__title">E-mail</h3>
             <a class="contact-list__link" href="mailto:info@lifetour.com">info@lifetour.com</a>
           </li>
-          <li class="contact-list__item">
-            <span class="contact-list__title">Адрес</span>
+          <li class="contact-list__item contact-list__item--pin">
+            <h3 class="contact-list__title">Адрес</h3>
             <a class="contact-list__link">г. Москва, пр-т Мира, д. 14, офис 101</a>
           </li>
-          <div class="contacts__map"></div>
         </ul>
+        <div class="contacts__map" data-map></div>
       </section>
     </main>
+
+    <!-- Footer -->
     <footer class="page-footer">
       <a class="page-footer__logo-link" href="index.html">
         <span class="visually-hidden">Логотип сайта Путешествия.</span>

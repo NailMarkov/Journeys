@@ -5,6 +5,7 @@ import {initVideos} from './modules/video';
 import {showMenu} from './modules/menu';
 import {initSliderHero, initSliderTours, initSliderTraining, initSliderReviews, initSliderAdvantages, initSliderGallery} from './modules/swiper';
 import {initAudio} from './modules/audio';
+import {initMap} from './modules/map';
 
 // ---------------------------------
 
@@ -27,6 +28,7 @@ window.addEventListener('DOMContentLoaded', () => {
   initSliderReviews();
   initVideos();
   initAudio();
+  initMap();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана

@@ -1,0 +1,76 @@
+.contact-list {
+  grid-column: 1 / 2;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  @include vp-1199 {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    gap: 44px;
+    margin-bottom: 23px;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    gap: 29px;
+    margin-bottom: 16px;
+  }
+}
+
+.contact-list__item {
+  padding: 0 56px;
+  background-repeat: no-repeat;
+  background-position: left center;
+
+  @include vp-1199 {
+    padding-left: 34px;
+    padding-right: 0;
+    background-position: left top;
+  }
+
+  @include vp-767 {
+    padding-left: 32px;
+    padding-right: 95px;
+    background-size: 22px;
+  }
+
+  &--phone {
+    background-image: url("../img/svg/phone.svg");
+  }
+
+  &--mail {
+    background-image: url("../img/svg/mail.svg");
+  }
+
+  &--pin {
+    background-image: url("../img/svg/pin.svg");
+  }
+}
+
+.contact-list__title {
+  margin: 0 0 7px;
+  font-weight: 600;
+  font-size: 18px;
+  float: 18px;
+
+  @include vp-1199 {
+    margin-bottom: 5px;
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 7px;
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+
+.contact-list__link {
+  font-size: 14px;
+  line-height: 22px;
+}
