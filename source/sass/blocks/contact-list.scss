@@ -71,6 +71,8 @@
 }
 
 .contact-list__link {
-  font-size: 14px;
-  line-height: 22px;
+  @include vp-1199 {
+    font-size: 14px;
+    line-height: 22px;
+  }
 }

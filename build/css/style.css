@@ -1826,9 +1826,11 @@ button,
   }
 }
 
-.contact-list__link {
-  font-size: 14px;
-  line-height: 22px;
+@media (max-width: 1199px) {
+  .contact-list__link {
+    font-size: 14px;
+    line-height: 22px;
+  }
 }
 
 .contacts {
@@ -1888,7 +1890,7 @@ button,
   grid-row: 2/4;
   margin-top: 17px;
   width: 585px;
-  height: 320px;
+  height: 324px;
   background-image: url("../img/background/map-bg.png");
   background-repeat: no-repeat;
   background-size: 100%;
@@ -1900,6 +1902,7 @@ button,
     -ms-grid-row-span: 1;
     grid-row: 4/5;
     margin-top: 0;
+    width: 100%;
     min-height: 340px;
     background-image: url("../img/background/map-tablet-bg.png");
   }
