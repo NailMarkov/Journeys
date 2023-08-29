@@ -5,7 +5,7 @@ export const initMap = () => {
 
   const mapOptions = {
     scrollWheelZoom: false,
-    center: [55.823325, 37.625415],
+    center: [55.823420, 37.623996],
     zoom: 13,
   };
 
@@ -17,7 +17,9 @@ export const initMap = () => {
 
   const map = L.map(mapElement, mapOptions);
 
-  L.marker([55.816654, 37.636922], iconOptions).addTo(map);
+  L.marker([55.816654, 37.636922], {
+    icon: iconOptions,
+  }).addTo(map);
 
   L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}', {
     minZoom: 10,
