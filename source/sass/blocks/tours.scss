@@ -60,17 +60,6 @@
   z-index: 1;
 }
 
-.tours__btn {
-  width: 37px;
-  height: 35px;
-
-  @include hover {
-    .btn__icon {
-      color: $color-resolution-blue;
-    }
-  }
-}
-
 .tours__slider-wrapper {
   grid-column: 1 / -1;
 

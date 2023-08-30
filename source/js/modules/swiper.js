@@ -71,6 +71,7 @@ export const initSliderTraining = () => {
 
 export const initSliderReviews = () => {
   const sliderReviewsElement = document.querySelector('[data-slider="reviews"]');
+
   const swiperReviews = new window.Swiper(sliderReviewsElement, {
     navigation: {
       prevEl: document.querySelector('[data-prev="reviews"]'),
@@ -91,6 +92,9 @@ export const initSliderReviews = () => {
       },
     },
   });
+
+  const wrapperElement = sliderReviewsElement.document.querySelector('.swiper-wrapper');
+  wrapperElement.style.overflow = 'visible';
 
   return swiperReviews;
 };

@@ -1891,42 +1891,42 @@ button.swiper-pagination-bullet {
 
 @font-face {
   font-family: "Montserrat";
-  src: url("../fonts/Montserrat-Light.woff2") format("woff2");
+  src: url("../fonts/Montserrat-Light.woff2") format("woff2"), url("../fonts/Montserrat-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Montserrat";
-  src: url("../fonts/Montserrat-Regular.woff2") format("woff2");
+  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Light.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Montserrat";
-  src: url("../fonts/Montserrat-Medium.woff2") format("woff2");
+  src: url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Light.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Montserrat";
-  src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2");
+  src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat-Light.woff") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Montserrat";
-  src: url("../fonts/Montserrat-Bold.woff2") format("woff2");
+  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Light.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Montserrat";
-  src: url("../fonts/Montserrat-ExtraBold.woff2") format("woff2");
+  src: url("../fonts/Montserrat-ExtraBold.woff2") format("woff2"), url("../fonts/Montserrat-Light.woff") format("woff");
   font-weight: 800;
   font-style: normal;
   font-display: swap;
@@ -2382,19 +2382,6 @@ button,
   }
 }
 
-.advantages__title .subtitle__bg {
-  left: -83px;
-}
-@media (max-width: 1199px) {
-  .advantages__title .subtitle__bg {
-    left: -63px;
-  }
-}
-@media (max-width: 767px) {
-  .advantages__title .subtitle__bg {
-    left: -17px;
-  }
-}
 @media (max-width: 767px) {
   .advantages__title {
     margin-bottom: 14px;
@@ -3331,6 +3318,7 @@ button,
 
 .hero__wrapper {
   position: relative;
+  background-color: #0266c1;
   z-index: 3;
 }
 
@@ -4048,19 +4036,6 @@ button,
     padding: 0 15px;
   }
 }
-.photogallery__title .subtitle__bg {
-  left: 120px;
-}
-@media (max-width: 1199px) {
-  .photogallery__title .subtitle__bg {
-    left: 45px;
-  }
-}
-@media (max-width: 767px) {
-  .photogallery__title .subtitle__bg {
-    left: 15px;
-  }
-}
 
 .photogallery__description {
   margin: 0 0 23px;
@@ -4630,9 +4605,6 @@ button,
 .reviews__slider-wrapper {
   grid-column: 1/-1;
 }
-.reviews__slider-wrapper .swiper-wrapper {
-  overflow: visible;
-}
 
 .social-list {
   grid-column: 1/-1;
@@ -4717,6 +4689,32 @@ button,
     line-height: 26px;
   }
 }
+.subtitle__bg--center {
+  left: -83px;
+}
+@media (max-width: 1199px) {
+  .subtitle__bg--center {
+    left: -63px;
+  }
+}
+@media (max-width: 767px) {
+  .subtitle__bg--center {
+    left: -17px;
+  }
+}
+.subtitle__bg--left {
+  left: 120px;
+}
+@media (max-width: 1199px) {
+  .subtitle__bg--left {
+    left: 45px;
+  }
+}
+@media (max-width: 767px) {
+  .subtitle__bg--left {
+    left: 15px;
+  }
+}
 
 .swiper-pagination-bullet {
   width: 10px;
@@ -4769,6 +4767,7 @@ button,
 }
 .tour-card img {
   width: 100%;
+  background-color: #0266c1;
 }
 
 .tour-card__block {
@@ -4873,16 +4872,6 @@ button,
   display: flex;
   gap: 4px;
   z-index: 1;
-}
-
-.tours__btn {
-  width: 37px;
-  height: 35px;
-}
-@media (hover: hover) {
-  .tours__btn:hover:not(.focus-visible) .btn__icon {
-    color: #1c3374;
-  }
 }
 
 .tours__slider-wrapper {

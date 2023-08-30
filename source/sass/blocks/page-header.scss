@@ -24,8 +24,8 @@
   }
 
   &--opened {
-    background-color: white;
-    color: black;
+    background-color: $color-default-white;
+    color: $color-default-black;
   }
 }
 
@@ -198,4 +198,3 @@
     line-height: 14px;
   }
 }
-

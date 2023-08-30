@@ -4,7 +4,7 @@ import {Form} from './modules/form-validate/form';
 import {initVideos} from './modules/video';
 import {showMenu} from './modules/menu';
 import {initSliderHero, initSliderTours, initSliderTraining, initSliderReviews, initSliderAdvantages, initSliderGallery} from './modules/swiper';
-import {initAudio} from './modules/audio';
+import {initAudios} from './modules/audio';
 import {initMap} from './modules/map';
 
 // ---------------------------------
@@ -27,7 +27,7 @@ window.addEventListener('DOMContentLoaded', () => {
   initSliderTraining();
   initSliderReviews();
   initVideos();
-  initAudio();
+  initAudios();
   initMap();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
