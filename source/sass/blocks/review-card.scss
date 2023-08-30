@@ -21,13 +21,13 @@
   }
 }
 
-.review__photo {
+.review-card__photo {
   @include vp-767 {
     margin-bottom: 15px;
   }
 }
 
-.reviews__block {
+.review-card__block {
   display: flex;
   flex-direction: column;
   padding: 15px 0;
