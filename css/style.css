@@ -50,6 +50,8 @@
 .leaflet-safari .leaflet-tile-container {
   width: 1600px;
   height: 1600px;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
   -webkit-transform-origin: 0 0;
 }
 
@@ -118,6 +120,9 @@
 /* workaround for https://bugzilla.mozilla.org/show_bug.cgi?id=888319 */
 
 .leaflet-overlay-pane svg {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   -moz-user-select: none;
 }
 
@@ -325,7 +330,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 }
 
 .leaflet-container a {
-  color: #0078A8;
+  color: #0078a8;
 }
 
 .leaflet-container a.leaflet-active {
@@ -640,6 +645,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 }
 
 .leaflet-oldie .leaflet-popup-content-wrapper {
+  zoom: 1;
   -ms-zoom: 1;
 }
 
@@ -2009,7 +2015,7 @@ button.swiper-pagination-bullet {
 
 @font-face {
   font-family: "Montserrat";
-  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Light.woff") format("woff");
+  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -2017,7 +2023,7 @@ button.swiper-pagination-bullet {
 
 @font-face {
   font-family: "Montserrat";
-  src: url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Light.woff") format("woff");
+  src: url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -2025,7 +2031,7 @@ button.swiper-pagination-bullet {
 
 @font-face {
   font-family: "Montserrat";
-  src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat-Light.woff") format("woff");
+  src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -2033,7 +2039,7 @@ button.swiper-pagination-bullet {
 
 @font-face {
   font-family: "Montserrat";
-  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Light.woff") format("woff");
+  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -2041,7 +2047,7 @@ button.swiper-pagination-bullet {
 
 @font-face {
   font-family: "Montserrat";
-  src: url("../fonts/Montserrat-ExtraBold.woff2") format("woff2"), url("../fonts/Montserrat-Light.woff") format("woff");
+  src: url("../fonts/Montserrat-ExtraBold.woff2") format("woff2"), url("../fonts/Montserrat-ExtraBold.woff") format("woff");
   font-weight: 800;
   font-style: normal;
   font-display: swap;
@@ -2372,7 +2378,7 @@ button,
   padding: 53px calc(50% - 720px) 59px;
   background-image: url("../img/background/advantages-right.png");
   background-repeat: no-repeat;
-  background-position: top -5px right 0px;
+  background-position: top -5px right 0;
 }
 
 .advantages::after {
@@ -2384,10 +2390,6 @@ button,
   height: 391px;
   background-image: url("../img/background/advantages-left.png");
   background-repeat: no-repeat;
-}
-
-.advantages__title .subtitle__bg {
-  left: -83px;
 }
 
 .advantages__slider-wrapper {
@@ -2858,6 +2860,7 @@ button,
 
 .hero__wrapper {
   position: relative;
+  background-color: #0266c1;
   z-index: 3;
 }
 
@@ -3072,8 +3075,8 @@ button,
 }
 
 .page-header__nav--opened {
-  background-color: white;
-  color: black;
+  background-color: #ffffff;
+  color: #000000;
 }
 
 .page-header__toggle {
@@ -3235,10 +3238,6 @@ button,
 .photogallery__title {
   grid-column: 1/-1;
   padding: 0 120px;
-}
-
-.photogallery__title .subtitle__bg {
-  left: 120px;
 }
 
 .photogallery__description {
@@ -3472,8 +3471,8 @@ button,
   padding: 20px 40px 20px 20px;
   width: 790px;
   height: auto;
-  -webkit-box-shadow: 0px 0px 30px 0px rgba(28, 51, 116, 0.1);
-  box-shadow: 0px 0px 30px 0px rgba(28, 51, 116, 0.1);
+  -webkit-box-shadow: 0 0 30px 0 rgba(28, 51, 116, 0.1);
+  box-shadow: 0 0 30px 0 rgba(28, 51, 116, 0.1);
 }
 
 .review-card__block {
@@ -3541,10 +3540,6 @@ button,
   grid-column: 1/-1;
 }
 
-.reviews__slider-wrapper .swiper-wrapper {
-  overflow: visible;
-}
-
 .social-list {
   grid-column: 1/-1;
   -ms-grid-row-align: center;
@@ -3600,6 +3595,14 @@ button,
   color: rgba(45, 56, 63, 0.03);
 }
 
+.subtitle__bg--center {
+  left: -83px;
+}
+
+.subtitle__bg--left {
+  left: 120px;
+}
+
 .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
@@ -3619,6 +3622,7 @@ button,
 
 .tour-card img {
   width: 100%;
+  background-color: #0266c1;
 }
 
 .tour-card__block {
@@ -3672,11 +3676,6 @@ button,
   display: flex;
   gap: 4px;
   z-index: 1;
-}
-
-.tours__btn {
-  width: 37px;
-  height: 35px;
 }
 
 .tours__slider-wrapper {
@@ -3922,10 +3921,6 @@ button,
 
   .advantages::after {
     display: none;
-  }
-
-  .advantages__title .subtitle__bg {
-    left: -63px;
   }
 
   .advantages__wrapper {
@@ -4307,10 +4302,6 @@ button,
     padding: 0 45px;
   }
 
-  .photogallery__title .subtitle__bg {
-    left: 45px;
-  }
-
   .photogallery__description {
     margin-bottom: 15px;
     padding: 0 195px 0 45px;
@@ -4434,6 +4425,14 @@ button,
     top: -13px;
     font-size: 40px;
     line-height: 40px;
+  }
+
+  .subtitle__bg--center {
+    left: -63px;
+  }
+
+  .subtitle__bg--left {
+    left: 45px;
   }
 
   .swiper-pagination-fraction,
@@ -4569,10 +4568,6 @@ button,
 
   .advantages .advantages__title {
     margin-bottom: 15px;
-  }
-
-  .advantages__title .subtitle__bg {
-    left: -17px;
   }
 
   .advantages__title {
@@ -4874,10 +4869,6 @@ button,
     padding: 0 15px;
   }
 
-  .photogallery__title .subtitle__bg {
-    left: 15px;
-  }
-
   .photogallery__description {
     grid-column: 1/-1;
     margin-bottom: 0;
@@ -5020,6 +5011,14 @@ button,
     width: 256px;
     font-size: 26px;
     line-height: 26px;
+  }
+
+  .subtitle__bg--center {
+    left: -17px;
+  }
+
+  .subtitle__bg--left {
+    left: 15px;
   }
 
   .swiper-pagination-bullet {
@@ -5187,10 +5186,6 @@ button,
     right: 0;
     height: 1px;
     background-color: #ffffff;
-  }
-
-  .tours__btn:hover:not(.focus-visible) .btn__icon {
-    color: #1c3374;
   }
 
   .tours__link:hover:not(.focus-visible) {
