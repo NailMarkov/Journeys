@@ -3603,6 +3603,10 @@ button,
   left: 120px;
 }
 
+.subtitle__bg::before {
+  content: attr(title);
+}
+
 .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
