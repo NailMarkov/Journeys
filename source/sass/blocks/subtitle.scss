@@ -60,4 +60,8 @@
       left: 15px;
     }
   }
+
+  &::before {
+    content: attr(title);
+  }
 }

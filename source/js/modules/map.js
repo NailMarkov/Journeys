@@ -1,6 +1,9 @@
 import L from '../vendor/leaflet';
 
 export const initMap = () => {
+  if (!L) {
+    return;
+  }
   const mapElement = document.querySelector('[data-map]');
 
   const mapOptions = {
@@ -15,7 +18,7 @@ export const initMap = () => {
     iconAnchor: [24, 48],
   });
 
-  const map = L.map(mapElement, mapOptions);
+  const map = new window.L.Map(mapElement, mapOptions);
 
   L.marker([55.816654, 37.636922], {
     icon: iconOptions,
@@ -27,6 +30,5 @@ export const initMap = () => {
   }).addTo(map);
 
   mapElement.querySelector('.leaflet-control-attribution').style.visibility = 'hidden';
-
-  return map;
+  mapElement.querySelector('.leaflet-control-zoom').style.visibility = 'hidden';
 };

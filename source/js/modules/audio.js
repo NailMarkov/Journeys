@@ -1,10 +1,13 @@
-export const initAudio = () => {
-  const buttonElement = document.querySelector('[data-button="play"]');
-  const radioElement = document.querySelector('.hero-card__radio');
+const initAudio = (element) => {
+  const wrapperElement = document.querySelector('.wrapper-element');
+  const buttonElement = wrapperElement.querySelector('[data-button="play"]');
+  const radioElement = element.querySelector('.hero-card__radio');
 
-  const audio = buttonElement.addEventListener('click', () => {
+  buttonElement.addEventListener('click', () => {
     radioElement.classList.toggle('hero-card__radio--active');
   });
+};
 
-  return audio;
+export const initAudios = () => {
+  document.querySelectorAll('[data-audio]').forEach(initAudio);
 };
