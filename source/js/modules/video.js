@@ -2,7 +2,7 @@ import {loadScript} from '../utils/load-script.js';
 
 let scriptLoaded = false;
 
-const initVideo = (containerElement) => {
+export const initVideo = (containerElement) => {
   const linkElement = containerElement.querySelector('[data-control]');
   const youtubeElement = containerElement.querySelector('[data-youtube]');
   let youtubePlayer = null;

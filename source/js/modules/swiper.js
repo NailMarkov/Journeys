@@ -1,3 +1,5 @@
+import {initVideo} from './video';
+
 export const initSliderHero = () => {
   const sliderHeroElement = document.querySelector('[data-slider="hero"]');
   const swiperHero = new window.Swiper(sliderHeroElement, {
@@ -11,7 +13,23 @@ export const initSliderHero = () => {
     },
   });
 
-  swiperHero.on('slideChange', )
+  const initActiveSlides = () => {
+    initVideo();
+    const activeSlide = swiperHero.slides[swiperHero.activeIndex]; // Находим текущий слайд
+    const activePlayer = activeSlide.querySelector('[data-video]'); // Находим текущий плеер
+    activePlayer.classList.remove('is-active');
+    console.log(activePlayer);
+    // if (activePlayer.hasAttribute('data-madia="media"')) {
+    //   activePlayer.classList.remove('is-active');
+    // }
+    // const activeAttribute = activeSlide.getAttribute('data-swiper-slide-index');
+    // if (activeAttribute === '0') {
+    //   initVideo(activePlayer);
+    //   activePlayer.setAttribute('data-media', 'media');
+    // }
+  };
+
+  swiperHero.on('slideChange', initActiveSlides);
 
   return swiperHero;
 };
