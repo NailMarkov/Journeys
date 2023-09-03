@@ -14,19 +14,13 @@ export const initSliderHero = () => {
   });
 
   const initActiveSlides = () => {
-    initVideo();
-    const activeSlide = swiperHero.slides[swiperHero.activeIndex]; // Находим текущий слайд
-    const activePlayer = activeSlide.querySelector('[data-video]'); // Находим текущий плеер
-    activePlayer.classList.remove('is-active');
-    console.log(activePlayer);
-    // if (activePlayer.hasAttribute('data-madia="media"')) {
-    //   activePlayer.classList.remove('is-active');
-    // }
-    // const activeAttribute = activeSlide.getAttribute('data-swiper-slide-index');
-    // if (activeAttribute === '0') {
-    //   initVideo(activePlayer);
-    //   activePlayer.setAttribute('data-media', 'media');
-    // }
+    if (!activeVideo) {
+      return;
+    }
+    const activeSlides = swiperHero.slides[swiperHero.activeIndex];
+    const activeBlock = activeSlides.querySelector('.hero-card');
+    const activeVideo = activeBlock.querySelector('[data-video]');
+    initVideo(activeVideo);
   };
 
   swiperHero.on('slideChange', initActiveSlides);
