@@ -1,4 +1,5 @@
-import {initVideo} from './video';
+import {destroyVideos, initVideo} from './video';
+import {destroyAudios, initAudio} from './audio';
 
 export const initSliderHero = () => {
   const sliderHeroElement = document.querySelector('[data-slider="hero"]');
@@ -11,19 +12,22 @@ export const initSliderHero = () => {
       type: 'bullets',
       clickable: true,
     },
+    on: {
+      slideChange(slider) {
+        destroyVideos();
+        destroyAudios();
+        const activeSlide = slider.slides[slider.activeIndex];
+        const video = activeSlide.querySelector('[data-video]');
+        if (video) {
+          initVideo(video);
+        }
+        const audio = activeSlide.querySelector('[data-audio]');
+        if (audio) {
+          initAudio(audio);
+        }
+      },
+    },
   });
-
-  const initActiveSlides = () => {
-    if (!activeVideo) {
-      return;
-    }
-    const activeSlides = swiperHero.slides[swiperHero.activeIndex];
-    const activeBlock = activeSlides.querySelector('.hero-card');
-    const activeVideo = activeBlock.querySelector('[data-video]');
-    initVideo(activeVideo);
-  };
-
-  swiperHero.on('slideChange', initActiveSlides);
 
   return swiperHero;
 };
@@ -163,3 +167,12 @@ export const initSliderGallery = () => {
 
   return swiperGallery;
 };
+
+// export default initSliders = () => {
+//   initSliderHero(),
+//   initSliderTours(),
+//   initSliderTraining(),
+//   initSliderReviews(),
+//   initSliderAdvantages(),
+//   initSliderGallery(),
+// };

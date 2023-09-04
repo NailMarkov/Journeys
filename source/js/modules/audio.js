@@ -1,13 +1,23 @@
-const initAudio = (element) => {
-  const wrapperElement = document.querySelector('.wrapper-element');
-  const buttonElement = wrapperElement.querySelector('[data-button="play"]');
-  const radioElement = element.querySelector('.hero-card__radio');
+export const initAudio = (audioElement) => {
+  const buttonElement = audioElement.querySelector('[data-button="play"]');
 
   buttonElement.addEventListener('click', () => {
-    radioElement.classList.toggle('hero-card__radio--active');
+    audioElement.classList.toggle('hero-card__radio--active');
   });
+
+  const createElement = () => {
+    const iframe = document.createElement('iframe');
+    iframe.src = 'https://music.yandex.ru/iframe/#track/112912322/25474374';
+    audioElement.appendChild(iframe);
+  };
+
+  createElement();
 };
 
-export const initAudios = () => {
-  document.querySelectorAll('[data-audio]').forEach(initAudio);
+const destroyAudio = (containerAudioElement) => {
+  containerAudioElement.remove();
+};
+
+export const destroyAudios = (rootElement = document) => {
+  rootElement.querySelectorAll('iframe').forEach(destroyAudio);
 };
