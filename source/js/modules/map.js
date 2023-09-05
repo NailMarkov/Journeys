@@ -1,7 +1,7 @@
 import L from '../vendor/leaflet';
 
 export const initMap = () => {
-  if (!L) {
+  if (!map) {
     return;
   }
   const mapElement = document.querySelector('[data-map]');

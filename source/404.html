@@ -74,7 +74,7 @@
                   <source media="(max-width: 1199px)"
                     srcset="img/hero/photo-tablet-1.jpg 1x, img/hero/photo-tablet-1@2x.jpg 2x" />
                   <img src="img/hero/photo-1.jpg" alt="Захватывающие вершины Кавказа"
-                    srcset="img/hero/photo-1@2x.jpg 2x" width="1440" height="880">
+                    srcset="img/hero/photo-1@2x.jpg 2x" width="1440" height="880" />
                 </picture>
                 <div class="hero-card__info">
                   <h2 class="hero-card__title">Захватывающие<br> вершины Кавказа</h2>
@@ -85,7 +85,7 @@
                   </p>
                   <a class="hero-card__link" href="#!">Смотреть тур</a>
                   <div class="hero-card__video video" data-video>
-                    <div class="video__player" id="9TZXsZItgdw" data-youtube></div>
+                    <div class="video__player" data-youtube="9TZXsZItgdw"></div>
                     <a class="video__control" href="https://youtube.com/embed/9TZXsZItgdw" data-control>
                       <span class="visually-hidden">Проиграть видео.</span>
                     </a>
@@ -108,7 +108,7 @@
                   <source media="(max-width: 1199px)"
                     srcset="img/hero/photo-tablet-2.jpg 1x, img/hero/photo-tablet-2@2x.jpg 2x" />
                   <img src="img/hero/photo-2.jpg" alt="Невероятная природа Камчатки"
-                    srcset="img/hero/photo-2@2x.jpg 2x">
+                    srcset="img/hero/photo-2@2x.jpg 2x" />
                 </picture>
                 <div class="hero-card__info">
                   <h2 class="hero-card__title">Невероятная<br> природа Камчатки</h2>
@@ -146,7 +146,7 @@
                   <source media="(max-width: 1199px)"
                     srcset="img/hero/photo-tablet-3.jpg 1x, img/hero/photo-tablet-3@2x.jpg 2x" />
                   <img src="img/hero/photo-3.jpg" alt="Магические пейзажи Алтайского Края"
-                    srcset="img/hero/photo-3@2x.jpg 2x">
+                    srcset="img/hero/photo-3@2x.jpg 2x" />
                 </picture>
                 <div class="hero-card__info">
                   <h2 class="hero-card__title">Магические пейзажи<br> Алтайского Края</h2>
@@ -156,7 +156,7 @@
                     дух ландшафтов Алтайских гор.
                   </p>
                   <a class="hero-card__link" href="#!">Смотреть тур</a>
-                  <div class="hero-card__radio radio">
+                  <div class="hero-card__radio radio" data-audio>
                     <h3 class="radio__title">Алтай</h3>
                     <div class="radio__block-interaction">
                       <h4 class="radio__subtitle">Lifetour</h4>
@@ -209,8 +209,8 @@
                           <use xlink:href="img/sprite.svg#prev" />
                         </svg>
                       </button>
-                      <button class="radio__button radio__button--play" type="button">
-                        <span class="visually-hidden">Следующий файл.</span>
+                      <button class="radio__button radio__button--play" type="button" data-button="play">
+                        <span class="visually-hidden">Запустить видео</span>
                         <svg class="radio__btn" aria-hidden="true" focusable="false" width="47" height="47"
                           xmlns="http://www.w3.org/2000/svg">
                           <use xlink:href="img/sprite.svg#play-audio" />
@@ -241,6 +241,7 @@
             </div>
             <div class="swiper-pagination" data-pagination="hero"></div>
           </div>
+        </div>
       </section>
     </main>
     <footer class="page-footer">
@@ -307,4 +308,5 @@
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>
+
 </html>

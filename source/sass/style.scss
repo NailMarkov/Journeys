@@ -16,6 +16,11 @@
 @import "global/utils";
 @import "global/container";
 
+// Lib
+// ---------------------------------
+
+@import "lib/swiper";
+
 // Blocks
 // ---------------------------------
 
@@ -43,7 +48,6 @@
 @import "blocks/reviews";
 @import "blocks/social-list";
 @import "blocks/subtitle";
-@import "blocks/swiper";
 @import "blocks/tour-card";
 @import "blocks/tours";
 @import "blocks/training";
