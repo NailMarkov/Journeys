@@ -2687,12 +2687,24 @@ button,
 .hero-card {
   position: relative;
   color: #ffffff;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-card--caucasus {
+  background-image: url("../img/hero/photo-1.jpg");
+}
+
+.hero-card--kamchatka {
+  background-image: url("../img/hero/photo-2.jpg");
+}
+
+.hero-card--altai {
+  background-image: url("../img/hero/photo-3.jpg");
 }
 
 .hero-card__info {
-  position: absolute;
-  top: 0;
-  left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2702,7 +2714,7 @@ button,
   flex-direction: column;
   padding: 181px 120px 80px;
   width: 100%;
-  min-height: 800px;
+  height: 800px;
 }
 
 .hero-card__title {
@@ -2969,7 +2981,7 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 8px 0;
+  gap: 8px;
   padding: 31px calc(50% - 600px);
 }
 
@@ -3596,7 +3608,7 @@ button,
   background-color: #0266c1;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
 }
 
 .tour-card--elbrus {
@@ -3856,7 +3868,7 @@ button,
   .swiper-horizontal > .swiper-pagination-bullets,
   .swiper-pagination-bullets.swiper-pagination-horizontal {
     bottom: 84px;
-    right: 349px;
+    right: 45%;
   }
 
   .about-list {
@@ -4096,16 +4108,21 @@ button,
     height: 58px;
   }
 
-  .hero-card {
-    width: 100%;
+  .hero-card--caucasus {
+    background-image: url("../img/hero/photo-tablet-1.jpg");
   }
 
-  .hero-card img {
-    width: 100%;
+  .hero-card--kamchatka {
+    background-image: url("../img/hero/photo-tablet-2.jpg");
+  }
+
+  .hero-card--altai {
+    background-image: url("../img/hero/photo-tablet-3.jpg");
   }
 
   .hero-card__info {
     padding: 174px 45px 90px;
+    height: 1024px;
   }
 
   .hero-card__title {
@@ -4203,7 +4220,7 @@ button,
     -ms-grid-columns: min-content 1fr;
     grid-template-columns: -webkit-min-content 1fr;
     grid-template-columns: min-content 1fr;
-    gap: 12px 0;
+    gap: 12px;
     padding: 44px 45px 40px;
   }
 
@@ -4226,7 +4243,7 @@ button,
   }
 
   .page-footer__link {
-    margin-left: 0px;
+    margin-left: 0;
     font-size: 14px;
     line-height: 14px;
   }
@@ -4534,7 +4551,7 @@ button,
   .swiper-horizontal > .swiper-pagination-bullets,
   .swiper-pagination-bullets.swiper-pagination-horizontal {
     bottom: 34px;
-    right: 130px;
+    right: 41%;
   }
 
   .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
@@ -4701,6 +4718,7 @@ button,
 
   .hero-card__info {
     padding: 140px 15px 80px;
+    height: 568px;
   }
 
   .hero-card__title {

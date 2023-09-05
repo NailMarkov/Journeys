@@ -33,49 +33,39 @@
         </a>
         <ul class="page-header__list">
           <li class="page-header__item">
-            <a class="page-header__link" href="#!">Туры</a>
+            <a class="page-header__link" href="#tours">Туры</a>
           </li>
           <li class="page-header__item">
-            <a class="page-header__link" href="#!">Обучение</a>
+            <a class="page-header__link" href="#training">Обучение</a>
           </li>
           <li class="page-header__item">
-            <a class="page-header__link" href="#!">О нас</a>
+            <a class="page-header__link" href="#about">О нас</a>
           </li>
           <li class="page-header__item">
-            <a class="page-header__link" href="#!">Отзывы</a>
+            <a class="page-header__link" href="#reviews">Отзывы</a>
           </li>
           <li class="page-header__item">
-            <a class="page-header__link" href="#!">Фотографии</a>
+            <a class="page-header__link" href="#photogalery">Фотографии</a>
           </li>
           <li class="page-header__item">
-            <a class="page-header__link" href="#!">Контакты</a>
+            <a class="page-header__link" href="#contacts">Контакты</a>
           </li>
         </ul>
         <div class="page-header__wrapper">
-          <a class="page-header__phone-link" href="tel:88007253232">8 800 725 32 32</a>
+          <a class="page-header__phone-link" href="tel:+78007253232">8 800 725 32 32</a>
         </div>
       </nav>
     </header>
 
     <main class="main-page">
+      <h1 class="visually-hidden">Сайт Путешествия для любителей походов в горы.</h1>
+
+      <!-- Hero -->
       <section class="hero">
         <div class="hero__wrapper">
           <div class="swiper" data-slider="hero">
             <div class="swiper-wrapper">
-              <div class="swiper-slide hero-card" tabindex="0">
-                <picture>
-                  <source type="image/webp" media="(max-width: 767px)"
-                    srcset="img/hero/photo-mobile-1.webp, img/hero/photo-mobile-1@2x.webp 2x" />
-                  <source type="image/webp" media="(max-width: 1199px)"
-                    srcset="img/hero/photo-tablet-1.webp, img/hero/photo-tablet-1@2x.webp 2x" />
-                  <source type="image/webp" srcset="img/hero/photo-1.webp, img/hero/photo-1@2x.webp 2x" />
-                  <source media="(max-width: 767px)"
-                    srcset="img/hero/photo-mobile-1.jpg 1x, img/hero/photo-mobile-1@2x.jpg 2x" />
-                  <source media="(max-width: 1199px)"
-                    srcset="img/hero/photo-tablet-1.jpg 1x, img/hero/photo-tablet-1@2x.jpg 2x" />
-                  <img src="img/hero/photo-1.jpg" alt="Захватывающие вершины Кавказа"
-                    srcset="img/hero/photo-1@2x.jpg 2x" width="1440" height="880" />
-                </picture>
+              <div class="swiper-slide hero-card hero-card--caucasus" tabindex="0">
                 <div class="hero-card__info">
                   <h2 class="hero-card__title">Захватывающие<br> вершины Кавказа</h2>
                   <p class="hero-card__description">
@@ -96,20 +86,7 @@
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide hero-card" tabindex="0">
-                <picture>
-                  <source type="image/webp" media="(max-width: 767px)"
-                    srcset="img/hero/photo-mobile-2.webp, img/hero/photo-mobile-2@2x.webp 2x" />
-                  <source type="image/webp" media="(max-width: 1199px)"
-                    srcset="img/hero/photo-tablet-2.webp, img/hero/photo-tablet-2@2x.webp 2x" />
-                  <source type="image/webp" srcset="img/hero/photo-2.webp, img/hero/photo-2@2x.webp 2x" />
-                  <source media="(max-width: 767px)"
-                    srcset="img/hero/photo-mobile-2.jpg 1x, img/hero/photo-mobile-2@2x.jpg 2x" />
-                  <source media="(max-width: 1199px)"
-                    srcset="img/hero/photo-tablet-2.jpg 1x, img/hero/photo-tablet-2@2x.jpg 2x" />
-                  <img src="img/hero/photo-2.jpg" alt="Невероятная природа Камчатки"
-                    srcset="img/hero/photo-2@2x.jpg 2x" />
-                </picture>
+              <div class="swiper-slide hero-card hero-card--kamchatka" tabindex="0">
                 <div class="hero-card__info">
                   <h2 class="hero-card__title">Невероятная<br> природа Камчатки</h2>
                   <p class="hero-card__description">
@@ -134,20 +111,7 @@
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide hero-card" tabindex="0">
-                <picture>
-                  <source type="image/webp" media="(max-width: 767px)"
-                    srcset="img/hero/photo-mobile-3.webp, img/hero/photo-mobile-3@2x.webp 2x" />
-                  <source type="image/webp" media="(max-width: 1199px)"
-                    srcset="img/hero/photo-tablet-3.webp, img/hero/photo-tablet-3@2x.webp 2x" />
-                  <source type="image/webp" srcset="img/hero/photo-3.webp, img/hero/photo-3@2x.webp 2x" />
-                  <source media="(max-width: 767px)"
-                    srcset="img/hero/photo-mobile-3.jpg 1x, img/hero/photo-mobile-3@2x.jpg 2x" />
-                  <source media="(max-width: 1199px)"
-                    srcset="img/hero/photo-tablet-3.jpg 1x, img/hero/photo-tablet-3@2x.jpg 2x" />
-                  <img src="img/hero/photo-3.jpg" alt="Магические пейзажи Алтайского Края"
-                    srcset="img/hero/photo-3@2x.jpg 2x" />
-                </picture>
+              <div class="swiper-slide hero-card hero-card--altai" tabindex="0">
                 <div class="hero-card__info">
                   <h2 class="hero-card__title">Магические пейзажи<br> Алтайского Края</h2>
                   <p class="hero-card__description">
@@ -244,6 +208,8 @@
         </div>
       </section>
     </main>
+
+    <!-- Footer -->
     <footer class="page-footer">
       <a class="page-footer__logo-link" href="index.html">
         <span class="visually-hidden">Логотип сайта Путешествия.</span>
@@ -256,10 +222,10 @@
         <li class="page-footer__item">
           <a class="page-footer__link" href="#!">Туры</a>
         </li>
-        <li class="page-footer__item">
+        <li class="page-footer__item page-footer__item--training">
           <a class="page-footer__link" href="#!">Обучение</a>
         </li>
-        <li class="page-footer__item">
+        <li class="page-footer__item page-footer__item--photo">
           <a class="page-footer__link" href="#!">О нас</a>
         </li>
         <li class="page-footer__item">
@@ -273,28 +239,28 @@
         </li>
       </ul>
       <div class="page-footer__wrapper">
-        <a href="tel:88007253232" class="page-footer__phone-link">8 800 725 32 32</a>
+        <a class="page-footer__phone-link" href="tel:+78007253232">8 800 725 32 32</a>
       </div>
       <ul class="social-list">
         <li class="social-list__item">
-          <a class="social-list__link" href="#!">
-            <svg class="social-list__icon" aria-hidden="true" focusable="false" width="16" height="9"
+          <a class="social-list__link social-list__link--vk" href="#!">
+            <svg class="social-list__icon" aria-hidden="true" focusable="false" width="16" height="20"
               xmlns="http://www.w3.org/2000/svg">
               <use xlink:href="img/sprite.svg#vk" />
             </svg>
           </a>
         </li>
         <li class="social-list__item">
-          <a class="social-list__link" href="#!">
-            <svg class="social-list__icon" aria-hidden="true" focusable="false" width="9" height="16"
+          <a class="social-list__link social-list__link--ok" href="#!">
+            <svg class="social-list__icon" aria-hidden="true" focusable="false" width="15" height="21"
               xmlns="http://www.w3.org/2000/svg">
               <use xlink:href="img/sprite.svg#ok" />
             </svg>
           </a>
         </li>
         <li class="social-list__item">
-          <a class="social-list__link" href="#!">
-            <svg class="social-list__icon" aria-hidden="true" focusable="false" width="14" height="15"
+          <a class="social-list__link social-list__link--reddit" href="#!">
+            <svg class="social-list__icon" aria-hidden="true" focusable="false" width="16" height="17"
               xmlns="http://www.w3.org/2000/svg">
               <use xlink:href="img/sprite.svg#reddit" />
             </svg>

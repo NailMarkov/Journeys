@@ -66,20 +66,7 @@
         <div class="hero__wrapper">
           <div class="swiper" data-slider="hero">
             <div class="swiper-wrapper">
-              <div class="swiper-slide hero-card" tabindex="0">
-                <picture>
-                  <source type="image/webp" media="(max-width: 767px)"
-                    srcset="img/hero/photo-mobile-1.webp, img/hero/photo-mobile-1@2x.webp 2x" />
-                  <source type="image/webp" media="(max-width: 1199px)"
-                    srcset="img/hero/photo-tablet-1.webp, img/hero/photo-tablet-1@2x.webp 2x" />
-                  <source type="image/webp" srcset="img/hero/photo-1.webp, img/hero/photo-1@2x.webp 2x" />
-                  <source media="(max-width: 767px)"
-                    srcset="img/hero/photo-mobile-1.jpg 1x, img/hero/photo-mobile-1@2x.jpg 2x" />
-                  <source media="(max-width: 1199px)"
-                    srcset="img/hero/photo-tablet-1.jpg 1x, img/hero/photo-tablet-1@2x.jpg 2x" />
-                  <img src="img/hero/photo-1.jpg" alt="Захватывающие вершины Кавказа"
-                    srcset="img/hero/photo-1@2x.jpg 2x" width="1440" height="880" />
-                </picture>
+              <div class="swiper-slide hero-card hero-card--caucasus" tabindex="0">
                 <div class="hero-card__info">
                   <h2 class="hero-card__title">Захватывающие<br> вершины Кавказа</h2>
                   <p class="hero-card__description">
@@ -100,20 +87,7 @@
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide hero-card" tabindex="0">
-                <picture>
-                  <source type="image/webp" media="(max-width: 767px)"
-                    srcset="img/hero/photo-mobile-2.webp, img/hero/photo-mobile-2@2x.webp 2x" />
-                  <source type="image/webp" media="(max-width: 1199px)"
-                    srcset="img/hero/photo-tablet-2.webp, img/hero/photo-tablet-2@2x.webp 2x" />
-                  <source type="image/webp" srcset="img/hero/photo-2.webp, img/hero/photo-2@2x.webp 2x" />
-                  <source media="(max-width: 767px)"
-                    srcset="img/hero/photo-mobile-2.jpg 1x, img/hero/photo-mobile-2@2x.jpg 2x" />
-                  <source media="(max-width: 1199px)"
-                    srcset="img/hero/photo-tablet-2.jpg 1x, img/hero/photo-tablet-2@2x.jpg 2x" />
-                  <img src="img/hero/photo-2.jpg" alt="Невероятная природа Камчатки"
-                    srcset="img/hero/photo-2@2x.jpg 2x" />
-                </picture>
+              <div class="swiper-slide hero-card hero-card--kamchatka" tabindex="0">
                 <div class="hero-card__info">
                   <h2 class="hero-card__title">Невероятная<br> природа Камчатки</h2>
                   <p class="hero-card__description">
@@ -138,20 +112,7 @@
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide hero-card" tabindex="0">
-                <picture>
-                  <source type="image/webp" media="(max-width: 767px)"
-                    srcset="img/hero/photo-mobile-3.webp, img/hero/photo-mobile-3@2x.webp 2x" />
-                  <source type="image/webp" media="(max-width: 1199px)"
-                    srcset="img/hero/photo-tablet-3.webp, img/hero/photo-tablet-3@2x.webp 2x" />
-                  <source type="image/webp" srcset="img/hero/photo-3.webp, img/hero/photo-3@2x.webp 2x" />
-                  <source media="(max-width: 767px)"
-                    srcset="img/hero/photo-mobile-3.jpg 1x, img/hero/photo-mobile-3@2x.jpg 2x" />
-                  <source media="(max-width: 1199px)"
-                    srcset="img/hero/photo-tablet-3.jpg 1x, img/hero/photo-tablet-3@2x.jpg 2x" />
-                  <img src="img/hero/photo-3.jpg" alt="Магические пейзажи Алтайского Края"
-                    srcset="img/hero/photo-3@2x.jpg 2x" />
-                </picture>
+              <div class="swiper-slide hero-card hero-card--altai" tabindex="0">
                 <div class="hero-card__info">
                   <h2 class="hero-card__title">Магические пейзажи<br> Алтайского Края</h2>
                   <p class="hero-card__description">
@@ -1250,13 +1211,6 @@
     </footer>
   </div>
 
-  <script>
-    window.pixelperfect = {
-      breakpoints: [320, 768, 1440],
-      folder: "img/pixelperfect",
-    };
-  </script>
-  <script src="https://efiand.github.io/pixelperfect-tool/pixelperfect.min.js"></script>
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>
