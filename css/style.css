@@ -16,6 +16,9 @@
 }
 
 .leaflet-container {
+  font: 12px/1.5 "Helvetica Neue", "Arial", "Helvetica", sans-serif;
+  background: #dddddd;
+  outline: 0;
   overflow: hidden;
 }
 
@@ -39,20 +42,14 @@
   background: transparent;
 }
 
-/* Safari renders non-retina tile on retina better with this, but Chrome is worse */
-
-.leaflet-safari .leaflet-tile {
-  image-rendering: -webkit-optimize-contrast;
-}
-
 /* hack that prevents hw layers "stretching" when loading new tiles */
 
 .leaflet-safari .leaflet-tile-container {
   width: 1600px;
   height: 1600px;
+  -webkit-transform-origin: 0 0;
   -ms-transform-origin: 0 0;
   transform-origin: 0 0;
-  -webkit-transform-origin: 0 0;
 }
 
 .leaflet-marker-icon,
@@ -70,8 +67,8 @@
 .leaflet-container .leaflet-tile-pane img,
 .leaflet-container img.leaflet-image-layer,
 .leaflet-container .leaflet-tile {
-  max-width: none !important;
-  max-height: none !important;
+  max-width: none;
+  max-height: none;
 }
 
 .leaflet-container.leaflet-touch-zoom {
@@ -80,10 +77,9 @@
 }
 
 .leaflet-container.leaflet-touch-drag {
-  -ms-touch-action: pinch-zoom;
   /* Fallback for FF which doesn't support pinch-zoom */
+  -ms-touch-action: none;
   touch-action: none;
-  touch-action: pinch-zoom;
 }
 
 .leaflet-container.leaflet-touch-drag.leaflet-touch-zoom {
@@ -91,11 +87,8 @@
   touch-action: none;
 }
 
-.leaflet-container {
-  -webkit-tap-highlight-color: transparent;
-}
-
 .leaflet-container a {
+  color: #0078a8;
   -webkit-tap-highlight-color: rgba(51, 181, 229, 0.4);
 }
 
@@ -112,6 +105,8 @@
 .leaflet-zoom-box {
   width: 0;
   height: 0;
+  border: 2px dotted #3388ff;
+  background: rgba(255, 255, 255, 0.5);
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   z-index: 800;
@@ -121,9 +116,9 @@
 
 .leaflet-overlay-pane svg {
   -webkit-user-select: none;
+  -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  -moz-user-select: none;
 }
 
 .leaflet-pane {
@@ -168,7 +163,6 @@
 }
 
 .lvml {
-  behavior: url(#default#VML);
   display: inline-block;
   position: absolute;
 }
@@ -178,8 +172,8 @@
 .leaflet-control {
   position: relative;
   z-index: 800;
-  pointer-events: visiblePainted;
-  /* IE 9-10 doesn't have auto */
+  float: left;
+  clear: both;
   pointer-events: auto;
 }
 
@@ -206,13 +200,9 @@
   left: 0;
 }
 
-.leaflet-control {
-  float: left;
-  clear: both;
-}
-
 .leaflet-right .leaflet-control {
   float: right;
+  margin-right: 10px;
 }
 
 .leaflet-top .leaflet-control {
@@ -225,10 +215,6 @@
 
 .leaflet-left .leaflet-control {
   margin-left: 10px;
-}
-
-.leaflet-right .leaflet-control {
-  margin-right: 10px;
 }
 
 /* zoom and fade animations */
@@ -255,9 +241,6 @@
 
 .leaflet-zoom-anim .leaflet-zoom-animated {
   will-change: transform;
-}
-
-.leaflet-zoom-anim .leaflet-zoom-animated {
   -webkit-transition: -webkit-transform 0.25s cubic-bezier(0, 0, 0.25, 1);
   transition: -webkit-transform 0.25s cubic-bezier(0, 0, 0.25, 1);
   transition: transform 0.25s cubic-bezier(0, 0, 0.25, 1);
@@ -298,7 +281,6 @@
 .leaflet-dragging .leaflet-grab,
 .leaflet-dragging .leaflet-grab .leaflet-interactive,
 .leaflet-dragging .leaflet-marker-draggable {
-  cursor: move;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
@@ -317,35 +299,13 @@
 .leaflet-image-layer.leaflet-interactive,
 .leaflet-pane > svg path.leaflet-interactive,
 svg.leaflet-image-layer.leaflet-interactive path {
-  pointer-events: visiblePainted;
-  /* IE 9-10 doesn't have auto */
   pointer-events: auto;
 }
 
 /* visual tweaks */
 
-.leaflet-container {
-  background: #ddd;
-  outline: 0;
-}
-
-.leaflet-container a {
-  color: #0078a8;
-}
-
 .leaflet-container a.leaflet-active {
-  outline: 2px solid orange;
-}
-
-.leaflet-zoom-box {
-  border: 2px dotted #38f;
-  background: rgba(255, 255, 255, 0.5);
-}
-
-/* general typography */
-
-.leaflet-container {
-  font: 12px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
+  outline: 2px solid #ffa500;
 }
 
 /* general toolbar styles */
@@ -358,15 +318,15 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
 .leaflet-bar a,
 .leaflet-bar a:hover {
-  background-color: #fff;
-  border-bottom: 1px solid #ccc;
+  background-color: #ffffff;
+  border-bottom: 1px solid #cccccc;
   width: 26px;
   height: 26px;
   line-height: 26px;
   display: block;
   text-align: center;
   text-decoration: none;
-  color: black;
+  color: #000000;
 }
 
 .leaflet-bar a,
@@ -394,7 +354,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 .leaflet-bar a.leaflet-disabled {
   cursor: default;
   background-color: #f4f4f4;
-  color: #bbb;
+  color: #bbbbbb;
 }
 
 .leaflet-touch .leaflet-bar a {
@@ -417,7 +377,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
 .leaflet-control-zoom-in,
 .leaflet-control-zoom-out {
-  font: bold 18px "Lucida Console", Monaco, monospace;
+  font: 700 18px "Lucida Console", "Monaco", monospace;
   text-indent: 1px;
 }
 
@@ -431,18 +391,18 @@ svg.leaflet-image-layer.leaflet-interactive path {
 .leaflet-control-layers {
   -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
-  background: #fff;
+  background: #ffffff;
   border-radius: 5px;
 }
 
 .leaflet-control-layers-toggle {
-  background-image: url(images/layers.png);
+  background-image: url("images/layers.png");
   width: 36px;
   height: 36px;
 }
 
 .leaflet-retina .leaflet-control-layers-toggle {
-  background-image: url(images/layers-2x.png);
+  background-image: url("images/layers-2x.png");
   background-size: 26px 26px;
 }
 
@@ -463,8 +423,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
 .leaflet-control-layers-expanded {
   padding: 6px 10px 6px 6px;
-  color: #333;
-  background: #fff;
+  color: #333333;
+  background: #ffffff;
 }
 
 .leaflet-control-layers-scrollbar {
@@ -485,20 +445,19 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
 .leaflet-control-layers-separator {
   height: 0;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #dddddd;
   margin: 5px -10px 5px -6px;
 }
 
 /* Default icon URLs */
 
 .leaflet-default-icon-path {
-  background-image: url(images/marker-icon.png);
+  background-image: url("images/marker-icon.png");
 }
 
 /* attribution and scale controls */
 
 .leaflet-container .leaflet-control-attribution {
-  background: #fff;
   background: rgba(255, 255, 255, 0.7);
   margin: 0;
 }
@@ -506,7 +465,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 .leaflet-control-attribution,
 .leaflet-control-scale-line {
   padding: 0 5px;
-  color: #333;
+  color: #333333;
 }
 
 .leaflet-control-attribution a {
@@ -531,7 +490,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 }
 
 .leaflet-control-scale-line {
-  border: 2px solid #777;
+  border: 2px solid #777777;
   border-top: none;
   line-height: 1.1;
   padding: 2px 5px 1px;
@@ -540,18 +499,17 @@ svg.leaflet-image-layer.leaflet-interactive path {
   overflow: hidden;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  background: #fff;
   background: rgba(255, 255, 255, 0.5);
 }
 
 .leaflet-control-scale-line:not(:first-child) {
-  border-top: 2px solid #777;
+  border-top: 2px solid #777777;
   border-bottom: none;
   margin-top: -2px;
 }
 
 .leaflet-control-scale-line:not(:first-child):not(:last-child) {
-  border-bottom: 2px solid #777;
+  border-bottom: 2px solid #777777;
 }
 
 .leaflet-touch .leaflet-control-attribution,
@@ -612,8 +570,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
 .leaflet-popup-content-wrapper,
 .leaflet-popup-tip {
-  background: white;
-  color: #333;
+  background: #ffffff;
+  color: #333333;
   -webkit-box-shadow: 0 3px 14px rgba(0, 0, 0, 0.4);
   box-shadow: 0 3px 14px rgba(0, 0, 0, 0.4);
 }
@@ -627,21 +585,21 @@ svg.leaflet-image-layer.leaflet-interactive path {
   text-align: center;
   width: 18px;
   height: 14px;
-  font: 16px/14px Tahoma, Verdana, sans-serif;
+  font: 16px/14px "Tahoma", "Verdana", sans-serif;
   color: #c3c3c3;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 700;
   background: transparent;
 }
 
 .leaflet-container a.leaflet-popup-close-button:hover {
-  color: #999;
+  color: #999999;
 }
 
 .leaflet-popup-scrolled {
   overflow: auto;
-  border-bottom: 1px solid #ddd;
-  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #dddddd;
+  border-top: 1px solid #dddddd;
 }
 
 .leaflet-oldie .leaflet-popup-content-wrapper {
@@ -652,8 +610,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
 .leaflet-oldie .leaflet-popup-tip {
   width: 24px;
   margin: 0 auto;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.70710678, M12=0.70710678, M21=-0.70710678, M22=0.70710678)";
-  filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.70710678, M12=0.70710678, M21=-0.70710678, M22=0.70710678);
+  -webkit-filter: progid:dximagetransform.microsoft.matrix(m11=0.71, m12=0.71, m21=-0.71, m22=0.71);
+  filter: progid:dximagetransform.microsoft.matrix(m11=0.71, m12=0.71, m21=-0.71, m22=0.71);
 }
 
 .leaflet-oldie .leaflet-popup-tip-container {
@@ -664,14 +622,14 @@ svg.leaflet-image-layer.leaflet-interactive path {
 .leaflet-oldie .leaflet-control-layers,
 .leaflet-oldie .leaflet-popup-content-wrapper,
 .leaflet-oldie .leaflet-popup-tip {
-  border: 1px solid #999;
+  border: 1px solid #999999;
 }
 
 /* div icon */
 
 .leaflet-div-icon {
-  background: #fff;
-  border: 1px solid #666;
+  background: #ffffff;
+  border: 1px solid #666666;
 }
 
 /* Tooltip */
@@ -681,10 +639,10 @@ svg.leaflet-image-layer.leaflet-interactive path {
 .leaflet-tooltip {
   position: absolute;
   padding: 6px;
-  background-color: #fff;
-  border: 1px solid #fff;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
   border-radius: 3px;
-  color: #222;
+  color: #222222;
   white-space: nowrap;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -700,10 +658,10 @@ svg.leaflet-image-layer.leaflet-interactive path {
   pointer-events: auto;
 }
 
-.leaflet-tooltip-top:before,
-.leaflet-tooltip-bottom:before,
-.leaflet-tooltip-left:before,
-.leaflet-tooltip-right:before {
+.leaflet-tooltip-top::before,
+.leaflet-tooltip-bottom::before,
+.leaflet-tooltip-left::before,
+.leaflet-tooltip-right::before {
   position: absolute;
   pointer-events: none;
   border: 6px solid transparent;
@@ -721,23 +679,23 @@ svg.leaflet-image-layer.leaflet-interactive path {
   margin-top: -6px;
 }
 
-.leaflet-tooltip-bottom:before,
-.leaflet-tooltip-top:before {
+.leaflet-tooltip-bottom::before,
+.leaflet-tooltip-top::before {
   left: 50%;
   margin-left: -6px;
 }
 
-.leaflet-tooltip-top:before {
+.leaflet-tooltip-top::before {
   bottom: 0;
   margin-bottom: -12px;
-  border-top-color: #fff;
+  border-top-color: #ffffff;
 }
 
-.leaflet-tooltip-bottom:before {
+.leaflet-tooltip-bottom::before {
   top: 0;
   margin-top: -12px;
   margin-left: -6px;
-  border-bottom-color: #fff;
+  border-bottom-color: #ffffff;
 }
 
 .leaflet-tooltip-left {
@@ -748,22 +706,22 @@ svg.leaflet-image-layer.leaflet-interactive path {
   margin-left: 6px;
 }
 
-.leaflet-tooltip-left:before,
-.leaflet-tooltip-right:before {
+.leaflet-tooltip-left::before,
+.leaflet-tooltip-right::before {
   top: 50%;
   margin-top: -6px;
 }
 
-.leaflet-tooltip-left:before {
+.leaflet-tooltip-left::before {
   right: 0;
   margin-right: -12px;
-  border-left-color: #fff;
+  border-left-color: #ffffff;
 }
 
-.leaflet-tooltip-right:before {
+.leaflet-tooltip-right::before {
   left: 0;
   margin-left: -12px;
-  border-right-color: #fff;
+  border-right-color: #ffffff;
 }
 
 /* stylelint-disable */
@@ -2278,6 +2236,18 @@ button,
   padding: 0 40px;
 }
 
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: inherit;
+  border: 1px solid #ffffff;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #ffffff;
+}
+
 .about-list {
   margin: 56px 0 0;
   padding: 0;
@@ -2966,7 +2936,6 @@ button,
 .instructor-card__link:active {
   background-color: #0266c1;
   border: 0;
-  padding: 2px 5px;
 }
 
 .instructor-card__link:active .instructor-card__icon {
@@ -3542,35 +3511,49 @@ button,
 
 .social-list {
   grid-column: 1/-1;
-  -ms-grid-row-align: center;
-  align-self: center;
+  -ms-grid-column-align: center;
+  justify-self: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  gap: 16px;
   margin: 0 auto 12px;
   padding: 0;
   list-style-type: none;
 }
 
 .social-list__link {
-  margin-left: 16px;
   width: 30px;
   height: 30px;
-  border: 1px solid #2d383f;
+  border: 1px solid rgba(2, 102, 193, 0.1);
 }
 
 .social-list__link--vk {
-  padding: 6px 6px 6px 5px;
+  padding: 6px 5px 6px 6px;
 }
 
 .social-list__link--ok {
-  padding: 6px 6px 6px 5px;
+  padding: 5px 6px 6px 5px;
 }
 
 .social-list__link--reddit {
-  padding: 6px 6px 6px 5px;
+  padding: 7px 7px 6px 4px;
+}
+
+.social-list__link.focus-visible:focus {
+  border: 1px solid #2d383f;
+  outline: none;
+}
+
+.social-list__link:active {
+  background-color: #0266c1;
+  border: 0;
+}
+
+.social-list__link:active .social-list__icon {
+  color: #ffffff;
 }
 
 .social-list__icon {
@@ -3607,32 +3590,28 @@ button,
   content: attr(title);
 }
 
-.swiper-pagination-bullet {
-  width: 10px;
-  height: 10px;
-  background: inherit;
-  border: 1px solid #ffffff;
-  opacity: 1;
-}
-
-.swiper-pagination-bullet-active {
-  background-color: #ffffff;
-}
-
 .tour-card {
   position: relative;
   width: 380px;
+  background-color: #0266c1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
-.tour-card img {
-  width: 100%;
-  background-color: #0266c1;
+.tour-card--elbrus {
+  background-image: url("../img/tours/tour-1.jpg");
+}
+
+.tour-card--belukha {
+  background-image: url("../img/tours/tour-2.jpg");
+}
+
+.tour-card--fisht {
+  background-image: url("../img/tours/tour-3.jpg");
 }
 
 .tour-card__block {
-  position: absolute;
-  top: 0;
-  left: 0;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
@@ -3872,6 +3851,14 @@ button,
     padding: 0 24px;
   }
 
+  .swiper-pagination-fraction,
+  .swiper-pagination-custom,
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 84px;
+    right: 349px;
+  }
+
   .about-list {
     margin-top: 35px;
   }
@@ -3908,7 +3895,7 @@ button,
   }
 
   .advantage-card__title {
-    margin: 0 0 14px;
+    margin: 0 0 15px;
     font-size: 16px;
     line-height: 16px;
   }
@@ -4216,27 +4203,30 @@ button,
     -ms-grid-columns: min-content 1fr;
     grid-template-columns: -webkit-min-content 1fr;
     grid-template-columns: min-content 1fr;
+    gap: 12px 0;
     padding: 44px 45px 40px;
   }
 
   .page-footer__logo-link {
-    margin-right: 80px;
-    margin-bottom: 37px;
+    margin-right: 75px;
+    margin-bottom: 17px;
   }
 
   .page-footer__icon {
     width: 118px;
-    height: 34px;
+    height: 35px;
   }
 
   .page-footer__list {
     -ms-grid-column-align: end;
     justify-self: end;
-    margin-bottom: 37px;
+    gap: 11px;
+    margin-bottom: 29px;
+    margin-left: 0;
   }
 
   .page-footer__link {
-    margin-left: 10px;
+    margin-left: 0px;
     font-size: 14px;
     line-height: 14px;
   }
@@ -4299,7 +4289,7 @@ button,
 
   .photogallery {
     gap: 22px;
-    padding: 45px 0 0;
+    padding: 44px 0 0;
   }
 
   .photogallery__title {
@@ -4420,6 +4410,10 @@ button,
     margin-top: -20px;
   }
 
+  .social-list {
+    margin-bottom: 9px;
+  }
+
   .subtitle {
     font-size: 25px;
     line-height: 25px;
@@ -4439,12 +4433,16 @@ button,
     left: 45px;
   }
 
-  .swiper-pagination-fraction,
-  .swiper-pagination-custom,
-  .swiper-horizontal > .swiper-pagination-bullets,
-  .swiper-pagination-bullets.swiper-pagination-horizontal {
-    bottom: 84px;
-    right: 349px;
+  .tour-card--elbrus {
+    background-image: url("../img/tours/tour-tablet-1.jpg");
+  }
+
+  .tour-card--belukha {
+    background-image: url("../img/tours/tour-tablet-2.jpg");
+  }
+
+  .tour-card--fisht {
+    background-image: url("../img/tours/tour-tablet-2.jpg");
   }
 
   .tours {
@@ -4523,6 +4521,25 @@ button,
 @media (max-width: 767px) {
   .container {
     padding: 0 16px;
+  }
+
+  .swiper-pagination-bullet {
+    margin: 0 6px;
+    width: 8px;
+    height: 8px;
+  }
+
+  .swiper-pagination-fraction,
+  .swiper-pagination-custom,
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 34px;
+    right: 130px;
+  }
+
+  .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+  .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 6px);
   }
 
   .about-list {
@@ -4647,7 +4664,7 @@ button,
   .feedback {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    padding: 180px 15px 175px;
+    padding: 179px 15px 175px;
     gap: 14px;
     background-image: url("../img/background/subscribe-mobile.jpg");
     background-size: 100%;
@@ -4760,7 +4777,7 @@ button,
 
   .page-footer__logo-link {
     margin-right: 0;
-    margin-bottom: 20px;
+    margin-bottom: 0;
   }
 
   .page-footer__icon {
@@ -4775,9 +4792,9 @@ button,
     display: grid;
     -ms-grid-columns: (1fr)[2];
     grid-template-columns: repeat(2, 1fr);
-    gap: 9px 71px;
+    gap: 9px 64px;
     margin-left: 0;
-    margin-bottom: 25px;
+    margin-bottom: 14px;
   }
 
   .page-footer__item--training {
@@ -4800,6 +4817,7 @@ button,
 
   .page-footer__link {
     margin-left: 0;
+    padding: 3px 0;
   }
 
   .page-footer__copyright {
@@ -4866,7 +4884,7 @@ button,
 
   .photogallery {
     gap: 15px;
-    padding: 27px 0 0;
+    padding: 26px 0 0;
   }
 
   .photogallery__title {
@@ -5002,7 +5020,7 @@ button,
   }
 
   .social-list {
-    margin-left: -16px;
+    margin-left: 0;
   }
 
   .subtitle {
@@ -5025,23 +5043,16 @@ button,
     left: 15px;
   }
 
-  .swiper-pagination-bullet {
-    margin: 0 6px;
-    width: 8px;
-    height: 8px;
+  .tour-card--elbrus {
+    background-image: url("../img/tours/tour-mobile-1.jpg");
   }
 
-  .swiper-pagination-fraction,
-  .swiper-pagination-custom,
-  .swiper-horizontal > .swiper-pagination-bullets,
-  .swiper-pagination-bullets.swiper-pagination-horizontal {
-    bottom: 34px;
-    right: 130px;
+  .tour-card--belukha {
+    background-image: url("../img/tours/tour-mobile-2.jpg");
   }
 
-  .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
-  .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-    margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 6px);
+  .tour-card--fisht {
+    background-image: url("../img/tours/tour-mobile-3.jpg");
   }
 
   .tour-card__block {
@@ -5190,6 +5201,10 @@ button,
     right: 0;
     height: 1px;
     background-color: #ffffff;
+  }
+
+  .social-list__link:hover:not(.focus-visible) {
+    border: 1px solid #2d383f;
   }
 
   .tours__link:hover:not(.focus-visible) {
