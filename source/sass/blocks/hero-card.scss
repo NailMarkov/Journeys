@@ -1,32 +1,50 @@
 .hero-card {
   position: relative;
   color: $color-default-white;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
-  @include vp-1199 {
-    width: 100%;
+  &--caucasus {
+    background-image: url("../img/hero/photo-1.jpg");
 
-    img {
-      width: 100%;
+    @include vp-1199 {
+      background-image: url("../img/hero/photo-tablet-1.jpg");
+    }
+  }
+
+  &--kamchatka {
+    background-image: url("../img/hero/photo-2.jpg");
+
+    @include vp-1199 {
+      background-image: url("../img/hero/photo-tablet-2.jpg");
+    }
+  }
+
+  &--altai {
+    background-image: url("../img/hero/photo-3.jpg");
+
+    @include vp-1199 {
+      background-image: url("../img/hero/photo-tablet-3.jpg");
     }
   }
 }
 
 .hero-card__info {
-  position: absolute;
-  top: 0;
-  left: 0;
   display: flex;
   flex-direction: column;
   padding: 181px 120px 80px;
   width: 100%;
-  min-height: 800px;
+  height: 800px;
 
   @include vp-1199 {
     padding: 174px 45px 90px;
+    height: 1024px;
   }
 
   @include vp-767 {
     padding: 140px 15px 80px;
+    height: 568px;
   }
 }
 

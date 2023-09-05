@@ -22,12 +22,12 @@
 .swiper-pagination-bullets.swiper-pagination-horizontal {
   @include vp-1199 {
     bottom: 84px;
-    right: 349px;
+    right: 45%;
   }
 
   @include vp-767 {
     bottom: 34px;
-    right: 130px;
+    right: 41%;
   }
 }
 

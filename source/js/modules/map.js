@@ -1,9 +1,6 @@
 import L from '../vendor/leaflet';
 
 export const initMap = () => {
-  if (!map) {
-    return;
-  }
   const mapElement = document.querySelector('[data-map]');
 
   const mapOptions = {
@@ -19,6 +16,10 @@ export const initMap = () => {
   });
 
   const map = new window.L.Map(mapElement, mapOptions);
+
+  if (!map) {
+    return;
+  }
 
   L.marker([55.816654, 37.636922], {
     icon: iconOptions,

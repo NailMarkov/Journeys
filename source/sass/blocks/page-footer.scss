@@ -2,12 +2,12 @@
   display: grid;
   grid-template-columns: min-content 1fr 142px;
   align-items: center;
-  gap: 8px 0;
+  gap: 8px;
   padding: 31px calc(50% - 600px);
 
   @include vp-1199 {
     grid-template-columns: min-content 1fr;
-    gap: 12px 0;
+    gap: 12px;
     padding: 44px 45px 40px;
   }
 
@@ -88,7 +88,7 @@
   line-height: 16px;
 
   @include vp-1199 {
-    margin-left: 0px;
+    margin-left: 0;
     font-size: 14px;
     line-height: 14px;
   }
