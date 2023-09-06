@@ -88,8 +88,12 @@ export const initSliderTraining = () => {
 };
 
 export const initSliderReviews = () => {
+  let result = false;
   const sliderReviewsElement = document.querySelector('[data-slider="reviews"]');
-  const wrapperReviewsElement = document.querySelector('[data-wrapper="reviews"]');
+  if (!sliderReviewsElement) {
+    return result;
+  }
+  const wrapperReviewsElement = sliderReviewsElement.querySelector('[data-wrapper]');
   wrapperReviewsElement.style.overflow = 'visible';
 
   const swiperReviews = new window.Swiper(sliderReviewsElement, {
@@ -167,12 +171,3 @@ export const initSliderGallery = () => {
 
   return swiperGallery;
 };
-
-// export default initSliders = () => {
-//   initSliderHero(),
-//   initSliderTours(),
-//   initSliderTraining(),
-//   initSliderReviews(),
-//   initSliderAdvantages(),
-//   initSliderGallery(),
-// };

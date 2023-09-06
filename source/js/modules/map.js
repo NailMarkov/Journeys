@@ -1,7 +1,11 @@
-import L from '../vendor/leaflet';
+const {L} = window;
 
 export const initMap = () => {
   const mapElement = document.querySelector('[data-map]');
+
+  if (!mapElement) {
+    return;
+  }
 
   const mapOptions = {
     scrollWheelZoom: false,
@@ -15,11 +19,7 @@ export const initMap = () => {
     iconAnchor: [24, 48],
   });
 
-  const map = new window.L.Map(mapElement, mapOptions);
-
-  if (!map) {
-    return;
-  }
+  const map = new L.Map(mapElement, mapOptions);
 
   L.marker([55.816654, 37.636922], {
     icon: iconOptions,
