@@ -142,8 +142,6 @@
   }
 
   @include hover {
-    left: 5px;
-
     &::before {
       content: "";
       position: absolute;
@@ -196,5 +194,23 @@
   @include vp-767 {
     font-size: 14px;
     line-height: 14px;
+  }
+
+  @include hover {
+    color: $color-resolution-blue;
+  }
+
+  @include focus {
+    color: $color-resolution-blue;
+    outline: none;
+  }
+
+  &:active {
+    color: $color-navy-blue;
+  }
+
+  &[aria-disabled="true"] {
+    background-color: rgba(2, 102, 193, 0.1);
+    pointer-events: none;
   }
 }

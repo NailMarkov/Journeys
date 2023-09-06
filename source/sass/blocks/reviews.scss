@@ -3,7 +3,7 @@
   grid-template-columns: 1fr min-content;
   align-items: center;
   gap: 27px;
-  padding: 40px calc(50% - 600px) 83px;
+  padding: 40px calc(50% - 720px) 83px;
 
   @include vp-1199 {
     padding: 16px 45px 45px;
@@ -34,4 +34,6 @@
 
 .reviews__slider-wrapper {
   grid-column: 1 / -1;
+  margin-top: 10px;
+  margin-left: 120px;
 }

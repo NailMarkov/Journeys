@@ -99,8 +99,6 @@
   }
 
   @include hover {
-    left: 5px;
-
     &::before {
       content: "";
       position: absolute;
@@ -137,6 +135,24 @@
   font-weight: 600;
   font-size: 18px;
   line-height: 18px;
+
+  @include hover {
+    color: $color-resolution-blue;
+  }
+
+  @include focus {
+    color: $color-resolution-blue;
+    outline: none;
+  }
+
+  &:active {
+    color: $color-navy-blue;
+  }
+
+  &[aria-disabled="true"] {
+    background-color: rgba(2, 102, 193, 0.1);
+    pointer-events: none;
+  }
 }
 
 .page-footer__copyright {

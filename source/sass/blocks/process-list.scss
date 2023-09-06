@@ -3,6 +3,7 @@
   grid-column: 1 / -1;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  align-items: end;
   gap: 30px;
   margin: 0;
   padding: 0;
@@ -10,6 +11,7 @@
 
   @include vp-1199 {
     grid-template-columns: repeat(2, 1fr);
+    align-items: normal;
     gap: 90px 30px;
   }
 
