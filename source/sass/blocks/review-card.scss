@@ -24,6 +24,10 @@
 
   &:first-child {
     margin-left: 20px;
+
+    @include vp-767 {
+      margin-left: 0;
+    }
   }
 }
 

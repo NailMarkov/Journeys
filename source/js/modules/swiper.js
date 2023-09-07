@@ -94,12 +94,17 @@ export const initSliderReviews = () => {
     return result;
   }
   const wrapperReviewsElement = sliderReviewsElement.querySelector('[data-wrapper]');
-  wrapperReviewsElement.style.overflow = 'visible';
+  // wrapperReviewsElement.style.overflow = 'visible';
 
-  const mediaQuery = window.matchMedia('(min-width: 765px)');
-  mediaQuery.addEventListener('change', () => {
-    wrapperReviewsElement.style.overflow = 'hidden';
-  });
+  const getMobileChange = (event) => {
+    const overflofHide = event.matches ? wrapperReviewsElement.style.overflow = 'hidden' : wrapperReviewsElement.style.overflow = 'visible';
+    return overflofHide;
+  };
+
+  const mediaQuery = window.matchMedia('(max-width: 765px)');
+  mediaQuery.addEventListener('change', getMobileChange);
+
+  getMobileChange(mediaQuery);
 
   const swiperReviews = new window.Swiper(sliderReviewsElement, {
     navigation: {

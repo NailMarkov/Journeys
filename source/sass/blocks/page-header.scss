@@ -95,7 +95,7 @@
 .page-header__list {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 0 3px -22px;
+  margin: 0 auto 3px -22px;
   padding: 0;
   list-style-type: none;
 
@@ -170,8 +170,8 @@
 }
 
 .page-header__wrapper {
-  margin-left: auto;
   margin-bottom: 3px;
+  width: 142px;
 
   @include vp-1199 {
     margin-left: 0;
