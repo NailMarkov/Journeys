@@ -96,6 +96,11 @@ export const initSliderReviews = () => {
   const wrapperReviewsElement = sliderReviewsElement.querySelector('[data-wrapper]');
   wrapperReviewsElement.style.overflow = 'visible';
 
+  const mediaQuery = window.matchMedia('(min-width: 765px)');
+  mediaQuery.addEventListener('change', () => {
+    wrapperReviewsElement.style.overflow = 'hidden';
+  });
+
   const swiperReviews = new window.Swiper(sliderReviewsElement, {
     navigation: {
       prevEl: document.querySelector('[data-prev="reviews"]'),
