@@ -2930,11 +2930,16 @@ button,
 }
 
 .instructor-card {
-  margin: 20px 0;
+  margin: 30px 0 30px;
   padding: 20px;
   height: auto;
+  width: 277px;
   -webkit-box-shadow: 0 0 30px 0 rgba(28, 51, 116, 0.1);
   box-shadow: 0 0 30px 0 rgba(28, 51, 116, 0.1);
+}
+
+.instructor-card:first-child {
+  margin-left: 30px;
 }
 
 .instructor-card__photo {
@@ -3864,7 +3869,7 @@ button,
 
 .training__slider-wrapper {
   grid-column: 1/-1;
-  margin: -15px 0 0;
+  margin: -30px -30px 0;
 }
 
 .video__player {
