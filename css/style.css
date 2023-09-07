@@ -2573,6 +2573,7 @@ button,
   background-image: url("../img/background/subscribe.webp");
   background-repeat: no-repeat;
   background-position: center top;
+  background-size: 100%;
 }
 
 .feedback__title {
@@ -2745,7 +2746,7 @@ button,
   flex-direction: column;
   padding: 181px 120px 80px;
   width: 100%;
-  height: 800px;
+  min-height: 800px;
 }
 
 .hero-card__title {
@@ -2758,12 +2759,13 @@ button,
 
 .hero-card__description {
   margin: 0 0 37px;
-  padding: 0 736px 0 0;
+  padding: 0 calc(100% - 470px) 0 0;
   font-size: 17px;
   line-height: 24px;
 }
 
 .hero-card__link {
+  margin-bottom: 30px;
   padding: 17px;
   width: 220px;
   font-weight: 500;
@@ -3511,12 +3513,17 @@ button,
   display: -ms-flexbox;
   display: flex;
   gap: 30px;
-  margin: 20px 10px;
+  margin: 20px 0;
+  margin-left: 20px;
   padding: 20px 40px 20px 20px;
   width: 790px;
   height: auto;
   -webkit-box-shadow: 0 0 30px 0 rgba(28, 51, 116, 0.1);
   box-shadow: 0 0 30px 0 rgba(28, 51, 116, 0.1);
+}
+
+.review-card:first-child {
+  margin-left: 20px;
 }
 
 .review-card__block {
@@ -3564,8 +3571,8 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 27px;
-  padding: 40px calc(50% - 720px) 83px;
+  gap: 17px;
+  padding: 40px 0 83px calc(50% - 600px);
 }
 
 .reviews__title {
@@ -3578,12 +3585,13 @@ button,
   display: flex;
   gap: 4px;
   margin-top: -25px;
+  margin-right: 120px;
 }
 
 .reviews__slider-wrapper {
   grid-column: 1/-1;
-  margin-top: 10px;
-  margin-left: 120px;
+  margin-top: -10px;
+  margin-left: -20px;
 }
 
 .social-list {
@@ -3711,15 +3719,15 @@ button,
   gap: 23px;
   padding: 206px 20px 28px;
   color: #ffffff;
-  z-index: 1;
 }
 
 .tour-card__title {
   margin: 0 0 15px;
-  margin-right: 50px;
+  padding-right: 70px;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
+  word-wrap: break-word;
 }
 
 .tours {
@@ -3938,6 +3946,40 @@ button,
     }
   }
 */
+
+@media (max-width: 1365px) {
+  .contacts {
+    padding: 83px 20px 101px;
+  }
+
+  .details-list {
+    gap: 15px;
+  }
+
+  .info-list {
+    gap: 41px;
+  }
+
+  .page-footer {
+    padding: 31px 20px;
+  }
+
+  .page-header__nav {
+    padding: 40px 20px;
+  }
+
+  .reviews {
+    padding: 40px 0 83px 20px;
+  }
+
+  .tours {
+    padding: 123px 20px 50px;
+  }
+
+  .training {
+    padding: 69px 20px 95px;
+  }
+}
 
 @media (max-width: 1199px) {
   .container {
@@ -4203,7 +4245,7 @@ button,
 
   .hero-card__info {
     padding: 174px 45px 90px;
-    height: 1024px;
+    min-height: 1024px;
   }
 
   .hero-card__title {
@@ -4504,11 +4546,12 @@ button,
   }
 
   .reviews {
-    padding: 16px 45px 45px;
+    padding: 16px 0 45px 45px;
   }
 
   .reviews__block-button {
     margin-top: -20px;
+    margin-right: 45px;
   }
 
   .social-list {
@@ -4802,7 +4845,7 @@ button,
 
   .hero-card__info {
     padding: 140px 15px 80px;
-    height: 568px;
+    min-height: 568px;
   }
 
   .hero-card__title {
@@ -5119,6 +5162,7 @@ button,
 
   .reviews__block-button {
     margin-top: -9px;
+    margin-right: 15px;
   }
 
   .social-list {
