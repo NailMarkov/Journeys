@@ -11,6 +11,10 @@
   color: $color-default-white;
   z-index: 10;
 
+  @include vp-1365 {
+    padding: 40px 20px;
+  }
+
   @include vp-1199 {
     justify-content: space-between;
     padding: 30px 45px;

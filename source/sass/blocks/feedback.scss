@@ -7,6 +7,7 @@
   background-image: url("../img/background/subscribe.webp");
   background-repeat: no-repeat;
   background-position: center top;
+  background-size: 100%;
 
   @include vp-1199 {
     grid-template-columns: 295px;

@@ -4,6 +4,10 @@
   gap: 22px 132px;
   padding: 83px calc(50% - 600px) 101px;
 
+  @include vp-1365 {
+    padding: 83px 20px 101px;
+  }
+
   @include vp-1199 {
     grid-template-columns: 1fr;
     gap: 17px;

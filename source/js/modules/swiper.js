@@ -104,15 +104,15 @@ export const initSliderReviews = () => {
     breakpoints: {
       320: {
         slidesPerView: 1,
-        spaceBetween: 30,
+        spaceBetween: 10,
       },
       768: {
         slidesPerView: 'auto',
-        spaceBetween: 30,
+        spaceBetween: 10,
       },
       1200: {
         slidesPerView: 'auto',
-        spaceBetween: 30,
+        spaceBetween: 10,
       },
     },
   });

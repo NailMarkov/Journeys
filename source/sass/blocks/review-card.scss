@@ -1,7 +1,8 @@
 .review-card {
   display: flex;
   gap: 30px;
-  margin: 20px 10px;
+  margin: 20px 0;
+  margin-left: 20px;
   padding: 20px 40px 20px 20px;
   width: 790px;
   height: auto;
@@ -19,6 +20,10 @@
     padding-right: 20px;
     height: 0;
     min-height: 469px;
+  }
+
+  &:first-child {
+    margin-left: 20px;
   }
 }
 

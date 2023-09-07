@@ -2,11 +2,15 @@
   display: grid;
   grid-template-columns: 1fr min-content;
   align-items: center;
-  gap: 27px;
-  padding: 40px calc(50% - 720px) 83px;
+  gap: 17px;
+  padding: 40px 0 83px calc(50% - 600px);
+
+  @include vp-1365 {
+    padding: 40px 0 83px 20px;
+  }
 
   @include vp-1199 {
-    padding: 16px 45px 45px;
+    padding: 16px 0 45px 45px;
   }
 
   @include vp-767 {
@@ -22,18 +26,21 @@
   display: flex;
   gap: 4px;
   margin-top: -25px;
+  margin-right: 120px;
 
   @include vp-1199 {
     margin-top: -20px;
+    margin-right: 45px;
   }
 
   @include vp-767 {
     margin-top: -9px;
+    margin-right: 15px;
   }
 }
 
 .reviews__slider-wrapper {
   grid-column: 1 / -1;
-  margin-top: 10px;
-  margin-left: 120px;
+  margin-top: -10px;
+  margin-left: -20px;
 }

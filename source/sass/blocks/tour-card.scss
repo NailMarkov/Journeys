@@ -44,7 +44,7 @@
   }
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -52,7 +52,11 @@
     bottom: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 22.3%, rgba(0, 0, 0, 0) 60.32%);
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.6) 22.3%,
+      rgba(0, 0, 0, 0) 60.32%
+    );
   }
 }
 
@@ -63,7 +67,6 @@
   gap: 23px;
   padding: 206px 20px 28px;
   color: $color-default-white;
-  z-index: 1;
 
   @include vp-767 {
     gap: 15px;
@@ -73,10 +76,11 @@
 
 .tour-card__title {
   margin: 0 0 15px;
-  margin-right: 50px;
+  padding-right: 70px;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
+  word-wrap: break-word;
 
   @include vp-767 {
     font-size: 20px;

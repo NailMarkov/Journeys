@@ -6,6 +6,10 @@
   gap: 30px;
   padding: 69px calc(50% - 600px) 95px;
 
+  @include vp-1365 {
+    padding: 69px 20px 95px;
+  }
+
   @include vp-1199 {
     gap: 20px;
     padding: 39px 45px 45px;

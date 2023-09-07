@@ -2596,6 +2596,11 @@ button,
   gap: 22px 132px;
   padding: 83px calc(50% - 600px) 101px;
 }
+@media (max-width: 1365px) {
+  .contacts {
+    padding: 83px 20px 101px;
+  }
+}
 @media (max-width: 1199px) {
   .contacts {
     -ms-grid-columns: 1fr;
@@ -2677,6 +2682,11 @@ button,
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+@media (max-width: 1365px) {
+  .details-list {
+    gap: 15px;
+  }
 }
 @media (max-width: 1199px) {
   .details-list {
@@ -2806,6 +2816,7 @@ button,
   background-image: url("../img/background/subscribe.webp");
   background-repeat: no-repeat;
   background-position: center top;
+  background-size: 100%;
 }
 @media (max-width: 1199px) {
   .feedback {
@@ -3134,18 +3145,18 @@ button,
           flex-direction: column;
   padding: 181px 120px 80px;
   width: 100%;
-  height: 800px;
+  min-height: 800px;
 }
 @media (max-width: 1199px) {
   .hero-card__info {
     padding: 174px 45px 90px;
-    height: 1024px;
+    min-height: 1024px;
   }
 }
 @media (max-width: 767px) {
   .hero-card__info {
     padding: 140px 15px 80px;
-    height: 568px;
+    min-height: 568px;
   }
 }
 
@@ -3176,7 +3187,7 @@ button,
 
 .hero-card__description {
   margin: 0 0 37px;
-  padding: 0 736px 0 0;
+  padding: 0 calc(100% - 470px) 0 0;
   font-size: 17px;
   line-height: 24px;
 }
@@ -3197,6 +3208,7 @@ button,
 }
 
 .hero-card__link {
+  margin-bottom: 30px;
   padding: 17px;
   width: 220px;
   font-weight: 500;
@@ -3402,6 +3414,11 @@ button,
   padding: 0;
   list-style-type: none;
 }
+@media (max-width: 1365px) {
+  .info-list {
+    gap: 41px;
+  }
+}
 @media (max-width: 1199px) {
   .info-list {
     gap: 25px;
@@ -3595,6 +3612,11 @@ button,
           align-items: center;
   gap: 8px;
   padding: 31px calc(50% - 600px);
+}
+@media (max-width: 1365px) {
+  .page-footer {
+    padding: 31px 20px;
+  }
 }
 @media (max-width: 1199px) {
   .page-footer {
@@ -3796,6 +3818,11 @@ button,
   width: 100%;
   color: #ffffff;
   z-index: 10;
+}
+@media (max-width: 1365px) {
+  .page-header__nav {
+    padding: 40px 20px;
+  }
 }
 @media (max-width: 1199px) {
   .page-header__nav {
@@ -4562,7 +4589,8 @@ button,
   display: -ms-flexbox;
   display: flex;
   gap: 30px;
-  margin: 20px 10px;
+  margin: 20px 0;
+  margin-left: 20px;
   padding: 20px 40px 20px 20px;
   width: 790px;
   height: auto;
@@ -4587,6 +4615,9 @@ button,
     height: 0;
     min-height: 469px;
   }
+}
+.review-card:first-child {
+  margin-left: 20px;
 }
 
 @media (max-width: 767px) {
@@ -4665,12 +4696,17 @@ button,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 27px;
-  padding: 40px calc(50% - 720px) 83px;
+  gap: 17px;
+  padding: 40px 0 83px calc(50% - 600px);
+}
+@media (max-width: 1365px) {
+  .reviews {
+    padding: 40px 0 83px 20px;
+  }
 }
 @media (max-width: 1199px) {
   .reviews {
-    padding: 16px 45px 45px;
+    padding: 16px 0 45px 45px;
   }
 }
 @media (max-width: 767px) {
@@ -4689,22 +4725,25 @@ button,
   display: flex;
   gap: 4px;
   margin-top: -25px;
+  margin-right: 120px;
 }
 @media (max-width: 1199px) {
   .reviews__block-button {
     margin-top: -20px;
+    margin-right: 45px;
   }
 }
 @media (max-width: 767px) {
   .reviews__block-button {
     margin-top: -9px;
+    margin-right: 15px;
   }
 }
 
 .reviews__slider-wrapper {
   grid-column: 1/-1;
-  margin-top: 10px;
-  margin-left: 120px;
+  margin-top: -10px;
+  margin-left: -20px;
 }
 
 .social-list {
@@ -4911,7 +4950,6 @@ button,
   gap: 23px;
   padding: 206px 20px 28px;
   color: #ffffff;
-  z-index: 1;
 }
 @media (max-width: 767px) {
   .tour-card__block {
@@ -4922,10 +4960,11 @@ button,
 
 .tour-card__title {
   margin: 0 0 15px;
-  margin-right: 50px;
+  padding-right: 70px;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
+  word-wrap: break-word;
 }
 @media (max-width: 767px) {
   .tour-card__title {
@@ -4945,6 +4984,11 @@ button,
   gap: 54px;
   padding: 123px calc(50% - 600px) 50px;
   z-index: 1;
+}
+@media (max-width: 1365px) {
+  .tours {
+    padding: 123px 20px 50px;
+  }
 }
 @media (max-width: 1199px) {
   .tours {
@@ -5083,6 +5127,11 @@ button,
           align-items: center;
   gap: 30px;
   padding: 69px calc(50% - 600px) 95px;
+}
+@media (max-width: 1365px) {
+  .training {
+    padding: 69px 20px 95px;
+  }
 }
 @media (max-width: 1199px) {
   .training {

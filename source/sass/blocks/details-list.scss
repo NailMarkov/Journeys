@@ -6,6 +6,10 @@
   padding: 0;
   list-style-type: none;
 
+  @include vp-1365 {
+    gap: 15px;
+  }
+
   @include vp-1199 {
     display: flex;
     flex-wrap: wrap;

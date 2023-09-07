@@ -30,7 +30,7 @@
   }
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -47,16 +47,16 @@
   flex-direction: column;
   padding: 181px 120px 80px;
   width: 100%;
-  height: 800px;
+  min-height: 800px;
 
   @include vp-1199 {
     padding: 174px 45px 90px;
-    height: 1024px;
+    min-height: 1024px;
   }
 
   @include vp-767 {
     padding: 140px 15px 80px;
-    height: 568px;
+    min-height: 568px;
   }
 }
 
@@ -86,7 +86,7 @@
 
 .hero-card__description {
   margin: 0 0 37px;
-  padding: 0 736px 0 0;
+  padding: 0 calc(100% - 470px) 0 0;
   font-size: 17px;
   line-height: 24px;
 
@@ -105,6 +105,7 @@
 }
 
 .hero-card__link {
+  margin-bottom: 30px;
   padding: 17px;
   width: 220px;
   font-weight: 500;

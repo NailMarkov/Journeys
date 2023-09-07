@@ -3,66 +3,71 @@
 
 // Default
 
-$color-default-black:               #000000;
-$color-default-white:               #ffffff;
+$color-default-black: #000000;
+$color-default-white: #ffffff;
 
 // Project palette
 // для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
 
-$color-elephant:                    #2d383f;
-$color-navy-blue:                   #0266c1;
-$color-resolution-blue:             #1c3374;
-$color-torch-red:                   #ff121f;
+$color-elephant: #2d383f;
+$color-navy-blue: #0266c1;
+$color-resolution-blue: #1c3374;
+$color-torch-red: #ff121f;
 
 // Gradient
 
-$black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
+$black-to-right: linear-gradient(
+  90deg,
+  rgba(0, 0, 0, 0.75) 0%,
+  rgba(0, 0, 0, 0) 75%
+);
 
 // Typography
 // ---------------------------------
 
 // Heading
 
-$head-desktop:                        77px;
-$head-tablet:                         56px;
-$head-mobile:                         30px;
+$head-desktop: 77px;
+$head-tablet: 56px;
+$head-mobile: 30px;
 
 //  Subhead
 
-$subhead-desktop:                     35px;
-$subhead-tablet:                      25px;
-$subhead-mobile:                      22px;
+$subhead-desktop: 35px;
+$subhead-tablet: 25px;
+$subhead-mobile: 22px;
 
 // Thirdhead
 
-$thirdhead-desktop:                   21px;
-$thirdhead-tablet:                    18px;
-$thirdhead-mobile:                    16px;
+$thirdhead-desktop: 21px;
+$thirdhead-tablet: 18px;
+$thirdhead-mobile: 16px;
 
 // переменная используемая в html для подключения скейлинга
-$fz-default:                        16px;
+$fz-default: 16px;
 
-$ff-montserrat:                    "Montserrat", "Arial", sans-serif;
+$ff-montserrat: "Montserrat", "Arial", sans-serif;
 
 // Animation
 // ---------------------------------
 
-$tf-default:                        ease;
-$trans-default:                     0.3s $tf-default;
+$tf-default: ease;
+$trans-default: 0.3s $tf-default;
 
 // если требуется изинг отличный от $tf-default, то переменную называем не цифрой
-$trans-modal:                       0.6s cubic-bezier(0.55, 0, 0.1, 1);
+$trans-modal: 0.6s cubic-bezier(0.55, 0, 0.1, 1);
 
-$trans-600:                         0.6s $tf-default;
+$trans-600: 0.6s $tf-default;
 
 // Viewports
 // ---------------------------------
 
-$vp-768:                            768px;
-$vp-1200:                           1200px;
+$vp-768: 768px;
+$vp-1200: 1200px;
+$vp-1366: 1366px;
 
 // Retina
 // ---------------------------------
 
-$retina-dpi:                        144dpi;
-$retina-dppx:                       1.5dppx;
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;

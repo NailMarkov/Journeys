@@ -5,6 +5,10 @@
   gap: 8px;
   padding: 31px calc(50% - 600px);
 
+  @include vp-1365 {
+    padding: 31px 20px;
+  }
+
   @include vp-1199 {
     grid-template-columns: min-content 1fr;
     gap: 12px;

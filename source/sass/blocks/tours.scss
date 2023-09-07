@@ -6,6 +6,10 @@
   padding: 123px calc(50% - 600px) 50px;
   z-index: 1;
 
+  @include vp-1365 {
+    padding: 123px 20px 50px;
+  }
+
   @include vp-1199 {
     gap: 38px;
     padding: 83px 45px 43px;
