@@ -2345,7 +2345,7 @@ button,
   -ms-flex-align: center;
   align-items: center;
   gap: 47px;
-  padding: 53px calc(50% - 720px) 59px;
+  padding: 33px calc(50% - 720px) 59px;
   background-image: url("../img/background/advantages-right.png");
   background-repeat: no-repeat;
   background-position: top -5px right 0;
@@ -2930,16 +2930,12 @@ button,
 }
 
 .instructor-card {
-  margin: 30px 0 30px;
+  margin: 20px 0;
   padding: 20px;
   height: auto;
   width: 277px;
   -webkit-box-shadow: 0 0 30px 0 rgba(28, 51, 116, 0.1);
   box-shadow: 0 0 30px 0 rgba(28, 51, 116, 0.1);
-}
-
-.instructor-card:first-child {
-  margin-left: 30px;
 }
 
 .instructor-card__photo {
@@ -3024,7 +3020,7 @@ button,
 }
 
 .page-footer__logo-link {
-  margin-right: 100px;
+  margin-right: 92px;
 }
 
 .page-footer__list {
@@ -3147,7 +3143,7 @@ button,
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin: 0 0 3px -22px;
+  margin: 0 auto 3px -22px;
   padding: 0;
   list-style-type: none;
 }
@@ -3183,8 +3179,8 @@ button,
 }
 
 .page-header__wrapper {
-  margin-left: auto;
   margin-bottom: 3px;
+  width: 142px;
 }
 
 .page-header__phone-link {
@@ -3869,7 +3865,7 @@ button,
 
 .training__slider-wrapper {
   grid-column: 1/-1;
-  margin: -30px -30px 0;
+  margin: -15px 0 0;
 }
 
 .video__player {
@@ -4046,7 +4042,7 @@ button,
   }
 
   .advantages {
-    padding: 44px 45px 40px;
+    padding: 22px 45px 40px;
     background-image: none;
   }
 
@@ -4101,7 +4097,7 @@ button,
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     gap: 17px;
-    padding: 88px 45px 70px;
+    padding: 86px 45px 70px;
   }
 
   .contacts__description {
@@ -4353,7 +4349,7 @@ button,
   }
 
   .page-footer__logo-link {
-    margin-right: 75px;
+    margin-right: 66px;
     margin-bottom: 17px;
   }
 
@@ -4720,7 +4716,7 @@ button,
   }
 
   .advantage-card {
-    padding: 86px 10px 20px;
+    padding: 85px 10px 20px;
     width: 290px;
     background-position: top 19px center;
     background-size: 42px;
@@ -4733,7 +4729,7 @@ button,
 
   .advantages {
     gap: 15px;
-    padding: 30px 15px 36px;
+    padding: 10px 15px 36px;
   }
 
   .advantages .advantages__title {
@@ -4768,7 +4764,7 @@ button,
   }
 
   .contact-list__title {
-    margin-bottom: 7px;
+    margin-bottom: 5px;
     font-size: 14px;
     line-height: 14px;
   }
@@ -5051,7 +5047,7 @@ button,
 
   .photogallery__block-button {
     grid-column: 1/-1;
-    margin-bottom: 0;
+    margin-bottom: 1px;
     margin-right: 15px;
     margin-left: auto;
   }
@@ -5152,6 +5148,10 @@ button,
     min-height: 469px;
   }
 
+  .review-card:first-child {
+    margin-left: 0;
+  }
+
   .review-card__photo {
     margin-bottom: 15px;
   }
@@ -5167,7 +5167,11 @@ button,
 
   .reviews__block-button {
     margin-top: -9px;
-    margin-right: 15px;
+    margin-right: 0;
+  }
+
+  .reviews__slider-wrapper {
+    margin-left: 0;
   }
 
   .social-list {
@@ -5239,7 +5243,7 @@ button,
   }
 
   .tours__link {
-    margin-top: 0;
+    margin: 0 auto;
     font-size: 14px;
     line-height: 14px;
   }
