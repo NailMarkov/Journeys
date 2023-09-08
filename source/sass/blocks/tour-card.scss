@@ -1,47 +1,7 @@
 .tour-card {
   position: relative;
-  width: 380px;
   height: auto;
   background-color: $color-navy-blue;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  &--elbrus {
-    background-image: url("../img/tours/tour-1.jpg");
-
-    @include vp-1199 {
-      background-image: url("../img/tours/tour-tablet-1.jpg");
-    }
-
-    @include vp-767 {
-      background-image: url("../img/tours/tour-mobile-1.jpg");
-    }
-  }
-
-  &--belukha {
-    background-image: url("../img/tours/tour-2.jpg");
-
-    @include vp-1199 {
-      background-image: url("../img/tours/tour-tablet-2.jpg");
-    }
-
-    @include vp-767 {
-      background-image: url("../img/tours/tour-mobile-2.jpg");
-    }
-  }
-
-  &--fisht {
-    background-image: url("../img/tours/tour-3.jpg");
-
-    @include vp-1199 {
-      background-image: url("../img/tours/tour-tablet-2.jpg");
-    }
-
-    @include vp-767 {
-      background-image: url("../img/tours/tour-mobile-3.jpg");
-    }
-  }
 
   &::before {
     content: "";
@@ -60,8 +20,16 @@
   }
 }
 
+.tour-card__photo {
+  img {
+    width: 100%;
+  }
+}
+
 .tour-card__block {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   display: grid;
   grid-template-columns: 340px;
   gap: 23px;

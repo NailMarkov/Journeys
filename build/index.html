@@ -20,7 +20,7 @@
   <div class="wrapper">
 
     <!-- Header -->
-    <header class="page-header">
+    <header class="header page-header">
       <nav class="page-header__nav">
         <button class="page-header__toggle page-header__toggle--closed" type="button">
           <span class="visually-hidden">Переключатель отображения меню.</span>
@@ -58,7 +58,7 @@
       </nav>
     </header>
 
-    <main class="main-page">
+    <main class="main main-page">
       <h1 class="visually-hidden">Сайт Путешествия для любителей походов в горы.</h1>
 
       <!-- Hero -->
@@ -233,7 +233,22 @@
         <div class="tours__slider-wrapper">
           <div class="swiper" data-slider="tours">
             <div class="swiper-wrapper">
-              <div class="swiper-slide tour-card tour-card--elbrus">
+              <div class="swiper-slide tour-card">
+                <div class="tour-card__photo">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)"
+                      srcset="img/tours/tour-mobile-1.webp, img/tours/tour-mobile-1@2x.webp 2x" />
+                    <source type="image/webp" media="(max-width: 1199px)"
+                      srcset="img/tours/tour-tablet-1.webp, img/tours/tour-tablet-1@2x.webp 2x" />
+                    <source type="image/webp" srcset="img/tours/tour-1.webp, img/tours/tour-1@2x.webp 2x" />
+                    <source media="(max-width: 767px)"
+                      srcset="img/tours/tour-mobile-1.jpg 1x, img/tours/tour-mobile-1@2x.jpg 2x" />
+                    <source media="(max-width: 1199px)"
+                      srcset="img/tours/tour-tablet-1.jpg 1x, img/tours/tour-tablet-1@2x.jpg 2x" />
+                    <img src="img/tours/tour-1.jpg" alt="Путешествие вокруг Эльбруса." srcset="img/tours/tour-1@2x.jpg"
+                      width="380" height="412" />
+                  </picture>
+                </div>
                 <div class="tour-card__block">
                   <ul class="details-list">
                     <li class="details-list__item">
@@ -246,7 +261,7 @@
                       <p class="details-list__text details-list__text--night" href="#!">3 ночи</p>
                     </li>
                   </ul>
-                  <h3 class="tour-card__title">Путешествие вокруг Эльбруса</h3>
+                  <h3 class="tour-card__title">Путешествие<br> вокруг Эльбруса</h3>
                   <ul class="info-list">
                     <li class="info-list__item">
                       <h4 class="info-list__subtitle">Сложность:</h4>
@@ -269,7 +284,22 @@
                   </ul>
                 </div>
               </div>
-              <div class="swiper-slide tour-card tour-card--belukha">
+              <div class="swiper-slide tour-card">
+                <div class="tour-card__photo">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)"
+                      srcset="img/tours/tour-mobile-2.webp, img/tours/tour-mobile-2@2x.webp 2x" />
+                    <source type="image/webp" media="(max-width: 1199px)"
+                      srcset="img/tours/tour-tablet-2.webp, img/tours/tour-tablet-2@2x.webp 2x" />
+                    <source type="image/webp" srcset="img/tours/tour-2.webp, img/tours/tour-2@2x.webp 2x" />
+                    <source media="(max-width: 767px)"
+                      srcset="img/tours/tour-mobile-2.jpg 1x, img/tours/tour-mobile-2@2x.jpg 2x" />
+                    <source media="(max-width: 1199px)"
+                      srcset="img/tours/tour-tablet-2.jpg 1x, img/tours/tour-tablet-2@2x.jpg 2x" />
+                    <img src="img/tours/tour-2.jpg" alt="Путь к подножью Белухи." srcset="img/tours/tour-2@2x.jpg"
+                      width="380" height="412" />
+                  </picture>
+                </div>
                 <div class="tour-card__block">
                   <ul class="details-list">
                     <li class="details-list__item">
@@ -282,7 +312,7 @@
                       <p class="details-list__text details-list__text--night" href="#!">13 ночей</p>
                     </li>
                   </ul>
-                  <h3 class="tour-card__title">Путь к подножию Белухи</h3>
+                  <h3 class="tour-card__title">Путь к подножию<br> Белухи</h3>
                   <ul class="info-list">
                     <li class="info-list__item">
                       <h4 class="info-list__subtitle">Сложность:</h4>
@@ -305,7 +335,22 @@
                   </ul>
                 </div>
               </div>
-              <div class="swiper-slide tour-card tour-card--fisht">
+              <div class="swiper-slide tour-card">
+                <div class="tour-card__photo">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)"
+                      srcset="img/tours/tour-mobile-3.webp, img/tours/tour-mobile-3@2x.webp 2x" />
+                    <source type="image/webp" media="(max-width: 1199px)"
+                      srcset="img/tours/tour-tablet-3.webp, img/tours/tour-tablet-3@2x.webp 2x" />
+                    <source type="image/webp" srcset="img/tours/tour-3.webp, img/tours/tour-3@2x.webp 2x" />
+                    <source media="(max-width: 767px)"
+                      srcset="img/tours/tour-mobile-3.jpg 1x, img/tours/tour-mobile-3@2x.jpg 2x" />
+                    <source media="(max-width: 1199px)"
+                      srcset="img/tours/tour-tablet-3.jpg 1x, img/tours/tour-tablet-3@2x.jpg 2x" />
+                    <img src="img/tours/tour-3.jpg" alt="Через Фишт к Черному морю." srcset="img/tours/tour-3@2x.jpg"
+                      width="380" height="412" />
+                  </picture>
+                </div>
                 <div class="tour-card__block">
                   <ul class="details-list">
                     <li class="details-list__item">
@@ -1150,7 +1195,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="page-footer">
+    <footer class="footer page-footer">
       <a class="page-footer__logo-link" href="index.html">
         <span class="visually-hidden">Логотип сайта Путешествия.</span>
         <svg class="page-footer__icon" aria-hidden="true" focusable="false" width="205" height="62"
