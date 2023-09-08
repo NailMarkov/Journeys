@@ -100,25 +100,28 @@
   list-style-type: none;
 
   @include vp-1199 {
-    display: none;
     margin: 0;
     padding-bottom: 57px;
+
+    &--closed {
+      display: none;
+    }
+
+    &--opened {
+      position: absolute;
+      top: 111px;
+      left: 0;
+      right: 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      background-color: $color-default-white;
+    }
   }
 
   @include vp-767 {
     padding-bottom: 41px;
-  }
 
-  &--opened {
-    position: absolute;
-    top: 111px;
-    left: 0;
-    right: 0;
-    display: grid;
-    grid-template-columns: 1fr;
-    background-color: $color-default-white;
-
-    @include vp-767 {
+    &--opened {
       top: 86px;
     }
   }
