@@ -2930,6 +2930,7 @@ button,
 }
 
 .instructor-card {
+  position: relative;
   margin: 20px 0;
   padding: 20px;
   height: auto;
@@ -3146,18 +3147,6 @@ button,
   margin: 0 auto 3px -22px;
   padding: 0;
   list-style-type: none;
-}
-
-.page-header__list--opened {
-  position: absolute;
-  top: 111px;
-  left: 0;
-  right: 0;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-  grid-template-columns: 1fr;
-  background-color: #ffffff;
 }
 
 .page-header__link {
@@ -4402,9 +4391,24 @@ button,
   }
 
   .page-header__list {
-    display: none;
     margin: 0;
     padding-bottom: 57px;
+  }
+
+  .page-header__list--closed {
+    display: none;
+  }
+
+  .page-header__list--opened {
+    position: absolute;
+    top: 111px;
+    left: 0;
+    right: 0;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    background-color: #ffffff;
   }
 
   .page-header__link {
