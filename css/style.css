@@ -2166,7 +2166,7 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100%;
   /* stylelint-disable-next-line */
   min-height: calc(100 * var(--vh, 1vh));
 }
@@ -2770,6 +2770,7 @@ button,
   width: 220px;
   font-weight: 500;
   text-align: center;
+  z-index: 1;
   color: #ffffff;
   background-color: #0266c1;
 }
@@ -3095,9 +3096,9 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   padding: 40px calc(50% - 600px);
   width: 100%;
   color: #ffffff;
@@ -3144,8 +3145,9 @@ button,
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin: 0 auto 3px -22px;
+  margin: 20px auto 3px -22px;
   padding: 0;
+  width: 612px;
   list-style-type: none;
 }
 
@@ -3168,11 +3170,12 @@ button,
 }
 
 .page-header__wrapper {
+  margin-top: 23px;
   margin-bottom: 3px;
-  width: 142px;
 }
 
 .page-header__phone-link {
+  padding-bottom: 5px;
   font-weight: 600;
   font-size: 18px;
   line-height: 18px;
@@ -3667,24 +3670,8 @@ button,
 
 .tour-card {
   position: relative;
-  width: 380px;
   height: auto;
   background-color: #0266c1;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.tour-card--elbrus {
-  background-image: url("../img/tours/tour-1.jpg");
-}
-
-.tour-card--belukha {
-  background-image: url("../img/tours/tour-2.jpg");
-}
-
-.tour-card--fisht {
-  background-image: url("../img/tours/tour-3.jpg");
 }
 
 .tour-card::before {
@@ -3700,8 +3687,14 @@ button,
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 22.3%, rgba(0, 0, 0, 0) 60.32%);
 }
 
+.tour-card__photo img {
+  width: 100%;
+}
+
 .tour-card__block {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 340px;
@@ -4375,6 +4368,7 @@ button,
 
   .page-header__toggle {
     display: block;
+    margin-top: 9px;
     margin-bottom: 6px;
     width: 26px;
     height: 26px;
@@ -4393,6 +4387,7 @@ button,
   .page-header__list {
     margin: 0;
     padding-bottom: 57px;
+    width: 100%;
   }
 
   .page-header__list--closed {
@@ -4401,7 +4396,7 @@ button,
 
   .page-header__list--opened {
     position: absolute;
-    top: 111px;
+    top: 110px;
     left: 0;
     right: 0;
     display: -ms-grid;
@@ -4420,6 +4415,7 @@ button,
   }
 
   .page-header__wrapper {
+    margin-top: 16px;
     margin-left: 0;
   }
 
@@ -4582,18 +4578,6 @@ button,
     left: 45px;
   }
 
-  .tour-card--elbrus {
-    background-image: url("../img/tours/tour-tablet-1.jpg");
-  }
-
-  .tour-card--belukha {
-    background-image: url("../img/tours/tour-tablet-2.jpg");
-  }
-
-  .tour-card--fisht {
-    background-image: url("../img/tours/tour-tablet-2.jpg");
-  }
-
   .tours {
     gap: 38px;
     padding: 83px 45px 43px;
@@ -4616,8 +4600,7 @@ button,
   }
 
   .tours__link {
-    margin-top: 10px;
-    margin-left: 5px;
+    margin-top: 8px;
   }
 
   .training {
@@ -4983,7 +4966,7 @@ button,
   }
 
   .page-header__toggle {
-    margin-top: -12px;
+    margin-top: 0;
   }
 
   .page-header__logo-link {
@@ -5001,7 +4984,7 @@ button,
   }
 
   .page-header__list--opened {
-    top: 86px;
+    top: 85px;
   }
 
   .page-header__link {
@@ -5200,18 +5183,6 @@ button,
 
   .subtitle__bg--left {
     left: 15px;
-  }
-
-  .tour-card--elbrus {
-    background-image: url("../img/tours/tour-mobile-1.jpg");
-  }
-
-  .tour-card--belukha {
-    background-image: url("../img/tours/tour-mobile-2.jpg");
-  }
-
-  .tour-card--fisht {
-    background-image: url("../img/tours/tour-mobile-3.jpg");
   }
 
   .tour-card__block {
