@@ -2185,6 +2185,8 @@ button,
 
 .wrapper--opened {
   background: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  z-index: 20;
 }
 
 .visually-hidden {
@@ -3065,6 +3067,10 @@ button,
   line-height: 18px;
 }
 
+.page-footer__phone-link:hover {
+  color: #1c3374;
+}
+
 .page-footer__phone-link.focus-visible:focus {
   color: #1c3374;
   outline: none;
@@ -3072,6 +3078,7 @@ button,
 
 .page-footer__phone-link:active {
   color: #0266c1;
+  -webkit-text-fill-color: #0266c1;
 }
 
 .page-footer__phone-link[aria-disabled=true] {
@@ -3181,6 +3188,10 @@ button,
   line-height: 18px;
 }
 
+.page-header__phone-link:hover {
+  color: #1c3374;
+}
+
 .page-header__phone-link.focus-visible:focus {
   color: #1c3374;
   outline: none;
@@ -3188,6 +3199,7 @@ button,
 
 .page-header__phone-link:active {
   color: #0266c1;
+  -webkit-text-fill-color: #0266c1;
 }
 
 .page-header__phone-link[aria-disabled=true] {
@@ -3669,9 +3681,7 @@ button,
 }
 
 .tour-card {
-  position: relative;
   height: auto;
-  background-color: #0266c1;
 }
 
 .tour-card::before {
@@ -3687,21 +3697,32 @@ button,
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 22.3%, rgba(0, 0, 0, 0) 60.32%);
 }
 
-.tour-card__photo img {
-  width: 100%;
-}
-
-.tour-card__block {
+.tour-card__photo {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.tour-card__photo img {
+  background-color: #0266c1;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.tour-card__block {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 340px;
   grid-template-columns: 340px;
   gap: 23px;
   padding: 206px 20px 28px;
+  width: 100%;
+  height: 100%;
   color: #ffffff;
+  z-index: 1;
 }
 
 .tour-card__title {
@@ -4704,7 +4725,7 @@ button,
 
   .advantage-card {
     padding: 85px 10px 20px;
-    width: 290px;
+    width: 100%;
     background-position: top 19px center;
     background-size: 42px;
   }
@@ -4851,7 +4872,7 @@ button,
   .hero-card__link {
     margin-bottom: 0;
     padding: 14px;
-    width: 180px;
+    width: 100%;
   }
 
   .hero-card__video {
@@ -5131,7 +5152,7 @@ button,
     gap: 0;
     padding-top: 23px;
     padding-right: 20px;
-    height: 0;
+    height: 100%;
     min-height: 469px;
   }
 
@@ -5141,6 +5162,11 @@ button,
 
   .review-card__photo {
     margin-bottom: 15px;
+  }
+
+  .review-card__photo img {
+    width: 100%;
+    height: 100%;
   }
 
   .review-card__block {
@@ -5319,10 +5345,6 @@ button,
     background-color: #2d383f;
   }
 
-  .page-footer__phone-link:hover:not(.focus-visible) {
-    color: #1c3374;
-  }
-
   .page-header__link:hover:not(.focus-visible)::before {
     content: "";
     position: absolute;
@@ -5331,10 +5353,6 @@ button,
     right: 0;
     height: 1px;
     background-color: #ffffff;
-  }
-
-  .page-header__phone-link:hover:not(.focus-visible) {
-    color: #1c3374;
   }
 
   .social-list__link:hover:not(.focus-visible) {
