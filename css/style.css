@@ -2183,12 +2183,6 @@ button,
   flex-grow: 1;
 }
 
-.wrapper--opened {
-  background: rgba(0, 0, 0, 0.5);
-  overflow: hidden;
-  z-index: 20;
-}
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -2209,7 +2203,22 @@ button,
 }
 
 .scroll-lock {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
   overflow: hidden;
+}
+
+.scroll-lock::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 20;
 }
 
 .no-scrollbar {
@@ -2236,6 +2245,10 @@ button,
   max-width: 1920px;
   margin: 0 auto;
   padding: 0 40px;
+}
+
+.swiper-pagination {
+  z-index: 1;
 }
 
 .swiper-pagination-bullet {
@@ -2756,7 +2769,7 @@ button,
   font-weight: 800;
   font-size: 77px;
   line-height: 77px;
-  z-index: 5;
+  z-index: 1;
 }
 
 .hero-card__description {
@@ -2764,6 +2777,7 @@ button,
   padding: 0 calc(100% - 470px) 0 0;
   font-size: 17px;
   line-height: 24px;
+  z-index: 1;
 }
 
 .hero-card__link {
@@ -3115,6 +3129,9 @@ button,
 .page-header__nav--opened {
   background-color: #ffffff;
   color: #000000;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  z-index: 30;
 }
 
 .page-header__toggle {
@@ -4416,10 +4433,11 @@ button,
   }
 
   .page-header__list--opened {
-    position: absolute;
-    top: 110px;
-    left: 0;
-    right: 0;
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr;
