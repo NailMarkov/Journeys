@@ -65,7 +65,7 @@
   font-weight: 800;
   font-size: $head-desktop;
   line-height: $head-desktop;
-  z-index: 5;
+  z-index: 1;
 
   @include vp-1199 {
     margin-bottom: 13px;
@@ -89,6 +89,7 @@
   padding: 0 calc(100% - 470px) 0 0;
   font-size: 17px;
   line-height: 24px;
+  z-index: 1;
 
   @include vp-1199 {
     margin-bottom: 27px;

@@ -30,6 +30,8 @@
   &--opened {
     background-color: $color-default-white;
     color: $color-default-black;
+    flex-wrap: wrap;
+    z-index: 30;
   }
 }
 
@@ -111,10 +113,12 @@
     }
 
     &--opened {
-      position: absolute;
-      top: 110px;
-      left: 0;
-      right: 0;
+      // position: absolute;
+      // top: 110px;
+      // left: 0;
+      // right: 0;
+      order: 1;
+      flex-shrink: 1;
       display: grid;
       grid-template-columns: 1fr;
       background-color: $color-default-white;
