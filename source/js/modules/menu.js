@@ -1,26 +1,40 @@
-export const showMenu = () => {
+export const initNav = () => {
   const navElement = document.querySelector('.page-header__nav');
+  if (!navElement) {
+    return;
+  }
+
   const headerListElement = navElement.querySelector('.page-header__list');
   const togglerElement = navElement.querySelector('.page-header__toggle');
-  const bodyElement = document.querySelector('body');
 
-  const hideOverlay = (link) => {
-    link.addEventListener('click', () => {
-      bodyElement.classList.toggle('scroll-lock');
-      navElement.classList.toggle('page-header__nav--opened');
-      headerListElement.classList.toggle('page-header__list--opened');
-      togglerElement.classList.toggle('page-header__toggle--opened');
-    });
+  const changeOverlay = (method = 'toggle') => {
+    document.body.classList[method]('scroll-lock');
+    navElement.classList[method]('page-header__nav--opened');
+    headerListElement.classList[method]('page-header__list--opened');
+    togglerElement.classList[method]('page-header__toggle--opened');
   };
 
-  headerListElement.querySelectorAll('.page-header__link').forEach(hideOverlay);
-
-  const menu = togglerElement.addEventListener('click', () => {
-    navElement.classList.toggle('page-header__nav--opened');
-    headerListElement.classList.toggle('page-header__list--opened');
-    togglerElement.classList.toggle('page-header__toggle--opened');
-    bodyElement.classList.toggle('scroll-lock');
+  headerListElement.querySelectorAll('.page-header__link').forEach((linkElement) => {
+    linkElement.addEventListener('click', () => changeOverlay());
   });
 
-  return menu;
+  togglerElement.addEventListener('click', () => changeOverlay());
+
+  const setNavHeight = () => {
+    document.body.style.setProperty('--header-height', `${navElement.clientHeight}px`);
+  };
+  const observer = new MutationObserver(() => {
+    setNavHeight();
+  });
+  observer.observe(headerListElement, {
+    childList: true, // наблюдать за непосредственными детьми
+  });
+  window.addEventListener('resize', () => {
+    setNavHeight();
+
+    if (document.body.clientWidth >= 1200) {
+      changeOverlay('remove');
+    }
+  });
+  setNavHeight();
 };

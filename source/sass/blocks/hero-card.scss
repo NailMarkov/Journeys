@@ -1,5 +1,6 @@
 .hero-card {
   position: relative;
+  height: auto;
   color: $color-default-white;
   background-position: center center;
   background-repeat: no-repeat;
@@ -45,7 +46,7 @@
 .hero-card__info {
   display: flex;
   flex-direction: column;
-  padding: 181px 120px 80px;
+  padding: calc(var(--header-height) + 32px) 120px 80px;
   width: 100%;
   min-height: 800px;
 

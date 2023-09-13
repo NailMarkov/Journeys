@@ -28,10 +28,13 @@
   }
 
   &--opened {
-    background-color: $color-default-white;
-    color: $color-default-black;
     flex-wrap: wrap;
-    z-index: 30;
+
+    @include vp-1199 {
+      background-color: $color-default-white;
+      color: $color-default-black;
+      z-index: 30;
+    }
   }
 }
 
@@ -98,7 +101,7 @@
 .page-header__list {
   display: flex;
   flex-wrap: wrap;
-  margin: 20px auto 3px -22px;
+  margin: -2px auto 3px -22px;
   padding: 0;
   width: 612px;
   list-style-type: none;
@@ -113,10 +116,6 @@
     }
 
     &--opened {
-      // position: absolute;
-      // top: 110px;
-      // left: 0;
-      // right: 0;
       order: 1;
       flex-shrink: 1;
       display: grid;
@@ -136,11 +135,13 @@
 
 .page-header__link {
   position: relative;
+  margin-top: 22px;
   margin-left: 22px;
   padding: 3px 5px;
   line-height: 16px;
 
   @include vp-1199 {
+    margin-top: 0;
     margin-left: 0;
     padding: 13px 45px;
     font-weight: 700;

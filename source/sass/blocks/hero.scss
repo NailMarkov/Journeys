@@ -1,5 +1,6 @@
 .hero {
   padding: 0 calc(50% - 720px);
+
   @include vp-1199 {
     padding: 0;
   }

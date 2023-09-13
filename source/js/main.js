@@ -1,6 +1,6 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {Form} from './modules/form-validate/form';
-import {showMenu} from './modules/menu';
+import {initNav} from './modules/menu';
 import {initSliderHero, initSliderTours, initSliderTraining, initSliderReviews, initSliderAdvantages, initSliderGallery} from './modules/swiper';
 import {initMap} from './modules/map';
 
@@ -16,7 +16,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // Modules
   // ---------------------------------
 
-  showMenu();
+  initNav();
   initSliderAdvantages();
   initSliderGallery();
   initSliderHero();
