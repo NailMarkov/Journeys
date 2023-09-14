@@ -7,6 +7,7 @@ export const initSliderHero = () => {
     loop: true,
     initialSLide: 1,
     slidesPerView: 1,
+    watchSlidesProgress: true,
     pagination: {
       el: document.querySelector('[data-pagination="hero"]'),
       type: 'bullets',

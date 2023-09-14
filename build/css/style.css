@@ -2132,6 +2132,16 @@ button,
   }
 }
 
+.swiper-slide > .hero-card {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.swiper-slide-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
 .swiper-pagination {
   z-index: 1;
 }
@@ -3225,8 +3235,14 @@ button,
   }
 }
 
+@media (max-width: 767px) {
+  .hero-card__link-wrapper {
+    padding: 0 56px;
+  }
+}
+
 .hero-card__link {
-  margin-bottom: 30px;
+  margin-bottom: 151px;
   padding: 17px;
   width: 220px;
   font-weight: 500;
@@ -4935,7 +4951,6 @@ button,
   -ms-grid-rows: (min-content)[2];
   grid-template-rows: repeat(2, -webkit-min-content);
   grid-template-rows: repeat(2, min-content);
-  height: auto;
 }
 
 .tour-card__photo {
@@ -4961,18 +4976,19 @@ button,
   background-color: #0266c1;
   width: 100%;
   height: 100%;
-  z-index: -1;
 }
 
 .tour-card__block {
   grid-column: 1/-1;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+  -ms-grid-row-align: end;
+      align-self: end;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 340px;
-  grid-template-columns: 340px;
+  -ms-grid-columns: 280px;
+  grid-template-columns: 280px;
   gap: 23px;
   padding: 206px 20px 28px;
   color: #ffffff;
@@ -4987,7 +5003,7 @@ button,
 
 .tour-card__title {
   margin: 0 0 15px;
-  padding-right: 70px;
+  padding-right: 20px;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;

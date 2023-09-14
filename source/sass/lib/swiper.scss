@@ -1,3 +1,13 @@
+.swiper-slide > .hero-card {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.swiper-slide-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
 .swiper-pagination {
   z-index: 1;
 }

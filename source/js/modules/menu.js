@@ -6,6 +6,7 @@ export const initNav = () => {
 
   const headerListElement = navElement.querySelector('.page-header__list');
   const togglerElement = navElement.querySelector('.page-header__toggle');
+  const headerPhoneElement = navElement.querySelector('.page-header__wrapper');
 
   const changeOverlay = (method = 'toggle') => {
     document.body.classList[method]('scroll-lock');
@@ -28,6 +29,9 @@ export const initNav = () => {
   });
   observer.observe(headerListElement, {
     childList: true, // наблюдать за непосредственными детьми
+  });
+  observer.observe(headerPhoneElement, {
+    childList: true,
   });
   window.addEventListener('resize', () => {
     setNavHeight();
