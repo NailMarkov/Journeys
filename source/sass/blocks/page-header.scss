@@ -81,6 +81,7 @@
 
   @include vp-767 {
     justify-self: end;
+    margin-left: 33px;
   }
 }
 
@@ -110,6 +111,7 @@
     margin: 0;
     padding-bottom: 57px;
     width: 100%;
+    // overflow-y: auto;
 
     &--closed {
       display: none;

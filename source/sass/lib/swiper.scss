@@ -1,9 +1,11 @@
 .swiper-slide > .hero-card {
+  display: none;
   opacity: 0;
   visibility: hidden;
 }
 
 .swiper-slide-visible {
+  display: block;
   opacity: 1;
   visibility: visible;
 }

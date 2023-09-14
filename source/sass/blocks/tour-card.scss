@@ -1,6 +1,7 @@
 .tour-card {
   display: grid;
-  grid-template-rows: repeat(2, min-content);
+  grid-template-rows: repeat(2, 1fr);
+  height: auto;
 }
 
 .tour-card__photo {

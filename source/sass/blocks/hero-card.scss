@@ -107,6 +107,8 @@
 }
 
 .hero-card__link-wrapper {
+  z-index: 1;
+
   @include vp-767 {
     padding: 0 56px;
   }
@@ -123,7 +125,7 @@
   @include interaction;
 
   @include vp-1199 {
-    margin: 0 auto 70px;
+    margin: 0 auto 50px;
     width: 206px;
   }
 
@@ -136,7 +138,7 @@
 
 .hero-card__video {
   position: absolute;
-  bottom: 182px;
+  top: 301px;
   right: 120px;
   width: 482px;
   height: 317px;
@@ -144,9 +146,10 @@
 
   @include vp-1199 {
     position: relative;
+    top: 0;
     bottom: 20px;
     left: 0;
-    margin: 0 auto;
+    margin: 0 auto 30px;
     width: 442px;
     height: 300px;
     background-image: url("../img/poster-tablet.jpg");
@@ -159,7 +162,7 @@
 
 .hero-card__photo {
   position: absolute;
-  bottom: 139px;
+  top: 202px;
   right: 120px;
   width: 410px;
   height: 459px;
@@ -167,7 +170,7 @@
   @include vp-1199 {
     align-self: center;
     position: relative;
-    bottom: 0;
+    top: 0;
     right: 0;
     margin-top: -36px;
     width: 442px;
@@ -181,7 +184,7 @@
 
 .hero-card__radio {
   position: absolute;
-  bottom: 279px;
+  top: 301px;
   right: 120px;
   width: 340px;
   height: 220px;
@@ -190,8 +193,9 @@
   @include vp-1199 {
     align-self: center;
     position: relative;
-    bottom: 0;
+    top: 0;
     right: 0;
+    margin-bottom: 30px;
     text-align: center;
   }
 
