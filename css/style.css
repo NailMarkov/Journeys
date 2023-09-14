@@ -2249,11 +2249,13 @@ button,
 }
 
 .swiper-slide > .hero-card {
+  display: none;
   opacity: 0;
   visibility: hidden;
 }
 
 .swiper-slide-visible {
+  display: block;
   opacity: 1;
   visibility: visible;
 }
@@ -2792,6 +2794,10 @@ button,
   z-index: 1;
 }
 
+.hero-card__link-wrapper {
+  z-index: 1;
+}
+
 .hero-card__link {
   margin-bottom: 151px;
   padding: 17px;
@@ -2823,7 +2829,7 @@ button,
 
 .hero-card__video {
   position: absolute;
-  bottom: 182px;
+  top: 301px;
   right: 120px;
   width: 482px;
   height: 317px;
@@ -2832,7 +2838,7 @@ button,
 
 .hero-card__photo {
   position: absolute;
-  bottom: 139px;
+  top: 202px;
   right: 120px;
   width: 410px;
   height: 459px;
@@ -2840,7 +2846,7 @@ button,
 
 .hero-card__radio {
   position: absolute;
-  bottom: 279px;
+  top: 301px;
   right: 120px;
   width: 340px;
   height: 220px;
@@ -3710,10 +3716,9 @@ button,
 .tour-card {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: (-webkit-min-content)[2];
-  -ms-grid-rows: (min-content)[2];
-  grid-template-rows: repeat(2, -webkit-min-content);
-  grid-template-rows: repeat(2, min-content);
+  -ms-grid-rows: (1fr)[2];
+  grid-template-rows: repeat(2, 1fr);
+  height: auto;
 }
 
 .tour-card__photo {
@@ -3814,6 +3819,10 @@ button,
   text-align: center;
   text-transform: uppercase;
   z-index: 3;
+}
+
+.tours__link:hover {
+  color: #1c3374;
 }
 
 .tours__link.focus-visible:focus {
@@ -4305,15 +4314,16 @@ button,
   }
 
   .hero-card__link {
-    margin: 0 auto 70px;
+    margin: 0 auto 50px;
     width: 206px;
   }
 
   .hero-card__video {
     position: relative;
+    top: 0;
     bottom: 20px;
     left: 0;
-    margin: 0 auto;
+    margin: 0 auto 30px;
     width: 442px;
     height: 300px;
     background-image: url("../img/poster-tablet.jpg");
@@ -4324,7 +4334,7 @@ button,
     -ms-grid-row-align: center;
     align-self: center;
     position: relative;
-    bottom: 0;
+    top: 0;
     right: 0;
     margin-top: -36px;
     width: 442px;
@@ -4336,8 +4346,9 @@ button,
     -ms-grid-row-align: center;
     align-self: center;
     position: relative;
-    bottom: 0;
+    top: 0;
     right: 0;
+    margin-bottom: 30px;
     text-align: center;
   }
 
@@ -4664,7 +4675,7 @@ button,
   }
 
   .tours__link {
-    margin-top: 8px;
+    margin-top: 10px;
   }
 
   .training {
@@ -5040,6 +5051,7 @@ button,
   .page-header__logo-link {
     -ms-grid-column-align: end;
     justify-self: end;
+    margin-left: 33px;
   }
 
   .page-header__icon {
@@ -5404,10 +5416,6 @@ button,
 
   .social-list__link:hover:not(.focus-visible) {
     border: 1px solid #2d383f;
-  }
-
-  .tours__link:hover:not(.focus-visible) {
-    color: #1c3374;
   }
 
   .video__control:hover:not(.focus-visible) {
